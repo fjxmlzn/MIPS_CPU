@@ -19,16 +19,16 @@
 	<string>
 	<string.h>
 
-1436319166 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\main.cpp
+1436377360 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\main.cpp
 	<iostream>
 	"Frame.h"
 
-1436322087 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\frame.h
+1436377307 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\frame.h
 	"CmdProcessor.h"
 	"ErrorHandler.h"
 	"Assembler.h"
 
-1436322413 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\cmdprocessor.h
+1436324022 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\cmdprocessor.h
 	<string>
 	<vector>
 
@@ -42,22 +42,30 @@
 	<string>
 	<string.h>
 
-1436322522 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\src\cmdprocessor.cpp
+1436324677 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\src\cmdprocessor.cpp
 	"CmdProcessor.h"
 
 1436320811 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\errorhandler.h
 	<iostream>
 	<string>
 
-1436322157 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\assembler.h
+1436374434 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\assembler.h
+	<iostream>
+	<map>
 	"CmdProcessor.h"
+	"MipsCode.h"
+	"AsmCode.h"
 
-1436320856 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\src\errorhandler.cpp
+1436332487 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\src\errorhandler.cpp
 	"ErrorHandler.h"
 
-1436322245 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\src\assembler.cpp
+1436377154 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\src\assembler.cpp
+	<fstream>
+	<sstream>
+	<iomanip>
 	"Assembler.h"
 	"ErrorHandler.h"
+	"MipsInstructionList.h"
 
 1436377360 source:e:\work\c++temp\mips_assembler\main.cpp
 	<iostream>
@@ -128,4 +136,26 @@
 1436366522 e:\work\c++temp\mips_assembler\include\mipsinstructionlist.h
 	<map>
 	<string>
+
+1436360522 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\mipscode.h
+	<iostream>
+	<string>
+	<vector>
+
+1436348747 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\asmcode.h
+	<string>
+	<vector>
+
+1436343826 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\src\asmcode.cpp
+	"AsmCode.h"
+
+1436366522 e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\include\mipsinstructionlist.h
+	<map>
+	<string>
+
+1436360541 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\src\mipscode.cpp
+	"MipsCode.h"
+
+1436370758 source:e:\think_pad 2015.2.2起\大学课程等\数字逻辑与处理器基础实验\作业\大作业\mips_cpu\mips_assembler\src\mipsinstructionlist.cpp
+	"MipsInstructionList.h"
 
