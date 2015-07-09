@@ -258,7 +258,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "lui")
     {
-        if (!CheckParamNum(asmCode, 3)) return false;
+        if (!CheckParamNum(asmCode, 2)) return false;
         unsigned int opcode, rt;
         int immediate;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -318,8 +318,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
         if (!GetRelaAddressByLabel(asmCode.param[2], labelList, address, offset)) return false;
         mipsCode.InitIType(address, opcode, rs, rt, offset);
     }
-    else if (asmCode.key == "blez" || asmCode.key == "bgtz"
-          || asmCode.key == "bgez")
+    else if (asmCode.key == "blez" || asmCode.key == "bgtz")
     {
         if (!CheckParamNum(asmCode, 2)) return false;
         unsigned int opcode, rs;
@@ -328,6 +327,16 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
         if (!GetRegisterByParam(asmCode.param[0], rs)) return false;
         if (!GetRelaAddressByLabel(asmCode.param[1], labelList, address, offset)) return false;
         mipsCode.InitIType(address, opcode, rs, 0, offset);
+    }
+    else if (asmCode.key == "bgez")
+    {
+        if (!CheckParamNum(asmCode, 2)) return false;
+        unsigned int opcode, rs;
+        short offset;
+        opcode = GetOpcodeByKey(asmCode.key);
+        if (!GetRegisterByParam(asmCode.param[0], rs)) return false;
+        if (!GetRelaAddressByLabel(asmCode.param[1], labelList, address, offset)) return false;
+        mipsCode.InitIType(address, opcode, rs, 1, offset);
     }
     else if (asmCode.key == "j" || asmCode.key == "jal")
     {
@@ -360,7 +369,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     else if (asmCode.key == "nop")
     {
         if (!CheckParamNum(asmCode, 0)) return false;
-        mipsCode.InitRType(0, 0, 0, 0, 0, 0, 0);
+        mipsCode.InitRType(address, 0, 0, 0, 0, 0, 0);
     }
     else
     {
@@ -387,13 +396,27 @@ bool Assembler::AssembleExport(string cfgMode, bool cfgAddress, string cfgOutput
 
     for (unsigned int i = 0; i < mipsCode.size(); i++)
     {
-        if (cfgAddress && !(cfgMode == "bin")) outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].address << ": ";
-        if (cfgMode == "hex")
-            outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].code << endl;
-        else if (cfgMode == "ver")
-            outputFile << "32'h" << hex << setw(8) << setfill('0') << mipsCode[i].code << endl;
-        else
+//        if (cfgAddress && !(cfgMode == "bin")) outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].address << ": ";
+//        if (cfgMode == "hex")
+//            outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].code << endl;
+//        else if (cfgMode == "ver")
+//            outputFile << "32'h" << hex << setw(8) << setfill('0') << mipsCode[i].code << endl;
+//        else
+//            outputFile.write(reinterpret_cast<const char*>(&mipsCode[i].code), sizeof(mipsCode[i].code));
+        if (cfgMode == "bin")
             outputFile.write(reinterpret_cast<const char*>(&mipsCode[i].code), sizeof(mipsCode[i].code));
+        else if (cfgMode == "hex")
+        {
+            if (cfgAddress)
+                outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].address << ": ";
+            outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].code << endl;
+        }
+        else    //ver
+        {
+            if (cfgAddress)
+                outputFile << dec << mipsCode[i].address/4 << ": ";
+            outputFile << "data <= 32'h" << hex << setw(8) << setfill('0') << mipsCode[i].code << ";" << endl;
+        }
     }
     outputFile.close();
     return true;

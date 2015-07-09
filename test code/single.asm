@@ -20,17 +20,23 @@ uart_recv_interrupt_main:
 entry_main:
 	addi $t0, $zero, 10
 	addi $t1, $zero, -138
+	nop
 	add $t2, $t1, $t0
 	sub $t3, $t1, $t2
 	addu $t4, $t1, $t0
 	subu $t5, $t1, $t0
 	addiu $t6, $t5, -1234
+	nop
 	addi $t7, $t5, -1234
 	and $s0, $t2, $t5
 	or $s1, $t2, $t5
 	xor $s2, $t2, $t5
 	nor $s3, $t2, $t5
 	andi $s4, $t5, 0xFA25
+	lui $a3, 0xFA25
+	add $sp, $zero, $zero
+	sw $a3, 8, $sp
+	lw $t8, 8, $sp
 jump2:
 	sll $s5, $s2, 4
 	srl $s6, $s2, 20
