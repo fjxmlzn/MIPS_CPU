@@ -363,11 +363,9 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else
     {
-        /*
         stringstream tmpSStream;
         tmpSStream << "Unknown instruction on line " << asmCode.lineNum << ": " << asmCode.key;
         errorHandler->ReportError(tmpSStream.str());
-        */
         return false;
     }
     return true;
@@ -433,6 +431,7 @@ bool Assembler::GetRegisterByParam(string param, unsigned int &reg)
     auto it = MipsRegisterList.find(param);
     if (it == MipsRegisterList.end())
     {
+        errorHandler->ReportError(string("Cannot translate the param to register: ") + param);
         return false;
     }
     else
@@ -447,11 +446,19 @@ bool Assembler::GetImmediateByParam(string param, int &immediate)
     stringstream tmpSStream(param);
     if (param.size() >= 2 &&  param[0] == '0' && (param[1] == 'x' || param[1] == 'X'))
     {
-        if (!(tmpSStream >> hex >> immediate)) return false;
+        if (!(tmpSStream >> hex >> immediate))
+        {
+            errorHandler->ReportError(string("Cannot translate the param to num: ") + param);
+            return false;
+        }
     }
     else
     {
-        if (!(tmpSStream >> dec >> immediate)) return false;
+        if (!(tmpSStream >> dec >> immediate))
+        {
+            errorHandler->ReportError(string("Cannot translate the param to num: ") + param);
+            return false;
+        }
     }
     return true;
 }
@@ -460,7 +467,11 @@ bool Assembler::GetRelaAddressByLabel(string label, map<string, int> labelList, 
 {
     address += 4;
     auto it = labelList.find(label);
-    if (it == labelList.end()) return false;
+    if (it == labelList.end())
+    {
+        errorHandler->ReportError(string("Cannot find the label: ") + label);
+        return false;
+    }
     int tmpOffset = it->second - address;
     offset = tmpOffset >> 2;
     return true;
@@ -469,7 +480,11 @@ bool Assembler::GetRelaAddressByLabel(string label, map<string, int> labelList, 
 bool Assembler::GetAbsoAddressByLabel(string label, map<string, int> labelList, unsigned int address, unsigned int &target)
 {
     auto it = labelList.find(label);
-    if (it == labelList.end()) return false;
+    if (it == labelList.end())
+    {
+        errorHandler->ReportError(string("Cannot find the label: ") + label);
+        return false;
+    }
     target = it->second >> 2;
     return true;
 }
