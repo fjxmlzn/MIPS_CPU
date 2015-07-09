@@ -38,6 +38,7 @@ private:
     bool GetImmediateByParam(string param, int &immediate);
     bool GetRelaAddressByLabel(string label, map<string, int> labelList, unsigned int address, short &offset);
     bool GetAbsoAddressByLabel(string label, map<string, int> labelList, unsigned int address, unsigned int &target);
+    bool CheckParamNum(AsmCode asmCode, unsigned int paramNum);
 };
 
 #endif // ASSEMBLER_H

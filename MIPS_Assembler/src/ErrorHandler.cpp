@@ -22,3 +22,8 @@ void ErrorHandler::ReportWarning(string errMsg)
 {
     cout << "[Warning] " << errMsg << endl;
 }
+
+void ErrorHandler::ReportMessage(string msg)
+{
+    cout << "[Message] " << msg << endl;
+}

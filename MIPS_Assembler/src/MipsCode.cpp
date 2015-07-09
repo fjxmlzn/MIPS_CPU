@@ -31,7 +31,7 @@ void MipsCode::InitIType(unsigned int address, unsigned int opcode,
     code = (opcode & 0x0000003F) << 26;
     code |= (rs & 0x0000001F) << 21;
     code |= (rt & 0x0000001F) << 16;
-    code |= immediate;
+    code |= (0x0000FFFF & immediate);
 }
 
 void MipsCode::InitJType(unsigned int address, unsigned int opcode, unsigned int jAddress)

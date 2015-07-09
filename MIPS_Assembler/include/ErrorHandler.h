@@ -14,6 +14,7 @@ public:
 
     void ReportError(string errMsg);
     void ReportWarning(string errMsg);
+    void ReportMessage(string msg);
 };
 
 #endif // ERRORHANDLER_H

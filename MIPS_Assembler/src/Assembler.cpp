@@ -79,6 +79,7 @@ bool Assembler::AssembleMain(string cfgMode, bool cfgAddress, string cfgInputPat
     if (!AssembleTranslate(asmCode, mipsCode)) return false;
 
     if (!AssembleExport(cfgMode, cfgAddress, cfgOutputPath, mipsCode)) return false;
+    errorHandler->ReportMessage("Success!");
     return true;
 }
 
@@ -246,7 +247,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
 {
     if (asmCode.key == "lw" || asmCode.key == "sw")
     {
-        if (asmCode.param.size() != 3) return false;
+        if (!CheckParamNum(asmCode, 3)) return false;
         unsigned int opcode, rt, rs;
         int offset;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -257,7 +258,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "lui")
     {
-        if (asmCode.param.size() != 2) return false;
+        if (!CheckParamNum(asmCode, 3)) return false;
         unsigned int opcode, rt;
         int immediate;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -271,7 +272,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
           || asmCode.key == "xor" || asmCode.key == "nor"
           || asmCode.key == "slt")
     {
-        if (asmCode.param.size() != 3) return false;
+        if (!CheckParamNum(asmCode, 3)) return false;
         unsigned int opcode, rd, rs, rt, funct;
         opcode = GetOpcodeByKey(asmCode.key);
         funct = GetFunctByKey(asmCode.key);
@@ -283,7 +284,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     else if (asmCode.key == "sll" || asmCode.key == "srl"
           || asmCode.key == "sra")
     {
-        if (asmCode.param.size() != 3) return false;
+        if (!CheckParamNum(asmCode, 3)) return false;
         unsigned int opcode, rd, rt, funct;
         int shamt;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -297,7 +298,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
           || asmCode.key == "andi" || asmCode.key == "slti"
           || asmCode.key == "sltiu")
     {
-        if (asmCode.param.size() != 3) return false;
+        if (!CheckParamNum(asmCode, 3)) return false;
         unsigned int opcode, rt, rs;
         int immediate;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -308,7 +309,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "beq" || asmCode.key == "bne")
     {
-        if (asmCode.param.size() != 3) return false;
+        if (!CheckParamNum(asmCode, 3)) return false;
         unsigned int opcode, rs, rt;
         short offset;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -320,7 +321,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     else if (asmCode.key == "blez" || asmCode.key == "bgtz"
           || asmCode.key == "bgez")
     {
-        if (asmCode.param.size() != 2) return false;
+        if (!CheckParamNum(asmCode, 2)) return false;
         unsigned int opcode, rs;
         short offset;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -330,7 +331,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "j" || asmCode.key == "jal")
     {
-        if (asmCode.param.size() != 1) return false;
+        if (!CheckParamNum(asmCode, 1)) return false;
         unsigned int opcode;
         unsigned int target;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -339,7 +340,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "jr")
     {
-        if (asmCode.param.size() != 1) return false;
+        if (!CheckParamNum(asmCode, 1)) return false;
         unsigned int opcode, rs, funct;
         opcode = GetOpcodeByKey(asmCode.key);
         funct = GetFunctByKey(asmCode.key);
@@ -348,7 +349,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "jalr")
     {
-        if (asmCode.param.size() != 2) return false;
+        if (!CheckParamNum(asmCode, 2)) return false;
         unsigned int opcode, rd, rs, funct;
         opcode = GetOpcodeByKey(asmCode.key);
         funct = GetFunctByKey(asmCode.key);
@@ -358,7 +359,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "nop")
     {
-        if (asmCode.param.size() != 0) return false;
+        if (!CheckParamNum(asmCode, 0)) return false;
         mipsCode.InitRType(0, 0, 0, 0, 0, 0, 0);
     }
     else
@@ -487,4 +488,19 @@ bool Assembler::GetAbsoAddressByLabel(string label, map<string, int> labelList, 
     }
     target = it->second >> 2;
     return true;
+}
+
+bool Assembler::CheckParamNum(AsmCode asmCode, unsigned int paramNum)
+{
+    if (asmCode.param.size() != paramNum)
+    {
+        stringstream tmpSStream;
+        tmpSStream << "Instruction " << asmCode.key << " needs to have " << paramNum << " params";
+        errorHandler->ReportError(tmpSStream.str());
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
