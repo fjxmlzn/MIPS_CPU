@@ -304,11 +304,12 @@ img {
 
 <p>每块内容均为可选项。</p>
 <ul>
-<li>标签：可由一个或多个标签组成。每个标签均已冒号结尾。具体见<a href="#label">标签</a>。</li>
+<li>标签：可由一个或多个标签组成。每个标签均以冒号结尾。具体见<a href="#label">标签</a>。</li>
 <li>指令：最多只能有一条指令。具体见<a href="#instruction">指令</a>。</li>
 <li>注释：#之后的内容均被视为注释。具体见<a href="#comment">注释</a>。</li>
 </ul>
 <h3><span id = "instruction">指令</span></h3>
+<p>支持以下汇编指令。</p>
 <table>
 <thead>
 <tr>
@@ -470,16 +471,16 @@ img {
 </tr>
 </tbody>
 </table>
-<h3><span id = "label">标签</span></h3>
+<h3 id="command"><span id = "label">标签</span></h3>
 <p>标签中可以包含任意连续非空格字符，并以冒号结尾。</p>
 <h3><span id = "comment">注释</span></h3>
-<p>由#开头，本行之后的内容均视为注释。</p>
+<p>由#开头，同一行之后的内容均视为注释。</p>
 <h3>其他声明</h3>
 <p>默认指令起始地址为0x00000000。</p>
 <h2>使用指南</h2>
-<h3 id="command">运行方式</h3>
+<h3>运行方式</h3>
 <p>可以无参数直接启动，程序将进入命令行交互模式。也可以带参数启动，这时参数默认传递给命令<code>ass</code>，运行完毕即退出程序。关于此命令的内容参见<a href="#command">命令</a>。</p>
-<h3>命令</h3>
+<h3><span id = "command">命令</span></h3>
 <p>目前仅支持一个命令<code>ass</code>。其调用格式为：<sup id="fnref:command"><a href="#fn:command" rel="footnote">1</a></sup></p>
 <pre><code>ass -i &lt;输入文件路径&gt; -o &lt;输出文件路径&gt; [-m ver/bin/hex] [-ad]
 </code></pre>
@@ -501,7 +502,7 @@ img {
 <ul>
 <li>对于ver模式，地址为实际地址除以4的十进制形式。</li>
 <li>
-<p>对于hex模式，地址为实际地址的十六进制地址形式。</p>
+<p>对于hex模式，地址为实际地址的十六进制形式。</p>
 </li>
 </ul>
 </li>
