@@ -28,7 +28,7 @@
 |addi|addi rt, rs, imm|$rt <- $rs + (sign-extend)imm|
 |addiu|addiu rt, rs, imm|$rt <- $rs + (zero-extend)imm|
 |and|and rd, rs, rt|$rd <- $rs and $rt|
-|or|or rd, rs, rt|$rd <- $rs or $rt| 
+|or|or rd, rs, rt|$rd <- $rs or $rt|
 |xor|xor rd, rs, rt|$rd <- $rs xor $rt|
 |nor|nor rd, rs, rt|$rd <- not($rs or $rt)|
 |andi|andi rt, rs, imm|$rt <- $rs + (zero-extend)imm|
@@ -48,16 +48,27 @@
 |jr|jr rs|PC = $rs|
 |jalr|jalr rd, rs|$ra <- PC + 4;PC = $rs|
 |nop|nop|空指令|
+
 ###<span id = "label">标签</span>
+
 标签中可以包含任意连续非空格字符，并以冒号结尾。
+
 ###<span id = "comment">注释</span>
+
 由#开头，本行之后的内容均视为注释。
+
 ###其他声明
+
 默认指令起始地址为0x00000000。
+
 ##使用指南
+
 ###运行方式
+
 可以无参数直接启动，程序将进入命令行交互模式。也可以带参数启动，这时参数默认传递给命令`ass`，运行完毕即退出程序。关于此命令的内容参见[命令](#command)。
+
 ###命令
+
 目前仅支持一个命令`ass`。其调用格式为：[^command]
 
 	ass -i <输入文件路径> -o <输出文件路径> [-m ver/bin/hex] [-ad]
@@ -73,6 +84,5 @@
 * -ad：可选参数。指定输出中每一指令的前部是否包含地址，仅对ver和hex模式有效。
 	* 对于ver模式，地址为实际地址除以4的十进制形式。
 	* 对于hex模式，地址为实际地址的十六进制地址形式。
-
 
 [^command]: `[]`内为可选参数，`/`表示参数的或关系，`<>`内为说明。
