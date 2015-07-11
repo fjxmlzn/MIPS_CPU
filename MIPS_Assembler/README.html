@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1 id="command">Mips Assembler 文档</h1>
+<ul>
+<li>版本: 0.1.0</li>
+<li>本程序通过命令行交互的方式将Mips汇编代码转换为机器码。</li>
+</ul>
+<h2>汇编代码规范说明</h2>
+<h3>代码组织</h3>
+<p>代码由标签、指令和注释组成。每行的结构为</p>
+<pre><code>[标签][指令][注释]
+</code></pre>
+
+<p>每块内容均为可选项。</p>
+<ul>
+<li>标签：可由一个或多个标签组成。每个标签均以冒号结尾。具体见<a href="#label">标签</a>。</li>
+<li>指令：最多只能有一条指令。具体见<a href="#instruction">指令</a>。</li>
+<li>注释：#之后的内容均被视为注释。具体见<a href="#comment">注释</a>。</li>
+</ul>
+<h3><span id = "instruction">指令</span></h3>
+<p>支持以下汇编指令。</p>
+<table>
+<thead>
+<tr>
+	<th>指令</th>
+	<th>语法</th>
+	<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>lw</td>
+	<td>lw rt, offset, rs</td>
+	<td>$rt &lt;- memory[$rs + (sign-extend)offset]</td>
+</tr>
+<tr>
+	<td>sw</td>
+	<td>sw rt, offset, rs</td>
+	<td>memory[$rs + (sign-extend)offset] &lt;- $rt</td>
+</tr>
+<tr>
+	<td>lui</td>
+	<td>lui rt, imm</td>
+	<td>$rt &lt;- imm &lt;&lt; 16</td>
+</tr>
+<tr>
+	<td>add</td>
+	<td>add rd, rs, rt</td>
+	<td>$rd &lt;- $rs + $rt</td>
+</tr>
+<tr>
+	<td>addu</td>
+	<td>addu rd, rs, rt</td>
+	<td>$rd &lt;- $rs + $rt;无符号计算</td>
+</tr>
+<tr>
+	<td>sub</td>
+	<td>sub rd, rs, rt</td>
+	<td>$rd &lt;- $rs - $rt</td>
+</tr>
+<tr>
+	<td>subu</td>
+	<td>subu rd, rs, rt</td>
+	<td>$rd &lt;- $rs - $rt;无符号计算</td>
+</tr>
+<tr>
+	<td>addi</td>
+	<td>addi rt, rs, imm</td>
+	<td>$rt &lt;- $rs + (sign-extend)imm</td>
+</tr>
+<tr>
+	<td>addiu</td>
+	<td>addiu rt, rs, imm</td>
+	<td>$rt &lt;- $rs + (zero-extend)imm</td>
+</tr>
+<tr>
+	<td>and</td>
+	<td>and rd, rs, rt</td>
+	<td>$rd &lt;- $rs and $rt</td>
+</tr>
+<tr>
+	<td>or</td>
+	<td>or rd, rs, rt</td>
+	<td>$rd &lt;- $rs or $rt</td>
+</tr>
+<tr>
+	<td>xor</td>
+	<td>xor rd, rs, rt</td>
+	<td>$rd &lt;- $rs xor $rt</td>
+</tr>
+<tr>
+	<td>nor</td>
+	<td>nor rd, rs, rt</td>
+	<td>$rd &lt;- not($rs or $rt)</td>
+</tr>
+<tr>
+	<td>andi</td>
+	<td>andi rt, rs, imm</td>
+	<td>$rt &lt;- $rs + (zero-extend)imm</td>
+</tr>
+<tr>
+	<td>sll</td>
+	<td>sll rd, rt, shamt</td>
+	<td>$rd &lt;- $rt &lt;&lt; shamt</td>
+</tr>
+<tr>
+	<td>srl</td>
+	<td>srl rd, rt, shamt</td>
+	<td>$rd &lt;- $rt &gt;&gt; shamt;逻辑右移</td>
+</tr>
+<tr>
+	<td>sra</td>
+	<td>sra rd, rt, shamt</td>
+	<td>$rd &lt;- $rt &gt;&gt; shamt;算术右移</td>
+</tr>
+<tr>
+	<td>slt</td>
+	<td>slt rd, rs, rt</td>
+	<td>if ($rs &lt; $rt) $rd = 1 else $rd = 0</td>
+</tr>
+<tr>
+	<td>slti</td>
+	<td>slti rt, rs, imm</td>
+	<td>if ($rs &lt; (sign-extend)imm) $rt = 1 else $rt = 0</td>
+</tr>
+<tr>
+	<td>sltiu</td>
+	<td>sltiu rt, rs, imm</td>
+	<td>if ($rs &lt; (zero-extend)imm) $rt = 1 else $rt = 0</td>
+</tr>
+<tr>
+	<td>beq</td>
+	<td>beq rs, rt, label</td>
+	<td>if ($rs == $rt) PC &lt;- [label]</td>
+</tr>
+<tr>
+	<td>bne</td>
+	<td>bne rs, rt, label</td>
+	<td>if ($rs != $rt) PC &lt;- [label]</td>
+</tr>
+<tr>
+	<td>blez</td>
+	<td>blez rs, label</td>
+	<td>if ($rs &lt; 0) PC &lt;- [label]</td>
+</tr>
+<tr>
+	<td>bgtz</td>
+	<td>bgtz rs, label</td>
+	<td>if ($rs &gt; 0) PC &lt;- [label]</td>
+</tr>
+<tr>
+	<td>bgez</td>
+	<td>bgeq rs, label</td>
+	<td>if ($rs &gt;= 0) PC &lt;- [label]</td>
+</tr>
+<tr>
+	<td>j</td>
+	<td>j label</td>
+	<td>PC &lt;- [label]</td>
+</tr>
+<tr>
+	<td>jal</td>
+	<td>jal label</td>
+	<td>$rd &lt;- PC + 4;PC &lt;- [label]</td>
+</tr>
+<tr>
+	<td>jr</td>
+	<td>jr rs</td>
+	<td>PC = $rs</td>
+</tr>
+<tr>
+	<td>jalr</td>
+	<td>jalr rd, rs</td>
+	<td>$ra &lt;- PC + 4;PC = $rs</td>
+</tr>
+<tr>
+	<td>nop</td>
+	<td>nop</td>
+	<td>空指令</td>
+</tr>
+</tbody>
+</table>
+<h3 id="command"><span id = "label">标签</span></h3>
+<p>标签中可以包含任意连续非空格字符，并以冒号结尾。</p>
+<h3><span id = "comment">注释</span></h3>
+<p>由#开头，同一行之后的内容均视为注释。</p>
+<h3>其他声明</h3>
+<p>默认指令起始地址为0x00000000。</p>
+<h2>使用指南</h2>
+<h3>运行方式</h3>
+<p>可以无参数直接启动，程序将进入命令行交互模式。也可以带参数启动，这时参数默认传递给命令<code>ass</code>，运行完毕即退出程序。关于此命令的内容参见<a href="#command">命令</a>。</p>
+<h3><span id = "command">命令</span></h3>
+<p>目前仅支持一个命令<code>ass</code>。其调用格式为：<sup id="fnref:command"><a href="#fn:command" rel="footnote">1</a></sup></p>
+<pre><code>ass -i &lt;输入文件路径&gt; -o &lt;输出文件路径&gt; [-m ver/bin/hex] [-ad]
+</code></pre>
+
+<p>对于各参数的说明如下：</p>
+<ul>
+<li>-i：必选参数。后面跟上输入文件路径。路径中不能包含空格。</li>
+<li>-o：必选参数。后面跟上输出文件路径。路径中不能包含空格。</li>
+<li>
+-m：可选参数。指定了输出文件模式。未指定时默认为ver。
+<ul>
+<li>ver：输出纯文本模式的与verilog兼容的代码。</li>
+<li>bin：二进制文件。</li>
+<li>hex：输出纯文本模式的十六进制代码。</li>
+</ul>
+</li>
+<li>
+<p>-ad：可选参数。指定输出中每一指令的前部是否包含地址，仅对ver和hex模式有效。</p>
+<ul>
+<li>对于ver模式，地址为实际地址除以4的十进制形式。</li>
+<li>
+<p>对于hex模式，地址为实际地址的十六进制形式。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn:command">
+<p><code>[]</code>内为可选参数，<code>/</code>表示参数的或关系，<code>&lt;&gt;</code>内为说明。&nbsp;<a href="#fnref:command" rev="footnote">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
