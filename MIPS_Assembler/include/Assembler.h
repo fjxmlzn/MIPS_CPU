@@ -25,12 +25,12 @@ public:
     virtual bool ReadCommand(string cmd);
 
 private:
-    bool AssembleMain(string cfgMode, bool cfgAddress, string cfgInputPath, string cfgOutputPath);
+    bool AssembleMain(string cfgMode, bool cfgAddress, bool cfgSource, string cfgInputPath, string cfgOutputPath);
     bool AssembleImport(string cfgInputPath, vector<string> &sourceCode);
     bool AssembleParse(vector<string> sourceCode, vector<AsmCode> &asmCode);
     bool AssembleTranslate(vector<AsmCode> asmCode, vector<MipsCode> &mipsCode);
     bool AssembleInstruction(AsmCode asmCode, unsigned int address, map<string, int> labelList, MipsCode &mipsCode);
-    bool AssembleExport(string cfgMode, bool cfgAddress, string cfgOutputPath, vector<MipsCode> mipsCode);
+    bool AssembleExport(string cfgMode, bool cfgAddress, bool cfgSource, string cfgOutputPath, vector<MipsCode> mipsCode);
 
     unsigned int GetOpcodeByKey(string key);
     unsigned int GetFunctByKey(string key);

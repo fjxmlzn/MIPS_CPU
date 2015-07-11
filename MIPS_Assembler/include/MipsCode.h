@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "AsmCode.h"
 
 using std::vector;
 using std::string;
@@ -16,7 +17,7 @@ enum MIPS_TYPE
 class MipsCode
 {
 public:
-    MipsCode();
+    MipsCode(AsmCode asmSource, vector<string> labels);
     virtual ~MipsCode();
 
     void InitRType(unsigned int address, unsigned int opcode,
@@ -28,6 +29,8 @@ public:
     MIPS_TYPE mipsType;
     unsigned int address;
     unsigned int code;
+    AsmCode asmSource;
+    vector<string> labels;
 };
 
 #endif // MIPSCODE_H

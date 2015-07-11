@@ -1,13 +1,11 @@
 #include "MipsCode.h"
 
-MipsCode::MipsCode()
+MipsCode::MipsCode(AsmCode asmSource, vector<string> labels):asmSource(asmSource),labels(labels)
 {
-    //ctor
 }
 
 MipsCode::~MipsCode()
 {
-    //dtor
 }
 
 void MipsCode::InitRType(unsigned int address, unsigned int opcode,

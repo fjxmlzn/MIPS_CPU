@@ -4,6 +4,7 @@
 #include "Assembler.h"
 #include "ErrorHandler.h"
 #include "MipsInstructionList.h"
+#include "math.h"
 
 Assembler::Assembler(ErrorHandler *errorHandler):errorHandler(errorHandler)
 {
@@ -53,8 +54,9 @@ bool Assembler::ProcessAssCommand(vector<tagPARAM> param, string left)
 
     string tmpString;
     bool cfgAddress = GetValue("ad", param, tmpString);
+    bool cfgSource = GetValue("src", param, tmpString);
 
-    return AssembleMain(cfgMode, cfgAddress, cfgInputPath, cfgOutputPath);
+    return AssembleMain(cfgMode, cfgAddress, cfgSource, cfgInputPath, cfgOutputPath);
 }
 
 bool Assembler::ReadCommand(string cmd)
@@ -67,7 +69,7 @@ bool Assembler::ReadCommand(string cmd)
     return true;
 }
 
-bool Assembler::AssembleMain(string cfgMode, bool cfgAddress, string cfgInputPath, string cfgOutputPath)
+bool Assembler::AssembleMain(string cfgMode, bool cfgAddress, bool cfgSource, string cfgInputPath, string cfgOutputPath)
 {
     vector<string> sourceCode;
     if (!AssembleImport(cfgInputPath, sourceCode)) return false;
@@ -78,7 +80,7 @@ bool Assembler::AssembleMain(string cfgMode, bool cfgAddress, string cfgInputPat
     vector<MipsCode> mipsCode;
     if (!AssembleTranslate(asmCode, mipsCode)) return false;
 
-    if (!AssembleExport(cfgMode, cfgAddress, cfgOutputPath, mipsCode)) return false;
+    if (!AssembleExport(cfgMode, cfgAddress, cfgSource, cfgOutputPath, mipsCode)) return false;
     errorHandler->ReportMessage("Success!");
     return true;
 }
@@ -222,11 +224,13 @@ bool Assembler::AssembleTranslate(vector<AsmCode> asmCode, vector<MipsCode> &mip
     }
 
     address = 0;
+    vector<string> tmpLabels;
     for (unsigned int i = 0; i < asmCode.size(); i++)
     {
         if (asmCode[i].asmType == ASM_TYPE_SOURCE)
         {
-            MipsCode tmpMipsCode;
+            MipsCode tmpMipsCode(asmCode[i], tmpLabels);
+            tmpLabels.clear();
             if (!AssembleInstruction(asmCode[i], address, labelList, tmpMipsCode))
             {
                 stringstream tmpSStream;
@@ -237,6 +241,10 @@ bool Assembler::AssembleTranslate(vector<AsmCode> asmCode, vector<MipsCode> &mip
             else
                 mipsCode.push_back(tmpMipsCode);
             address += 4;
+        }
+        else if (asmCode[i].asmType == ASM_TYPE_LABEL)
+        {
+            tmpLabels.push_back(asmCode[i].key);
         }
     }
 
@@ -381,7 +389,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     return true;
 }
 
-bool Assembler::AssembleExport(string cfgMode, bool cfgAddress, string cfgOutputPath, vector<MipsCode> mipsCode)
+bool Assembler::AssembleExport(string cfgMode, bool cfgAddress, bool cfgSource, string cfgOutputPath, vector<MipsCode> mipsCode)
 {
     ofstream outputFile;
     if (cfgMode == "bin")
@@ -396,26 +404,40 @@ bool Assembler::AssembleExport(string cfgMode, bool cfgAddress, string cfgOutput
 
     for (unsigned int i = 0; i < mipsCode.size(); i++)
     {
-//        if (cfgAddress && !(cfgMode == "bin")) outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].address << ": ";
-//        if (cfgMode == "hex")
-//            outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].code << endl;
-//        else if (cfgMode == "ver")
-//            outputFile << "32'h" << hex << setw(8) << setfill('0') << mipsCode[i].code << endl;
-//        else
-//            outputFile.write(reinterpret_cast<const char*>(&mipsCode[i].code), sizeof(mipsCode[i].code));
         if (cfgMode == "bin")
             outputFile.write(reinterpret_cast<const char*>(&mipsCode[i].code), sizeof(mipsCode[i].code));
         else if (cfgMode == "hex")
         {
             if (cfgAddress)
                 outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].address << ": ";
-            outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].code << endl;
+            outputFile << "0x" << hex << setw(8) << setfill('0') << mipsCode[i].code;
+            if (cfgSource)
+            {
+                outputFile << " | ";
+                outputFile << mipsCode[i].asmSource.key << '\t';
+                for (unsigned int j = 0; j < mipsCode[i].asmSource.param.size()-1; j++)
+                    outputFile << ' ' << mipsCode[i].asmSource.param[j] << ',';
+                outputFile << ' ' << mipsCode[i].asmSource.param[mipsCode[i].asmSource.param.size()-1];
+                for (unsigned int j = 0; j < mipsCode[i].labels.size(); j++)
+                    outputFile << " <" << mipsCode[i].labels[j] << '>';
+            }
+            outputFile << endl;
         }
         else    //ver
         {
             if (cfgAddress)
-                outputFile << dec << mipsCode[i].address/4 << ": ";
-            outputFile << "data <= 32'h" << hex << setw(8) << setfill('0') << mipsCode[i].code << ";" << endl;
+                outputFile << int(log(mipsCode.size()) / log(2)) + 1 << "'d" << dec << mipsCode[i].address/4 << ": ";
+            outputFile << "data <= 32'h" << hex << setw(8) << setfill('0') << mipsCode[i].code << ";";
+            if (cfgSource)
+            {
+                outputFile << "\t// " << mipsCode[i].asmSource.key << '\t';
+                for (unsigned int j = 0; j < mipsCode[i].asmSource.param.size()-1; j++)
+                    outputFile << ' ' << mipsCode[i].asmSource.param[j] << ',';
+                outputFile << ' ' << mipsCode[i].asmSource.param[mipsCode[i].asmSource.param.size()-1];
+                for (unsigned int j = 0; j < mipsCode[i].labels.size(); j++)
+                    outputFile << " <" << mipsCode[i].labels[j] << '>';
+            }
+            outputFile << endl;
         }
     }
     outputFile.close();
@@ -468,9 +490,10 @@ bool Assembler::GetRegisterByParam(string param, unsigned int &reg)
 bool Assembler::GetImmediateByParam(string param, int &immediate)
 {
     stringstream tmpSStream(param);
+    char tmpChar;
     if (param.size() >= 2 &&  param[0] == '0' && (param[1] == 'x' || param[1] == 'X'))
     {
-        if (!(tmpSStream >> hex >> immediate))
+        if (!(tmpSStream >> hex >> immediate) || tmpSStream.get(tmpChar))
         {
             errorHandler->ReportError(string("Cannot translate the param to num: ") + param);
             return false;
@@ -478,7 +501,7 @@ bool Assembler::GetImmediateByParam(string param, int &immediate)
     }
     else
     {
-        if (!(tmpSStream >> dec >> immediate))
+        if (!(tmpSStream >> dec >> immediate) || tmpSStream.get(tmpChar))
         {
             errorHandler->ReportError(string("Cannot translate the param to num: ") + param);
             return false;
