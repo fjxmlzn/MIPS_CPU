@@ -401,7 +401,10 @@ bool Assembler::AssembleExport(string cfgMode, bool cfgAddress, bool cfgSource, 
         errorHandler->ReportError("Could not save to the output file!");
         return false;
     }
-
+    if (cfgMode == "bin" && cfgAddress)
+        errorHandler->ReportWarning("-ad option has no effect in bin mode!");
+    if (cfgMode == "bin" && cfgSource)
+        errorHandler->ReportWarning("-src option has no effect in bin mode!");
     for (unsigned int i = 0; i < mipsCode.size(); i++)
     {
         if (cfgMode == "bin")
