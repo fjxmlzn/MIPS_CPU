@@ -13,14 +13,14 @@ uart_recv_interrupt_vector:
 timer_interrupt_main:
 	lui $t0, 0x4000
 	addi $t0, $t0, 0x0008
-	lw $t1, 0, $t0
+	lw $t1, 0($t0)
 	andi $t1, $t1, 0xfff9
-	sw $t1, 0, $t0				#中断禁止，清零
+	sw $t1, 0($t0)				#中断禁止，清零
 
 ti_getenable:
 	addi $t7, $zero, 0x00fc
-	lw $t2, 0, $t7				#从ROM0x000000fc取数据，低16位有效
-	lw $t3, 12, $t0				#取得七段数码管
+	lw $t2, 0($t7)				#从ROM0x000000fc取数据，低16位有效
+	lw $t3, 12($t0)				#取得七段数码管
 	srl $t3, $t3, 8				#取得七段数码管使能信号
 	andi $t4, $t3, 0x0001		#最低位
 	sll $t4, $t4, 3
@@ -121,9 +121,9 @@ ti_nf:
 	j ti_display
 	
 ti_display:
-	sw $t3, 12, $t0
+	sw $t3, 12($t0)
 	addi $t1, $t1, 2
-	sw $t1, 0, $t0
+	sw $t1, 0($t0)
 	jr $26
 	
 	
@@ -131,30 +131,30 @@ exception_main:
 	lui $t0, 0x4000
 	addi $t0, $t0, 0x0018
 	addi $t1, $zero, 0x00ff		#出错标识
-	sw $t1, 0, $t0				#串口发送
+	sw $t1, 0($t0)				#串口发送
 	jr $26
 
 	
 uart_send_interrupt_main:
 	lui $t0, 0x4000
 	addi $t0, $t0, 0x0018
-	lw $t1, 0, $t0 				#read
+	lw $t1, 0($t0) 				#read
 	jr $26
 
 	
 uart_recv_interrupt_main:		
 	lui $t0, 0x4000
 	addi $t0, $t0, 0x001c
-	lw $t1, 0, $t0				#接收数据
+	lw $t1, 0($t0)				#接收数据
 	
 	addi $t2, $zero, 0x00fc 	#0x0000_00fc is used for storing RX, 
 								#0x000SDDDD, S is status, D is data，S =0, no data, S=1, 1data
-	lw $t3, 0, $t2
+	lw $t3, 0($t2)
 	srl $t4, $t3, 16
 	bne $t4, $zero, ur_gcd_start
 	lui $t3, 0x0001
 	add $t3, $t3, $t1
-	sw $t3, 0, $t2
+	sw $t3, 0($t2)
 	jr $26
 
 ur_gcd_start:
@@ -162,7 +162,7 @@ ur_gcd_start:
 	add $t3, $t3, $t1	
 	sll $t3, $t3, 16
 	srl $t3, $t3, 16
-	sw $t3, 0, $t2
+	sw $t3, 0($t2)
 	andi $t6, $t3, 0x00ff
 	andi $t7, $t3, 0xff00
 	srl $t7, $t7, 8
@@ -181,8 +181,8 @@ ur_gcd_main_swap:
 ur_gcd_end:
 	lui $t0, 0x4000
 	addi $t0, $t0, 0x000c
-	sw $t6, 0, $t0				#LED显示	
-	sw $t6, 12, $t0				#串口发送
+	sw $t6, 0($t0)				#LED显示	
+	sw $t6, 12($t0)				#串口发送
 	jr $26
 
 	
@@ -190,17 +190,17 @@ entry_main:
 main_init:
 	lui $t0, 0x4000
 	addi $t1, $zero, 0x08ff
-	sw $t1, 0x14, $t0			#数码管初始化
-	sw $zero, 0x0c, $t0			#外部LED初始化
+	sw $t1, 0x14($t0)			#数码管初始化
+	sw $zero, 0x0c($t0)			#外部LED初始化
 	lui $t1, 0xfffe
 	addi $t1, $zero, 0x795f
-	sw $t1, 0, $t0				#定时器初始化
+	sw $t1, 0($t0)				#定时器初始化
 	nor $t1, $0, $0
-	sw $t1, 0x04, $t0
+	sw $t1, 0x04($t0)
 	addi $t1, $zero, 0x0003
-	sw $t1, 0x08, $t0			#定时器使能
+	sw $t1, 0x08($t0)			#定时器使能
 	addi $t1, $zero, 0x0002
-	sw $t1, 0x20, $t1			#串口接收中断使能
+	sw $t1, 0x20($t1)			#串口接收中断使能
 	addi $t2, $zero, 0x0254
 	jr $t2
 main_loop:

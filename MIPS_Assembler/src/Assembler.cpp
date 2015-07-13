@@ -1,6 +1,7 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
+#include <boost/regex.hpp>
 #include "Assembler.h"
 #include "ErrorHandler.h"
 #include "MipsInstructionList.h"
@@ -107,93 +108,53 @@ bool Assembler::AssembleImport(string cfgInputPath, vector<string> &sourceCode)
 bool Assembler::AssembleParse(vector<string> sourceCode, vector<AsmCode> &asmCode)
 {
     asmCode.clear();
-
     for (unsigned int i = 0; i < sourceCode.size(); i++)
     {
-        stringstream tmpSStream(sourceCode[i]);
-        string tmpS;
-        vector<string> tokens;
-        while(tmpSStream >> tmpS)
-        {
-            unsigned int nComma = tmpS.find(',');
-            while ((nComma = tmpS.find(',')) != string::npos)
-            {
-                if (nComma != 0)
-                {
-                    string tmpS2 = tmpS.substr(0, nComma);
-                    tokens.push_back(tmpS2);
-                }
-                tmpS.erase(0, nComma+1);
-                tokens.push_back(",");
-            }
-            if (tmpS != "") tokens.push_back(tmpS);
-        }
-
-        while (true)
+        string source = sourceCode[i];
+        // find labels
+        boost::regex expression("^" + blankRegex + labelRegex);
+        boost::smatch what;
+        while (boost::regex_search(source, what, expression))
         {
             AsmCode tmpAsmCode;
-            tmpAsmCode.lineNum = i+1;
-            if (tokens.size() == 0 || tokens[0][0] == '#')  //comment
+            tmpAsmCode.asmType = ASM_TYPE_LABEL;
+            tmpAsmCode.lineNum = i + 1;
+            tmpAsmCode.key = string(what[1].first, what[1].second);
+            asmCode.push_back(tmpAsmCode);
+            source = boost::regex_replace(source, expression, "");
+        }
+        // find instructions
+        for (unsigned int j = 0; j < instructionRegexList.size(); j++)
+        {
+            expression = boost::regex("^" + blankRegex + instructionRegexList[j]);
+            if (boost::regex_search(source, what, expression))
             {
-                break;
-            }
-            else if (tokens[0][tokens[0].size()-1] == ':')
-            {
-                tmpAsmCode.asmType = ASM_TYPE_LABEL;
-                tmpAsmCode.key = tokens[0].substr(0, tokens[0].size()-1);
-                asmCode.push_back(tmpAsmCode);
-                tokens.erase(tokens.begin());
-            }
-            else
-            {
+                AsmCode tmpAsmCode;
                 tmpAsmCode.asmType = ASM_TYPE_SOURCE;
-                tmpAsmCode.key = tokens[0];
-                bool bSplit = true;
-                bool bStart = false;
-                for (unsigned int j = 1; j < tokens.size(); j++)
+                tmpAsmCode.lineNum = i + 1;
+                tmpAsmCode.key = string(what[1].first, what[1].second);
+                for (unsigned int k = 2; k < what.size(); k++)
                 {
-                    if (tokens[j][0] == '#') break;
-                    bStart = true;
-                    if (tokens[j] == ",")
-                    {
-                        if (bSplit)
-                        {
-                            stringstream tmpSStream;
-                            tmpSStream << "Parse error on line " << i+1 << ": " << tokens[j];
-                            errorHandler->ReportError(tmpSStream.str());
-                            return false;
-                        }
-                        else
-                        {
-                            bSplit = true;
-                        }
-                    }
-                    else
-                    {
-                        if (!bSplit)
-                        {
-                            stringstream tmpSStream;
-                            tmpSStream << "Parse error on line " << i+1 << ": " << tokens[j];
-                            errorHandler->ReportError(tmpSStream.str());
-                            return false;
-                        }
-                        else
-                        {
-                            tmpAsmCode.param.push_back(tokens[j]);
-                            bSplit = false;
-                        }
-                    }
-                }
-                if (bSplit && bStart)
-                {
-                    stringstream tmpSStream;
-                    tmpSStream << "Parse error on line " << i+1 << ": " << tokens[tokens.size()-1];
-                    errorHandler->ReportError(tmpSStream.str());
-                    return false;
+                    tmpAsmCode.param.push_back(string(what[k].first, what[k].second));
                 }
                 asmCode.push_back(tmpAsmCode);
+                source = boost::regex_replace(source, expression, "");
                 break;
             }
+        }
+        //find comment
+        expression = boost::regex("^" + blankRegex + commentRegex);
+        source = boost::regex_replace(source, expression, "");
+
+        //find blank
+        expression = boost::regex("^" + blankRegex);
+        source = boost::regex_replace(source, expression, "");
+        if (source != "")
+        {
+            stringstream tmpSStream;
+            tmpSStream << "Parse error on line " << i+1 << ": " << source;
+            errorHandler->ReportError(tmpSStream.str());
+            return false;
         }
     }
     return true;
@@ -255,7 +216,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
 {
     if (asmCode.key == "lw" || asmCode.key == "sw")
     {
-        if (!CheckParamNum(asmCode, 3)) return false;
+        assert(CheckParamNum(asmCode, 3));
         unsigned int opcode, rt, rs;
         int offset;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -266,7 +227,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "lui")
     {
-        if (!CheckParamNum(asmCode, 2)) return false;
+        assert(CheckParamNum(asmCode, 2));
         unsigned int opcode, rt;
         int immediate;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -280,7 +241,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
           || asmCode.key == "xor" || asmCode.key == "nor"
           || asmCode.key == "slt")
     {
-        if (!CheckParamNum(asmCode, 3)) return false;
+        assert(CheckParamNum(asmCode, 3));
         unsigned int opcode, rd, rs, rt, funct;
         opcode = GetOpcodeByKey(asmCode.key);
         funct = GetFunctByKey(asmCode.key);
@@ -292,7 +253,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     else if (asmCode.key == "sll" || asmCode.key == "srl"
           || asmCode.key == "sra")
     {
-        if (!CheckParamNum(asmCode, 3)) return false;
+        assert(CheckParamNum(asmCode, 3));
         unsigned int opcode, rd, rt, funct;
         int shamt;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -306,7 +267,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
           || asmCode.key == "andi" || asmCode.key == "slti"
           || asmCode.key == "sltiu")
     {
-        if (!CheckParamNum(asmCode, 3)) return false;
+        assert(CheckParamNum(asmCode, 3));
         unsigned int opcode, rt, rs;
         int immediate;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -317,7 +278,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "beq" || asmCode.key == "bne")
     {
-        if (!CheckParamNum(asmCode, 3)) return false;
+        assert(CheckParamNum(asmCode, 3));
         unsigned int opcode, rs, rt;
         short offset;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -328,7 +289,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "blez" || asmCode.key == "bgtz")
     {
-        if (!CheckParamNum(asmCode, 2)) return false;
+        assert(CheckParamNum(asmCode, 2));
         unsigned int opcode, rs;
         short offset;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -338,7 +299,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "bgez")
     {
-        if (!CheckParamNum(asmCode, 2)) return false;
+        assert(CheckParamNum(asmCode, 2));
         unsigned int opcode, rs;
         short offset;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -348,7 +309,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "j" || asmCode.key == "jal")
     {
-        if (!CheckParamNum(asmCode, 1)) return false;
+        assert(CheckParamNum(asmCode, 1));
         unsigned int opcode;
         unsigned int target;
         opcode = GetOpcodeByKey(asmCode.key);
@@ -357,7 +318,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "jr")
     {
-        if (!CheckParamNum(asmCode, 1)) return false;
+        assert(CheckParamNum(asmCode, 1));
         unsigned int opcode, rs, funct;
         opcode = GetOpcodeByKey(asmCode.key);
         funct = GetFunctByKey(asmCode.key);
@@ -366,7 +327,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "jalr")
     {
-        if (!CheckParamNum(asmCode, 2)) return false;
+        assert(CheckParamNum(asmCode, 2));
         unsigned int opcode, rd, rs, funct;
         opcode = GetOpcodeByKey(asmCode.key);
         funct = GetFunctByKey(asmCode.key);
@@ -376,7 +337,7 @@ bool Assembler::AssembleInstruction(AsmCode asmCode, unsigned int address, map<s
     }
     else if (asmCode.key == "nop")
     {
-        if (!CheckParamNum(asmCode, 0)) return false;
+        assert(CheckParamNum(asmCode, 0));
         mipsCode.InitRType(address, 0, 0, 0, 0, 0, 0);
     }
     else

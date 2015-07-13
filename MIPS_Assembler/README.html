@@ -321,12 +321,12 @@ img {
 <tbody>
 <tr>
 	<td>lw</td>
-	<td>lw rt, offset, rs</td>
+	<td>lw rt, offset(rs)</td>
 	<td>$rt &lt;- memory[$rs + (sign-extend)offset]</td>
 </tr>
 <tr>
 	<td>sw</td>
-	<td>sw rt, offset, rs</td>
+	<td>sw rt, offset(rs)</td>
 	<td>memory[$rs + (sign-extend)offset] &lt;- $rt</td>
 </tr>
 <tr>

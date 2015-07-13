@@ -19,8 +19,8 @@
 
 |指令|语法|功能|
 |---|---|---|
-|lw|lw rt, offset, rs|$rt <- memory[$rs + (sign-extend)offset]|
-|sw|sw rt, offset, rs|memory[$rs + (sign-extend)offset] <- $rt|
+|lw|lw rt, offset(rs)|$rt <- memory[$rs + (sign-extend)offset]|
+|sw|sw rt, offset(rs)|memory[$rs + (sign-extend)offset] <- $rt|
 |lui|lui rt, imm|$rt <- imm << 16|
 |add|add rd, rs, rt|$rd <- $rs + $rt|
 |addu|addu rd, rs, rt|$rd <- $rs + $rt;无符号计算|
