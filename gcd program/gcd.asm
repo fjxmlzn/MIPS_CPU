@@ -28,11 +28,12 @@ ti_getenable:
 	or $t3, $t3, $t4			#下一轮使能信号
 	add $t4, $t3, $zero			#$t4 = $t3
 
-ti_right_shift_loop:
 	andi $t5, $t4, 0x0008		#AN0控制最高位，以此类推
+ti_right_shift_loop:
 	beq $t5, $zero, ti_getnum	#低电平使能，遇到等于零才取信号
-	sll $t5, $t5, 1
+	srl $t5, $t5, 1
 	srl $t2, $t2, 4
+	and $t5, $t5, $t4
 	j ti_right_shift_loop
 	
 ti_getnum:
@@ -130,7 +131,7 @@ ti_display:
 exception_main:
 	lui $t0, 0x4000
 	addi $t0, $t0, 0x0018
-	addi $t1, $zero, 0x00ff		#出错标识
+	addi $t1, $zero, 0x005a		#出错标识
 	sw $t1, 0($t0)				#串口发送
 	jr $26
 
@@ -189,18 +190,18 @@ ur_gcd_end:
 entry_main:
 main_init:
 	lui $t0, 0x4000
-	addi $t1, $zero, 0x08ff
+	addi $t1, $zero, 0x07ff
 	sw $t1, 0x14($t0)			#数码管初始化
 	sw $zero, 0x0c($t0)			#外部LED初始化
 	lui $t1, 0xfffe
-	addi $t1, $zero, 0x795f
+	addi $t1, $t1, 0x795f
 	sw $t1, 0($t0)				#定时器初始化
 	nor $t1, $0, $0
 	sw $t1, 0x04($t0)
 	addi $t1, $zero, 0x0003
 	sw $t1, 0x08($t0)			#定时器使能
 	addi $t1, $zero, 0x0002
-	sw $t1, 0x20($t1)			#串口接收中断使能
+	sw $t1, 0x20($t0)			#串口接收中断使能
 	addi $t2, $zero, 0x0254
 	jr $t2
 main_loop:
