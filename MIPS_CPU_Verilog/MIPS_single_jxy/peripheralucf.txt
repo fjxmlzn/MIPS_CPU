@@ -1,0 +1,31 @@
+NET "RX" LOC = N17;
+NET "TX" LOC = N18;
+NET "sysclk" LOC = V10;
+NET "reset" LOC = T10;
+
+NET "led[7]" LOC = T11;
+NET "led[6]" LOC = R11;
+NET "led[5]" LOC = N11;
+NET "led[4]" LOC = M11;
+NET "led[3]" LOC = V15;
+NET "led[2]" LOC = U15;
+NET "led[1]" LOC = V16;
+NET "led[0]" LOC = U16;
+
+NET "readRXD" LOC = T5;
+NET "writeTXD" LOC = V8;
+NET "button" LOC = B8;
+NET "readTXD" LOC = U8;
+
+NET "cathodes[7]" LOC = M13;
+NET "cathodes[6]" LOC = T17;
+NET "cathodes[5]" LOC = T18;
+NET "cathodes[4]" LOC = U17;
+NET "cathodes[3]" LOC = U18;
+NET "cathodes[2]" LOC = M14;
+NET "cathodes[1]" LOC = N14;
+NET "cathodes[0]" LOC = L14;
+NET "AN[3]" LOC = P17;
+NET "AN[2]" LOC = P18;
+NET "AN[1]" LOC = N15;
+NET "AN[0]" LOC = N16;

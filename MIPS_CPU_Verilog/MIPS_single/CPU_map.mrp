@@ -1,0 +1,925 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'CPU'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o CPU_map.ncd CPU.ngd CPU.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Fri Jul 17 20:23:02 2015
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    3
+Slice Logic Utilization:
+  Number of Slice Registers:                 3,518 out of  18,224   19%
+    Number used as Flip Flops:               3,293
+    Number used as Latches:                    225
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      4,775 out of   9,112   52%
+    Number used as logic:                    4,729 out of   9,112   51%
+      Number using O6 output only:           4,506
+      Number using O5 output only:             110
+      Number using O5 and O6:                  113
+      Number used as ROM:                        0
+    Number used as Memory:                      17 out of   2,176    1%
+      Number used as Dual Port RAM:             16
+        Number using O6 output only:             8
+        Number using O5 output only:             0
+        Number using O5 and O6:                  8
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             1
+        Number using O6 output only:             1
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     29
+      Number with same-slice register load:     23
+      Number with same-slice carry load:         5
+      Number with other load:                    1
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,498 out of   2,278   65%
+  Number of MUXCYs used:                       248 out of   4,556    5%
+  Number of LUT Flip Flop pairs used:        5,285
+    Number with an unused Flip Flop:         1,811 out of   5,285   34%
+    Number with an unused LUT:                 510 out of   5,285    9%
+    Number of fully used LUT-FF pairs:       2,964 out of   5,285   56%
+    Number of unique control sets:              53
+    Number of slice register sites lost
+      to control set restrictions:              73 out of  18,224    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        33 out of     232   14%
+    Number of LOCed IOBs:                       33 out of      33  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       5 out of      16   31%
+    Number used as BUFGs:                        5
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                6.01
+
+Peak Memory Usage:  498 MB
+Total REAL time to MAP completion:  1 mins 39 secs 
+Total CPU time to MAP completion:   1 mins 39 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   alu1/cmper/ctrl[2]_PWR_208_o_Mux_15_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+WARNING:PhysDesignRules:367 - The signal <peri1/Mram_RX_buffer1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <peri1/Mram_TX_buffer1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network button_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 4 more times for the following
+   (max. 5 shown):
+   peri1/Mram_RX_buffer21/SPO,
+   peri1/Mram_TX_buffer22/SPO,
+   peri1/Mram_RX_buffer22/SPO,
+   peri1/Mram_TX_buffer21/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 166 block(s) removed
+   2 block(s) optimized away
+ 166 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_7" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_7"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_8" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_8"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_81" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_81"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_9" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_9"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_3" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_3"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_71" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_71"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_83" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_83"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_84" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_84"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_93" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_93"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_31" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_31"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_72" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_72"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_86" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_86"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_87" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_87"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_96" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_96"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_32" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_32"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_73" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_73"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_89" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_89"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_810" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_810"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_99" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_99"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_33" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_33"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_74" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_74"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_812" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_812"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_813" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_813"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_912" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_912"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_34" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_34"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_75" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_75"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_815" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_815"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_816" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_816"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_915" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_915"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_35" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_35"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_76" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_76"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_818" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_818"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_819" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_819"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_918" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_918"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_36" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_36"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_77" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_77"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_821" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_821"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_822" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_822"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_921" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_921"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_37" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_37"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_78" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_78"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_824" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_824"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_825" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_825"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_924" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_924"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_38" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_38"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_79" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_79"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_827" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_827"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_828" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_828"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_927" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_927"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_39" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_39"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_710" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_710"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_830" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_830"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_831" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_831"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_930" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_930"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_310" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_310"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_711" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_711"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_833" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_833"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_834" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_834"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_933" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_933"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_311" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_311"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_712" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_712"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_836" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_836"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_837" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_837"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_936" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_936"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_312" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_312"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_713" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_713"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_839" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_839"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_840" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_840"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_939" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_939"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_313" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_313"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_714" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_714"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_842" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_842"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_843" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_843"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_942" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_942"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_314" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_314"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_715" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_715"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_845" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_845"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_846" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_846"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_945" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_945"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_315" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_315"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_716" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_716"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_848" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_848"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_849" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_849"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_948" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_948"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_316" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_316"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_717" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_717"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_851" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_851"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_852" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_852"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_951" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_951"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_317" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_317"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_718" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_718"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_854" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_854"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_855" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_855"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_954" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_954"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_318" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_318"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_719" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_719"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_857" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_857"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_858" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_858"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_957" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_957"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_319" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_319"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_720" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_720"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_860" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_860"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_861" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_861"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_960" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_960"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_320" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_320"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_721" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_721"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_863" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_863"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_864" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_864"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_963" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_963"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_321" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_321"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_722" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_722"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_866" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_866"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_867" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_867"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_966" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_966"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_322" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_322"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_723" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_723"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_869" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_869"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_870" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_870"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_969" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_969"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_323" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_323"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_724" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_724"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_872" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_872"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_873" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_873"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_972" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_972"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_324" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_324"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_725" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_725"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_875" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_875"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_876" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_876"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_975" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_975"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_325" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_325"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_726" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_726"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_878" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_878"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_879" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_879"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_978" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_978"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_326" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_326"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_727" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_727"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_881" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_881"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_882" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_882"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_981" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_981"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_327" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_327"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_728" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_728"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_884" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_884"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_885" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_885"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_984" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_984"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_328" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_328"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_729" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_729"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_887" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_887"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_888" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_888"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_987" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_987"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_329" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_329"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_730" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_730"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_890" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_890"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_891" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_891"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_990" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_990"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_330" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_330"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_731" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_731"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_893" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_893"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_894" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_894"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_993" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_993"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_331" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_331"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_3301" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_330_1"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_3311" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_331_1"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_3110" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_31_1"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_3281" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_328_1"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_3231" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_323_1"
+(ROM) removed.
+The signal "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_3241" is
+unused and has been removed.
+ Unused block "register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_324_1"
+(ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| RX                                 | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| TX                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<0>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<1>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<2>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<3>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| bcd<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| bcd<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| bcd<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| bcd<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| bcd<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| bcd<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| bcd<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| bcd<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| button                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| resetk                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<0>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<1>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<2>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<3>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<4>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<5>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<6>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| switch<7>                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
