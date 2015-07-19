@@ -137,8 +137,8 @@
 8'd136: data <= 32'h200907ff;	// addi	 $t1, $zero, 0x07ff
 8'd137: data <= 32'had090014;	// sw	 $t1, 0x14, $t0
 8'd138: data <= 32'had00000c;	// sw	 $zero, 0x0c, $t0
-8'd139: data <= 32'h3c09fffe;	// lui	 $t1, 0xfffe
-8'd140: data <= 32'h2129795f;	// addi	 $t1, $t1, 0x795f
+8'd139: data <= 32'h3c09ffff;	// lui	 $t1, 0xffff
+8'd140: data <= 32'h21293caf;	// addi	 $t1, $t1, 0x3caf
 8'd141: data <= 32'had090000;	// sw	 $t1, 0, $t0
 8'd142: data <= 32'h00004827;	// nor	 $t1, $0, $0
 8'd143: data <= 32'had090004;	// sw	 $t1, 0x04, $t0
@@ -146,6 +146,6 @@
 8'd145: data <= 32'had090008;	// sw	 $t1, 0x08, $t0
 8'd146: data <= 32'h20090002;	// addi	 $t1, $zero, 0x0002
 8'd147: data <= 32'had090020;	// sw	 $t1, 0x20, $t0
-8'd148: data <= 32'h200a0254;	// addi	 $t2, $zero, 0x0254
+8'd148: data <= 32'h200a0258;	// addi	 $t2, $zero, 0x0258
 8'd149: data <= 32'h01400008;	// jr	 $t2
 8'd150: data <= 32'h08000096;	// j	 main_loop <main_loop>

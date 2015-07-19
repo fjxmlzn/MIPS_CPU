@@ -28,6 +28,7 @@ ti_getenable:
 	or $t3, $t3, $t4			#下一轮使能信号
 	add $t4, $t3, $zero			#$t4 = $t3
 
+
 	andi $t5, $t4, 0x0008		#AN0控制最高位，以此类推
 ti_right_shift_loop:
 	beq $t5, $zero, ti_getnum	#低电平使能，遇到等于零才取信号
@@ -193,8 +194,8 @@ main_init:
 	addi $t1, $zero, 0x07ff
 	sw $t1, 0x14($t0)			#数码管初始化
 	sw $zero, 0x0c($t0)			#外部LED初始化
-	lui $t1, 0xfffe
-	addi $t1, $t1, 0x795f
+	lui $t1, 0xffff
+	addi $t1, $t1, 0x3caf
 	sw $t1, 0($t0)				#定时器初始化
 	nor $t1, $0, $0
 	sw $t1, 0x04($t0)
@@ -202,7 +203,7 @@ main_init:
 	sw $t1, 0x08($t0)			#定时器使能
 	addi $t1, $zero, 0x0002
 	sw $t1, 0x20($t0)			#串口接收中断使能
-	addi $t2, $zero, 0x0254
+	addi $t2, $zero, 0x0258
 	jr $t2
 main_loop:
 	j main_loop

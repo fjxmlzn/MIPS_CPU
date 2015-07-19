@@ -1,0 +1,42 @@
+NET "an[0]" LOC = P17;
+NET "an[1]" LOC = P18;
+NET "an[2]" LOC = N15;
+NET "an[3]" LOC = N16;
+
+NET "bcd[7]" LOC = T17;
+NET "bcd[6]" LOC = T18;
+NET "bcd[5]" LOC = U17;
+NET "bcd[4]" LOC = U18;
+NET "bcd[3]" LOC = M14;
+NET "bcd[2]" LOC = N14;
+NET "bcd[1]" LOC = L14;
+NET "bcd[0]" LOC= M13;
+
+NET "resetk" LOC=B8;
+
+NET "button" LOC = C9;
+
+NET "clk" LOC=V10;
+
+NET "led[0]" LOC = U16;
+NET "led[1]" LOC = V16;
+NET "led[2]" LOC = U15;
+NET "led[3]" LOC = V15;
+NET "led[4]" LOC = M11;
+NET "led[5]" LOC = N11;
+NET "led[6]" LOC = R11;
+NET "led[7]" LOC = T11;
+
+NET "switch[0]" LOC = T10;
+NET "switch[1]" LOC = T9;
+NET "switch[2]" LOC = V9;
+NET "switch[3]" LOC = M8;
+NET "switch[4]" LOC = N8;
+NET "switch[5]" LOC = U8;
+NET "switch[6]" LOC = V8;
+NET "switch[7]" LOC = T5;
+
+NET "RX" LOC = N17;
+NET "TX" LOC = N18;
+
+
