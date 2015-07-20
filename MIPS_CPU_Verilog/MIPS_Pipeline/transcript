@@ -94,11 +94,11 @@
 # Top level modules:
 # 	glbl
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.tbpipeline glbl 
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vsim-3812) Design is being optimized...
 # 
-# ** Warning: src/CPU_Pipeline.v(260): (vopt-2685) [TFMPC] - Too few port connections for 'IDEXReg1'.  Expected 40, found 39.
+# ** Warning: src/CPU_Pipeline.v(262): (vopt-2685) [TFMPC] - Too few port connections for 'IDEXReg1'.  Expected 42, found 41.
 # 
-# ** Warning: src/CPU_Pipeline.v(260): (vopt-2718) [TFMPC] - Missing connection for port 'LuOp_n'.
+# ** Warning: src/CPU_Pipeline.v(262): (vopt-2718) [TFMPC] - Missing connection for port 'LuOp_n'.
 # 
 # Loading work.tbpipeline(fast)
 # Loading work.CPU_Pipeline(fast)
@@ -126,16 +126,18 @@
 # 
 #           File in use by: lzn  Hostname: THINK-PC  ProcessID: 31196
 # 
-#           Attempting to use alternate WLF file "./wlft6hqw12".
+#           Attempting to use alternate WLF file "./wlftqjms76".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlft6hqw12
+#           Using alternate file: ./wlftqjms76
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
 add wave -position end  sim:/tbpipeline/uut/PC
 add wave -position end  sim:/tbpipeline/uut/PC_id
+add wave -position end  sim:/tbpipeline/uut/PC_ex
+add wave -position end  sim:/tbpipeline/uut/PC_mem
 add wave -position end  sim:/tbpipeline/uut/PC_next
 add wave -position end  sim:/tbpipeline/uut/PC_normal_next
 restart -f

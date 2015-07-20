@@ -17,7 +17,7 @@ module CPU_Pipeline(resetk, clk , button, led, switch, bcd, an, RX, TX);
 	
 	//PC
 	reg [31:0] PC;
-	wire [31:0] PC_id;
+	wire [31:0] PC_id, PC_ex, PC_mem;
 	wire [31:0] PC_next, PC_normal_next;
 	
 	wire [31:0] Jump_target;	//id
@@ -180,7 +180,9 @@ module CPU_Pipeline(resetk, clk , button, led, switch, bcd, an, RX, TX);
 									(RegDst_ex == 2'b10)? 5'd31: 5'd26;
 									
 	assign Databus3 = (MemtoReg_wb == 2'b00)? ALU_out_wb: 
-							(MemtoReg_wb == 2'b01)? Read_data_wb: PC_plus_4_mem;
+							(MemtoReg_wb == 2'b01)? Read_data_wb: 
+							(MemtoReg_wb == 2'b11)? PC_mem: 
+							PC_plus_4_mem;
 	
 	RegFile register_file1(.reset(reset), .clk(myclk), .wr(RegWrite_wb), 
 		.addr1(Rs), .addr2(Rt), .addr3(Write_register_wb),
@@ -247,12 +249,12 @@ module CPU_Pipeline(resetk, clk , button, led, switch, bcd, an, RX, TX);
 			  .Instruction_n(Instruction_id), .PC_n(PC_id), .PC_plus_4_n(PC_plus_4_id));
 	//ID/EX
 	IDEXReg IDEXReg1(.clk(myclk), .reset(reset), .IDEXMux(IDEXMux),
-			  .Instruction(Instruction_id), .PC_plus_4(PC_plus_4_id),
+			  .Instruction(Instruction_id), .PC_plus_4(PC_plus_4_id), .PC(PC_id),
 			  .MemWrite(MemWrite), .MemRead(MemRead), .RegWrite(RegWrite), .RegDst(RegDst), 
 			  .PCSrc(PCSrc), .MemtoReg(MemtoReg), .ALUSrc1(ALUSrc1), .ALUSrc2(ALUSrc2),
 			  .Sign(Sign), .LU_out(LU_out), .ALUFun(ALUFun), .Rs(Rs), .Rd(Rd), .Rt(Rt), 
 			  .Databus1(Databus1), .Databus2(Databus2),
-			  .Instruction_n(Instruction_ex), .PC_plus_4_n(PC_plus_4_ex),
+			  .Instruction_n(Instruction_ex), .PC_plus_4_n(PC_plus_4_ex), .PC_n(PC_ex),
 			  .MemWrite_n(MemWrite_ex), .MemRead_n(MemRead_ex), .RegWrite_n(RegWrite_ex), .RegDst_n(RegDst_ex),
 			  .PCSrc_n(PCSrc_ex), .MemtoReg_n(MemtoReg_ex),
 			  .ALUSrc1_n(ALUSrc1_ex), .ALUSrc2_n(ALUSrc2_ex),
@@ -261,10 +263,10 @@ module CPU_Pipeline(resetk, clk , button, led, switch, bcd, an, RX, TX);
 	//EX/MEM
 	EXMEMReg EXMEMReg1(.clk(myclk), .reset(reset),
 				.RegWrite(RegWrite_ex), .MemRead(MemRead_ex), .MemWrite(MemWrite_ex), .MemtoReg(MemtoReg_ex),
-				.Write_register(Write_register), .Databus2(Databus2_ex), .ALU_out(ALU_out), .PC_plus_4(PC_plus_4_ex),
+				.Write_register(Write_register), .Databus2(Databus2_ex), .ALU_out(ALU_out), .PC_plus_4(PC_plus_4_ex), .PC(PC_ex),
 				.Rs(Rs_ex), .Rt(Rt_ex),
 				.RegWrite_n(RegWrite_mem), .MemRead_n(MemRead_mem), .MemWrite_n(MemWrite_mem), .MemtoReg_n(MemtoReg_mem),
-				.Write_register_n(Write_register_mem), .Databus2_n(Databus2_mem), .ALU_out_n(ALU_out_mem), .PC_plus_4_n(PC_plus_4_mem),
+				.Write_register_n(Write_register_mem), .Databus2_n(Databus2_mem), .ALU_out_n(ALU_out_mem), .PC_plus_4_n(PC_plus_4_mem), .PC_n(PC_mem),
 				.Rs_n(Rs_mem), .Rt_n(Rt_mem));
 	//MEM/WB
 	MEMWBReg MEMWBReg1(.clk(myclk), .reset(reset),

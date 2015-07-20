@@ -1,13 +1,13 @@
 `timescale 1ns / 1ps
 module IDEXReg(clk, reset, IDEXMux, 
-				   Instruction, PC_plus_4, MemWrite, MemRead, RegWrite, RegDst, 
+				   Instruction, PC_plus_4, PC, MemWrite, MemRead, RegWrite, RegDst, 
 					PCSrc, MemtoReg, ALUSrc1, ALUSrc2,
 					Sign, LU_out, ALUFun, Rs, Rd, Rt, Databus1, Databus2,
-					Instruction_n, PC_plus_4_n, MemWrite_n, MemRead_n, RegWrite_n, RegDst_n, 
+					Instruction_n, PC_plus_4_n, PC_n, MemWrite_n, MemRead_n, RegWrite_n, RegDst_n, 
 					PCSrc_n, LuOp_n, MemtoReg_n, ALUSrc1_n, ALUSrc2_n,
 					Sign_n,  LU_out_n, ALUFun_n, Rs_n, Rd_n, Rt_n, Databus1_n, Databus2_n);
 	input clk, reset, IDEXMux;
-	input [31:0] Instruction, PC_plus_4, LU_out,
+	input [31:0] Instruction, PC_plus_4, PC, LU_out,
 				Databus1, Databus2;
 	input MemWrite, MemRead, RegWrite, 
 				ALUSrc1, ALUSrc2, Sign;
@@ -16,7 +16,7 @@ module IDEXReg(clk, reset, IDEXMux,
 	input [5:0] ALUFun;
 	input [4:0] Rs, Rd, Rt;
 	
-	output reg [31:0] Instruction_n, PC_plus_4_n, LU_out_n,
+	output reg [31:0] Instruction_n, PC_plus_4_n, PC_n, LU_out_n,
 				Databus1_n, Databus2_n;
 	output reg MemWrite_n, MemRead_n, RegWrite_n, 
 				LuOp_n, ALUSrc1_n, ALUSrc2_n, Sign_n;
@@ -31,6 +31,7 @@ module IDEXReg(clk, reset, IDEXMux,
 				begin
 					Instruction_n <= 32'b0;
 					PC_plus_4_n <= 32'b0;
+					PC_n <= 32'b0;
 					LU_out_n <= 32'b0;
 					Rs_n <= 5'b0;
 					Rd_n <= 5'b0;
@@ -52,6 +53,7 @@ module IDEXReg(clk, reset, IDEXMux,
 				begin
 					Instruction_n <= Instruction;
 					PC_plus_4_n <= PC_plus_4;
+					PC_n <= PC;
 					LU_out_n <= LU_out;
 					Rs_n <= Rs;
 					Rd_n <= Rd;
@@ -73,6 +75,7 @@ module IDEXReg(clk, reset, IDEXMux,
 				begin
 					Instruction_n <= Instruction;
 					PC_plus_4_n <= PC_plus_4;
+					PC_n <= PC;
 					LU_out_n <= LU_out;
 					Rs_n <= Rs;
 					Rd_n <= Rd;

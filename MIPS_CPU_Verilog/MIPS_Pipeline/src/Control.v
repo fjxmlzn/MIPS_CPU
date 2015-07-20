@@ -72,8 +72,9 @@ module Control(monin, Ins, PCSrc, RegWrite, RegDst,
 		(~ex_inter&&Ins[31:26]==6'h2b)? 1'b1 : 1'b0;
 		
 	assign MemtoReg=
-		(ex_inter||Ins[31:26]==6'h3||(Ins[31:26]==6'h0&&Ins[5:0]==6'h9))? 2'b10:
-		(Ins[31:26]==6'h23)? 2'b01 : 2'b00;
+		(~monin&&IRQ!=0)? 2'b11:
+		((~monin&&excp)||Ins[31:26]==6'h3||(Ins[31:26]==6'h0&&Ins[5:0]==6'h9))? 2'b10:
+		(Ins[31:26]==6'h23)? 2'b01: 2'b00;
 		
 	assign ALUSrc1=
 		(Ins[31:26]==0&&(Ins[5:0]==0||Ins[5:0]==6'h2||
