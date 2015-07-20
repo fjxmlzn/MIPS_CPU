@@ -28,7 +28,7 @@
 # 	RegFile
 # Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
 # -- Compiling module Peripheral
-# -- Compiling module UARTReciever
+# -- Compiling module UARTReceiver
 # -- Compiling module UARTSender
 # 
 # Top level modules:
@@ -94,11 +94,11 @@
 # Top level modules:
 # 	glbl
 # vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.tbpipeline glbl 
-# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
-# ** Warning: src/CPU_Pipeline.v(262): (vopt-2685) [TFMPC] - Too few port connections for 'IDEXReg1'.  Expected 42, found 41.
+# ** Warning: src/CPU_Pipeline.v(264): (vopt-2685) [TFMPC] - Too few port connections for 'IDEXReg1'.  Expected 42, found 41.
 # 
-# ** Warning: src/CPU_Pipeline.v(262): (vopt-2718) [TFMPC] - Missing connection for port 'LuOp_n'.
+# ** Warning: src/CPU_Pipeline.v(264): (vopt-2718) [TFMPC] - Missing connection for port 'LuOp_n'.
 # 
 # Loading work.tbpipeline(fast)
 # Loading work.CPU_Pipeline(fast)
@@ -113,7 +113,7 @@
 # Loading work.ALUMUX(fast)
 # Loading work.DataMem(fast)
 # Loading work.Peripheral(fast)
-# Loading work.UARTReciever(fast)
+# Loading work.UARTReceiver(fast)
 # Loading work.UARTSender(fast)
 # Loading work.ForwardControl(fast)
 # Loading work.RiskControl(fast)
@@ -126,44 +126,26 @@
 # 
 #           File in use by: lzn  Hostname: THINK-PC  ProcessID: 31196
 # 
-#           Attempting to use alternate WLF file "./wlftqjms76".
+#           Attempting to use alternate WLF file "./wlft2xjze5".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftqjms76
+#           Using alternate file: ./wlft2xjze5
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-add wave -position end  sim:/tbpipeline/uut/PC
-add wave -position end  sim:/tbpipeline/uut/PC_id
-add wave -position end  sim:/tbpipeline/uut/PC_ex
-add wave -position end  sim:/tbpipeline/uut/PC_mem
-add wave -position end  sim:/tbpipeline/uut/PC_next
-add wave -position end  sim:/tbpipeline/uut/PC_normal_next
-restart -f
-# Loading work.tbpipeline(fast)
-# Loading work.CPU_Pipeline(fast)
-# Loading work.ROM(fast)
-# Loading work.Control(fast)
-# Loading work.RegFile(fast)
-# Loading work.ALU(fast)
-# Loading work.ALUADD(fast)
-# Loading work.ALULogic(fast)
-# Loading work.ALUShift(fast)
-# Loading work.ALUCMP(fast)
-# Loading work.ALUMUX(fast)
-# Loading work.DataMem(fast)
-# Loading work.Peripheral(fast)
-# Loading work.UARTReciever(fast)
-# Loading work.UARTSender(fast)
-# Loading work.ForwardControl(fast)
-# Loading work.RiskControl(fast)
-# Loading work.IFIDReg(fast)
-# Loading work.IDEXReg(fast)
-# Loading work.EXMEMReg(fast)
-# Loading work.MEMWBReg(fast)
-# Loading work.glbl(fast)
+add wave -position end  sim:/tbpipeline/uut/TX_buf_in_tag
+add wave -position end  sim:/tbpipeline/uut/TX_buf_out_tag
 run
 # Causality operation skipped due to absence of debug database file
-run -all
-# Break in Module tbpipeline at tbpipeline.v line 92
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run

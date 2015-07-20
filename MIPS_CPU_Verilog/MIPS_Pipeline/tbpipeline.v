@@ -43,9 +43,10 @@ module tbpipeline;
 			forever #5 clk=~clk;
 			#10 resetk=1;
 			#50 resetk=0;
+			forever #3000000 resetk = ~resetk;
 		join
 	end
-	
+	/*
    initial 
 		begin
 			#104167 RX=0;
@@ -92,6 +93,6 @@ module tbpipeline;
 			#104167 RX=1;
 
 		end
-      
+      */
 endmodule
 

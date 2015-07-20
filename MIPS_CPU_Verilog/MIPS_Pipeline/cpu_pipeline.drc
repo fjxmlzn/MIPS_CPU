@@ -1,64 +1,64 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Jul 20 14:17:25 2015
+Mon Jul 20 23:55:37 2015
 
 drc -z CPU_Pipeline.ncd CPU_Pipeline.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[2]_AND_1029_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[2]_AND_1017_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[3]_AND_1027_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[3]_AND_1015_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[0]_AND_1097_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[0]_AND_1085_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[4]_AND_1025_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[4]_AND_1013_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[1]_AND_1095_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[1]_AND_1083_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[5]_AND_1023_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[5]_AND_1011_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[6]_AND_1021_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[6]_AND_1009_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[7]_AND_1019_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[7]_AND_1007_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[8]_AND_1017_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[8]_AND_1005_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[9]_AND_1015_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[9]_AND_1003_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[10]_AND_1013_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[10]_AND_1001_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[11]_AND_1011_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[11]_AND_999_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[20]_AND_993_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[20]_AND_981_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[12]_AND_1009_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[12]_AND_997_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
@@ -66,191 +66,191 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    is not good design practice. Use the CE pin to control the loading of data
    into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[21]_AND_991_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[21]_AND_979_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[13]_AND_1007_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[13]_AND_995_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[30]_AND_973_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[30]_AND_961_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[22]_AND_989_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[22]_AND_977_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[14]_AND_1005_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[14]_AND_993_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[23]_AND_987_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[23]_AND_975_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[15]_AND_1003_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[15]_AND_991_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[24]_AND_985_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[24]_AND_973_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[16]_AND_1001_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[16]_AND_989_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[25]_AND_983_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[25]_AND_971_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[17]_AND_999_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[17]_AND_987_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[26]_AND_981_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[26]_AND_969_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[18]_AND_997_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[18]_AND_985_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[27]_AND_979_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[27]_AND_967_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[19]_AND_995_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[19]_AND_983_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[28]_AND_977_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[28]_AND_965_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[29]_AND_975_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[29]_AND_963_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[10]_AND_1077_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[10]_AND_1065_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[11]_AND_1075_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[11]_AND_1063_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[20]_AND_1057_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[20]_AND_1045_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[12]_AND_1073_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[12]_AND_1061_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[21]_AND_1055_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[21]_AND_1043_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[13]_AND_1071_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[13]_AND_1059_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[30]_AND_1037_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[30]_AND_1025_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[22]_AND_1053_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[22]_AND_1041_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[14]_AND_1069_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[14]_AND_1057_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC[31]_AND_971_o is sourced by a combinatorial pin. This is
+   IFIDReg1/reset_PC[31]_AND_959_o is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[23]_AND_1051_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[23]_AND_1039_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[15]_AND_1067_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[15]_AND_1055_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[24]_AND_1049_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[24]_AND_1037_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[16]_AND_1065_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[16]_AND_1053_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[25]_AND_1047_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[25]_AND_1035_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[17]_AND_1063_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[17]_AND_1051_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[26]_AND_1045_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[26]_AND_1033_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[18]_AND_1061_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[18]_AND_1049_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[27]_AND_1043_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[27]_AND_1031_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[19]_AND_1059_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[19]_AND_1047_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[28]_AND_1041_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[28]_AND_1029_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[29]_AND_1039_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[29]_AND_1027_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[6]_AND_1085_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[8]_AND_1069_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[3]_AND_1091_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[5]_AND_1075_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[8]_AND_1081_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[2]_AND_1081_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[5]_AND_1087_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[7]_AND_1071_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[2]_AND_1093_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[4]_AND_1077_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[7]_AND_1083_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[9]_AND_1067_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[4]_AND_1089_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[6]_AND_1073_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   IFIDReg1/reset_PC_plus_4[9]_AND_1079_o is sourced by a combinatorial pin.
+   IFIDReg1/reset_PC_plus_4[3]_AND_1079_o is sourced by a combinatorial pin.
    This is not good design practice. Use the CE pin to control the loading of
    data into the flip-flop.
 WARNING:PhysDesignRules:367 - The signal <peri1/Mram_TX_buffer1_RAMD_D1_O> is

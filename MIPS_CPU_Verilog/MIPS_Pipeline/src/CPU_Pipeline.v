@@ -108,7 +108,7 @@ module CPU_Pipeline(resetk, clk , button, led, switch, bcd, an, RX, TX);
 				cnt_clk<=0; 
 				myclk<=0; 
 			end
-		else if (cnt_clk==32'd1) 			// frequency = 50MHz
+		else if (cnt_clk==32'd1) 			// frequency = 100MHz
 			begin 
 				myclk<=~myclk;
 				cnt_clk<=1;
@@ -225,10 +225,9 @@ module CPU_Pipeline(resetk, clk , button, led, switch, bcd, an, RX, TX);
 	always @(posedge myclk or posedge reset)
 		if (reset) IRQs<=0;
 		else IRQs<=IRQ;
-	
 	Peripheral peri1(.reset(reset),.sysclk(clk),.clk(myclk),.rd(peri_read),.wr(peri_wr),.addr(ALU_out_mem),.wdata(Memory_write_data),
 		.rdata(peri_rda),.RX(RX),.TX(TX),.led(led),.switch(switch),.digi(digi),.irqout(IRQ));
-
+	//assign led = {TX_buf_in_tag, TX_buf_out_tag};
 	//memory
 	assign Read_data=
 		data_read? data_rda:
