@@ -1,0 +1,74 @@
+    ____  ____
+   /   /\/   /
+  /___/  \  /    VENDOR      : Xilinx Inc.
+  \   \   \/     VERSION     : 14.7 (P.20131013)
+   \   \         APPLICATION : d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\compxlib.exe
+   /   /         CONTENTS    : Compilation Log
+  /___/   /\     FILENAME    : compxlib.log
+  \   \  /  \    
+   \___\/\___\
+
+Release 14.7 - d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\compxlib.exe 14.7 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Processing command line ...
+Reading the compxlib configuration file - 'compxlib.cfg' ...
+Library Source Paths => 'd:/Xilinx/14.7/ISE_DS/ISE'
+Current Working Directory => 'E:\work\ise\MIPS_Pipeline'
+Compilation Mode = FAST
+Execute Mode = ON
+Scheduling library installation & compilation for architectures: spartan6
+
+Scheduling library installation & compilation for libraries: simprim unisim xilinxcorelib edk
+
+Signature:-
+------------------------------------------------------------------------------
+d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\compxlib.exe -s mti_se -l all -arch spartan6 -lib unisim -lib simprim -lib xilinxcorelib -lib edk -exclude_superseded -intstyle ise 
+------------------------------------------------------------------------------
+ERROR:Compxlib - COMPXLIB[sim]: Unable to automatically find executables for simulator 'mti_se' from the following paths:
+    d:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64
+   d:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64
+   D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64
+   D:\Xilinx\14.7\ISE_DS\ISE\lib\nt64
+   D:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav
+   D:\Xilinx\14.7\ISE_DS\PlanAhead\bin
+   D:\Xilinx\14.7\ISE_DS\EDK\bin\nt64
+   D:\Xilinx\14.7\ISE_DS\EDK\lib\nt64
+   D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin
+   D:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin
+   D:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin
+   D:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin
+   D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin
+   D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin
+   D:\Xilinx\14.7\ISE_DS\common\bin\nt64
+   D:\Xilinx\14.7\ISE_DS\common\lib\nt64
+   C:\Windows\system32
+   C:\Windows
+   C:\Windows\System32\Wbem
+   C:\Windows\System32\WindowsPowerShell\v1.0\
+   d:\CTEX\UserData\miktex\bin
+   d:\CTEX\MiKTeX\miktex\bin
+   d:\CTEX\CTeX\ctex\bin
+   d:\CTEX\CTeX\cct\bin
+   d:\CTEX\CTeX\ty\bin
+   d:\CTEX\Ghostscript\gs9.04\bin
+   d:\CTEX\GSview\gsview
+   d:\CTEX\WinEdt
+   D:\Program Files (x86)\Java\jdk1.8.0_45\bin
+   D:\Program Files (x86)\Java\jdk1.8.0_45\jre\bin
+   D:\Python34
+   d:\Cadence\SPB_16.3\tools\bin
+   d:\Cadence\SPB_16.3\tools\libutil\bin
+   d:\Cadence\SPB_16.3\tools\fet\bin
+   d:\Cadence\SPB_16.3\tools\pcb\bin
+   d:\Cadence\SPB_16.3\tools\specctra\bin
+   d:\Cadence\SPB_16.3\tools\PSpice
+   d:\Cadence\SPB_16.3\tools\PSpice\Library
+   d:\Cadence\SPB_16.3\tools\Capture
+   d:\Cadence\SPB_16.3\OpenAccess\bin\win32\opt
+   D:\MinGW\bin
+   D:\Program Files (x86)\CodeBlocks\MinGW\bin
+   C:\Users\lzn\AppData\Roaming\npm
+   D:\Program Files (x86)\Pandoc\
+   C:\Users\lzn\AppData\Local\Pandoc\.
+Simulator 'mti_se' is ignored.

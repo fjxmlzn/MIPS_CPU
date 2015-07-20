@@ -1,0 +1,40 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Jul 20 11:47:37 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "RX" LOCATE = SITE "N17" LEVEL 1;
+COMP "TX" LOCATE = SITE "N18" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "P17" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "P18" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "N15" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "N16" LEVEL 1;
+COMP "bcd<0>" LOCATE = SITE "M13" LEVEL 1;
+COMP "bcd<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "bcd<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "bcd<3>" LOCATE = SITE "M14" LEVEL 1;
+COMP "bcd<4>" LOCATE = SITE "U18" LEVEL 1;
+COMP "bcd<5>" LOCATE = SITE "U17" LEVEL 1;
+COMP "bcd<6>" LOCATE = SITE "T18" LEVEL 1;
+COMP "bcd<7>" LOCATE = SITE "T17" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "button" LOCATE = SITE "C9" LEVEL 1;
+COMP "resetk" LOCATE = SITE "B8" LEVEL 1;
+COMP "switch<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "switch<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "switch<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "switch<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "switch<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "switch<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "switch<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "switch<7>" LOCATE = SITE "T5" LEVEL 1;
+SCHEMATIC END;
+
