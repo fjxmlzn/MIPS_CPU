@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: CPU.prj
 
@@ -15388,10 +15388,10 @@ Delay:               19.118ns (Levels of Logic = 14)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 9.712ns (frequency: 102.968MHz)
+  Clock period: 9.752ns (frequency: 102.546MHz)
   Total number of paths / destination ports: 9281 / 265
 -------------------------------------------------------------------------
-Delay:               4.856ns (Levels of Logic = 1)
+Delay:               4.876ns (Levels of Logic = 1)
   Source:            d1/key_o_temp (FF)
   Destination:       peri1/TX_DATA_7 (FF)
   Source Clock:      clk rising
@@ -15401,12 +15401,12 @@ Delay:               4.856ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q            3212   0.447   3.082  d1/key_o_temp (d1/key_o_temp)
-     LUT6:I1->O            8   0.203   0.802  peri1/_n0320_inv1 (peri1/_n0320_inv)
+     FD:C->Q            3212   0.447   3.102  d1/key_o_temp (d1/key_o_temp)
+     LUT6:I0->O            8   0.203   0.802  peri1/_n0320_inv1 (peri1/_n0320_inv)
      FDE_1:CE                  0.322          peri1/TX_DATA_0
     ----------------------------------------
-    Total                      4.856ns (0.972ns logic, 3.884ns route)
-                                       (20.0% logic, 80.0% route)
+    Total                      4.876ns (0.972ns logic, 3.904ns route)
+                                       (19.9% logic, 80.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o'
@@ -15545,8 +15545,8 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    9.360|    2.524|    4.856|         |
-myclk          |         |         |    4.029|         |
+clk            |    9.360|    2.524|    4.876|         |
+myclk          |         |         |    4.148|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock myclk
@@ -15576,8 +15576,8 @@ myclk                                   |         |         |   17.147|         
 =========================================================================
 
 
-Total REAL time to Xst completion: 259.00 secs
-Total CPU time to Xst completion: 258.52 secs
+Total REAL time to Xst completion: 255.00 secs
+Total CPU time to Xst completion: 254.80 secs
  
 --> 
 

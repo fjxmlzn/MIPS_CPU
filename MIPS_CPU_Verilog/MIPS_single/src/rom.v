@@ -157,7 +157,7 @@ module ROM (addr,data);
 			8'd145: data <= 32'had090008;	// sw	 $t1, 0x08, $t0
 			8'd146: data <= 32'h20090002;	// addi	 $t1, $zero, 0x0002
 			8'd147: data <= 32'had090020;	// sw	 $t1, 0x20, $t0
-			8'd148: data <= 32'h200a0254;	// addi	 $t2, $zero, 0x0254
+			8'd148: data <= 32'h200a0258;	// addi	 $t2, $zero, 0x0254
 			8'd149: data <= 32'h01400008;	// jr	 $t2
 			8'd150: data <= 32'hfac23e4e;
 			8'd151: data <= 32'h08000097;	// j	 main_loop

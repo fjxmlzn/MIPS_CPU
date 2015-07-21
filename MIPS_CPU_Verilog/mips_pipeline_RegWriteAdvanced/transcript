@@ -1,0 +1,159 @@
+# Reading D:/modeltech64_10.2c/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.2c Jul 19 2013 
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {tbpipeline.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module ROM
+# 
+# Top level modules:
+# 	ROM
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module RiskControl
+# 
+# Top level modules:
+# 	RiskControl
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module RegFile
+# 
+# Top level modules:
+# 	RegFile
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module Peripheral
+# -- Compiling module UARTReceiver
+# -- Compiling module UARTSender
+# 
+# Top level modules:
+# 	Peripheral
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module MEMWBReg
+# 
+# Top level modules:
+# 	MEMWBReg
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module IFIDReg
+# 
+# Top level modules:
+# 	IFIDReg
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module IDEXReg
+# 
+# Top level modules:
+# 	IDEXReg
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module ForwardControl
+# 
+# Top level modules:
+# 	ForwardControl
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module EXMEMReg
+# 
+# Top level modules:
+# 	EXMEMReg
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module DataMem
+# 
+# Top level modules:
+# 	DataMem
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module Control
+# 
+# Top level modules:
+# 	Control
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module ALU
+# -- Compiling module ALUShift
+# -- Compiling module ALUMUX
+# -- Compiling module ALULogic
+# -- Compiling module ALUCMP
+# -- Compiling module ALUADD
+# 
+# Top level modules:
+# 	ALU
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module CPU_Pipeline
+# 
+# Top level modules:
+# 	CPU_Pipeline
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module tbpipeline
+# 
+# Top level modules:
+# 	tbpipeline
+# Model Technology ModelSim SE-64 vlog 10.2c Compiler 2013.07 Jul 19 2013
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.tbpipeline glbl 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# ** Warning: src/CPU_Pipeline.v(268): (vopt-2685) [TFMPC] - Too few port connections for 'IDEXReg1'.  Expected 42, found 41.
+# 
+# ** Warning: src/CPU_Pipeline.v(268): (vopt-2718) [TFMPC] - Missing connection for port 'LuOp_n'.
+# 
+# Loading work.tbpipeline(fast)
+# Loading work.CPU_Pipeline(fast)
+# Loading work.ROM(fast)
+# Loading work.Control(fast)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.ALUADD(fast)
+# Loading work.ALULogic(fast)
+# Loading work.ALUShift(fast)
+# Loading work.ALUCMP(fast)
+# Loading work.ALUMUX(fast)
+# Loading work.DataMem(fast)
+# Loading work.Peripheral(fast)
+# Loading work.UARTReceiver(fast)
+# Loading work.UARTSender(fast)
+# Loading work.ForwardControl(fast)
+# Loading work.RiskControl(fast)
+# Loading work.IFIDReg(fast)
+# Loading work.IDEXReg(fast)
+# Loading work.EXMEMReg(fast)
+# Loading work.MEMWBReg(fast)
+# Loading work.glbl(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+add wave -position end  sim:/tbpipeline/uut/PC
+add wave -position end  sim:/tbpipeline/uut/PC_id
+add wave -position end  sim:/tbpipeline/uut/PC_ex
+add wave -position end  sim:/tbpipeline/uut/PC_mem
+add wave -position end  sim:/tbpipeline/uut/PC_next
+add wave -position end  sim:/tbpipeline/uut/PC_normal_next
+# Causality operation skipped due to absence of debug database file
+restart -f
+# Loading work.tbpipeline(fast)
+# Loading work.CPU_Pipeline(fast)
+# Loading work.ROM(fast)
+# Loading work.Control(fast)
+# Loading work.RegFile(fast)
+# Loading work.ALU(fast)
+# Loading work.ALUADD(fast)
+# Loading work.ALULogic(fast)
+# Loading work.ALUShift(fast)
+# Loading work.ALUCMP(fast)
+# Loading work.ALUMUX(fast)
+# Loading work.DataMem(fast)
+# Loading work.Peripheral(fast)
+# Loading work.UARTReceiver(fast)
+# Loading work.UARTSender(fast)
+# Loading work.ForwardControl(fast)
+# Loading work.RiskControl(fast)
+# Loading work.IFIDReg(fast)
+# Loading work.IDEXReg(fast)
+# Loading work.EXMEMReg(fast)
+# Loading work.MEMWBReg(fast)
+# Loading work.glbl(fast)
+run -all
+# Break in Module tbpipeline at src/tbpipeline.v line 93

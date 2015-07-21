@@ -1,0 +1,509 @@
+m255
+K4
+z2
+13
+cModel Technology
+Z0 dE:/work/ise/mips_pipeline2
+!s112 0.1
+!i10d 8192
+!i10e 25
+!i10f 100
+T_opt
+V?no5BclfgP[IlZA:k>K=X3
+04 12 4 work CPU_Pipeline fast 0
+Z1 04 4 4 work glbl fast 0
+=1-e8b1fccadc3f-55ae311b-59-5508
+Z2 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+Z3 OL;O;10.2c;57
+Z4 dE:/work/ise/mips_pipeline2
+!s110 1437479195
+T_opt1
+!s110 1437479830
+VC?649gB5UM7D@H7M]fTAf0
+04 10 4 work tbpipeline fast 0
+R1
+=1-e8b1fccadc3f-55ae3395-1b5-39f0
+R2
+n@_opt1
+R3
+vALU
+Z5 !s110 1437479826
+IdNRo2<fdZ9dFMZMcfGQCl1
+Z6 V`JN@9S9cnhjKRR_L]QIcM3
+R4
+Z7 w1437132784
+Z8 8src/ALU.v
+Z9 Fsrc/ALU.v
+L0 1
+Z10 OL;L;10.2c;57
+r1
+31
+Z11 !s108 1437479826.917000
+Z12 !s107 src/ALU.v|
+Z13 !s90 -reportprogress|300|src/ALU.v|
+Z14 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@a@l@u
+!s100 2Ai]SPSUU79Ai9U318Ra=1
+!i10b 1
+!s85 0
+!i111 0
+vALUADD
+R5
+Ibd0aJQfPXX1AQL1]M?f2I1
+R6
+R4
+R7
+R8
+R9
+L0 153
+R10
+r1
+31
+R11
+R12
+R13
+R14
+n@a@l@u@a@d@d
+!s100 dkL_96OG5nQc_6g^XnJ9j3
+!i10b 1
+!s85 0
+!i111 0
+vALUCMP
+R5
+I]Ge^P^W?EMMA3>JYOSd5]3
+R6
+R4
+R7
+R8
+R9
+L0 133
+R10
+r1
+31
+R11
+R12
+R13
+R14
+n@a@l@u@c@m@p
+!s100 1O:MViTCS^Jf`f5;?<fV^1
+!i10b 1
+!s85 0
+!i111 0
+vALULogic
+R5
+IUfTkW4nB=c0TQHZ4d7JY=0
+R6
+R4
+R7
+R8
+R9
+L0 115
+R10
+r1
+31
+R11
+R12
+R13
+R14
+n@a@l@u@logic
+!s100 d1TA?lO[:CUeNN2U4oEkA2
+!i10b 1
+!s85 0
+!i111 0
+vALUMUX
+R5
+IU3m]Q`?gWE7nO`iM`2L7>0
+R6
+R4
+R7
+R8
+R9
+L0 95
+R10
+r1
+31
+R11
+R12
+R13
+R14
+n@a@l@u@m@u@x
+!s100 naiE;5bLg2Y_Jj8:3QfJM0
+!i10b 1
+!s85 0
+!i111 0
+vALUShift
+R5
+I>VeNO3UbTH5agMiL^mFQB1
+R6
+R4
+R7
+R8
+R9
+L0 21
+R10
+r1
+31
+R11
+R12
+R13
+R14
+n@a@l@u@shift
+!s100 ninXkILRzIoJezz9h`3Ab3
+!i10b 1
+!s85 0
+!i111 0
+vControl
+R5
+I8m5C[@3>lm>fgE;zY_ziJ2
+R6
+R4
+w1437369976
+8src/Control.v
+Fsrc/Control.v
+L0 21
+R10
+r1
+31
+R14
+n@control
+!s100 ioH=HO`R[lZ:`gfD]9JTC3
+!s90 -reportprogress|300|src/Control.v|
+!s108 1437479826.779000
+!s107 src/Control.v|
+!i10b 1
+!s85 0
+!i111 0
+vCPU_Pipeline
+IO@mF=XeTkfCak9m[A[F_62
+R6
+R4
+w1437479780
+8src/CPU_Pipeline.v
+Fsrc/CPU_Pipeline.v
+L0 1
+R10
+r1
+31
+R14
+n@c@p@u_@pipeline
+Z15 !s110 1437479827
+!s90 -reportprogress|300|src/CPU_Pipeline.v|
+!s100 Y?6:0[=n6OBWeUWj`HScb1
+!s108 1437479827.146000
+!s107 src/CPU_Pipeline.v|
+!i10b 1
+!s85 0
+!i111 0
+vDataMem
+R5
+I46aX;B]d^=JJDIkP:7CJ;0
+R6
+R4
+w1437105060
+8src/DataMemory.v
+Fsrc/DataMemory.v
+L0 3
+R10
+r1
+31
+R14
+n@data@mem
+!s100 L__i^JXCBJbNkMKEdoeXM3
+!s90 -reportprogress|300|src/DataMemory.v|
+!s108 1437479826.635000
+!s107 src/DataMemory.v|
+!i10b 1
+!s85 0
+!i111 0
+vdebounce
+I<mKYe4lbYhkj1HS7ME2G]2
+R6
+R4
+w1437408204
+8src/debounce.v
+Fsrc/debounce.v
+L0 21
+R10
+r1
+31
+R14
+!s110 1437479111
+!s100 F<4QWAd1I9N=zYcmH>2`C2
+!s90 -reportprogress|300|src/debounce.v|
+!s108 1437479111.188000
+!s107 src/debounce.v|
+!i10b 1
+!s85 0
+!i111 0
+vEXMEMReg
+R5
+IX:3z3T1VZ8iF9BlI=gEZX1
+R6
+R4
+Z16 w1437370278
+8src/EXMEMReg.v
+Fsrc/EXMEMReg.v
+L0 2
+R10
+r1
+31
+R14
+n@e@x@m@e@m@reg
+!s100 YcGO1`E`DkajO:l]E5LdV2
+!s90 -reportprogress|300|src/EXMEMReg.v|
+!s108 1437479826.502000
+!s107 src/EXMEMReg.v|
+!i10b 1
+!s85 0
+!i111 0
+vForwardControl
+R5
+IfLHCjJVecPRi0T5T8f=4g1
+R6
+R4
+w1437355498
+8src/ForwardControl.v
+Fsrc/ForwardControl.v
+L0 3
+R10
+r1
+31
+R14
+n@forward@control
+!s100 R0j0`N]e]c2^VH72U`kBS1
+!s90 -reportprogress|300|src/ForwardControl.v|
+!s108 1437479826.355000
+!s107 src/ForwardControl.v|
+!i10b 1
+!s85 0
+!i111 0
+vglbl
+R15
+IFUYY2z[70DU=?JH;4S<Nm1
+R6
+R4
+w1381681120
+8d:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+Fd:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v
+L0 5
+R10
+r1
+31
+R14
+!s100 V<`KW`8LXe32mQ2Gdj1MB2
+!s90 -reportprogress|300|d:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i10b 1
+!s85 0
+!s108 1437479827.461000
+!s107 d:/Xilinx/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i111 0
+vIDEXReg
+R5
+IOMFEF[zdg5b1CQ6__N@[g2
+R6
+R4
+R16
+8src/IDEXReg.v
+Fsrc/IDEXReg.v
+L0 2
+R10
+r1
+31
+R14
+n@i@d@e@x@reg
+!s100 XGGfJgif@1clzO:f9Zmj@1
+!s90 -reportprogress|300|src/IDEXReg.v|
+!s108 1437479826.210000
+!s107 src/IDEXReg.v|
+!i10b 1
+!s85 0
+!i111 0
+vIFIDReg
+Ij1jEZLeO<J5R1J?WeQgGA0
+R6
+R4
+w1437313830
+8src/IFIDReg.v
+Fsrc/IFIDReg.v
+L0 3
+R10
+r1
+31
+R14
+n@i@f@i@d@reg
+R5
+!s100 5@QGm3j2EnK_[Wc`ES^7W1
+!s90 -reportprogress|300|src/IFIDReg.v|
+!s108 1437479826.054000
+!s107 src/IFIDReg.v|
+!i10b 1
+!s85 0
+!i111 0
+vMEMWBReg
+Z17 !s110 1437479825
+I<<g:IF3CmYF75W7i0]YJL1
+R6
+R4
+w1437231648
+8src/MEMWBReg.v
+Fsrc/MEMWBReg.v
+L0 3
+R10
+r1
+31
+R14
+n@m@e@m@w@b@reg
+!s100 F;H8IBDJXJLQ<XPNL:H5b0
+!s90 -reportprogress|300|src/MEMWBReg.v|
+!s108 1437479825.915000
+!s107 src/MEMWBReg.v|
+!i10b 1
+!s85 0
+!i111 0
+vPeripheral
+R17
+IH0EYdY88=h65L]k5MOXac2
+R6
+R4
+Z18 w1437406216
+Z19 8src/Peripheral.v
+Z20 Fsrc/Peripheral.v
+L0 1
+R10
+r1
+31
+Z21 !s108 1437479825.714000
+Z22 !s107 src/Peripheral.v|
+Z23 !s90 -reportprogress|300|src/Peripheral.v|
+R14
+n@peripheral
+!s100 hlMTE<on;C?7T;Mz>Eklh2
+!i10b 1
+!s85 0
+!i111 0
+vRegFile
+R17
+I=^2h[zj^6XZS?aPdo5J7e2
+R6
+R4
+w1437462710
+8src/regfile.v
+Fsrc/regfile.v
+L0 3
+R10
+r1
+31
+R14
+n@reg@file
+!s100 ;0OzooVm^Ne8Y6@cZQ43d1
+!s90 -reportprogress|300|src/regfile.v|
+!s108 1437479825.554000
+!s107 src/regfile.v|
+!i10b 1
+!s85 0
+!i111 0
+vRiskControl
+R17
+IE7JWB7jnQQf_S>XokGfgC1
+R6
+R4
+w1437360421
+8src/RiskControl.v
+Fsrc/RiskControl.v
+L0 3
+R10
+r1
+31
+R14
+n@risk@control
+!s100 Fj?AU?Fd=_6Lc;geBKjff0
+!s90 -reportprogress|300|src/RiskControl.v|
+!s108 1437479825.417000
+!s107 src/RiskControl.v|
+!i10b 1
+!s85 0
+!i111 0
+vROM
+Im14O_XZ?^lF``<lU1Eg6R2
+R6
+R4
+w1437363710
+8src/rom.v
+Fsrc/rom.v
+L0 3
+R10
+r1
+31
+R14
+n@r@o@m
+R17
+!s100 glj60WYBoNW?F_zd7mQ880
+!s90 -reportprogress|300|src/rom.v|
+!s108 1437479825.214000
+!s107 src/rom.v|
+!i10b 1
+!s85 0
+!i111 0
+vtbpipeline
+R15
+InG`Hb:2XRTl]EWQkEb2zA2
+R6
+R4
+w1437479321
+8src/tbpipeline.v
+Fsrc/tbpipeline.v
+L0 3
+R10
+r1
+31
+R14
+!s100 fIi26DEVjlNNiNP=Q0P3=2
+!s90 -reportprogress|300|src/tbpipeline.v|
+!s108 1437479827.283000
+!s107 src/tbpipeline.v|
+!i10b 1
+!s85 0
+!i111 0
+vUARTReceiver
+R17
+Ikf4_zSC?<Oec9nFX8[BC=1
+R6
+R4
+R18
+R19
+R20
+L0 232
+R10
+r1
+31
+R21
+R22
+R23
+R14
+n@u@a@r@t@receiver
+!s100 7JEhCm`mM6iT8Q<S]nmH73
+!i10b 1
+!s85 0
+!i111 0
+vUARTSender
+R17
+IWkNk0oi4WoDQVIR9WbnI=3
+R6
+R4
+R18
+R19
+R20
+L0 298
+R10
+r1
+31
+R21
+R22
+R23
+R14
+n@u@a@r@t@sender
+!s100 NCC9DTYOlV6`l=KigX^TO3
+!i10b 1
+!s85 0
+!i111 0

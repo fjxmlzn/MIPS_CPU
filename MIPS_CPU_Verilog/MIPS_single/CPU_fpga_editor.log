@@ -1,0 +1,17 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   E:\work\ise\MIPS_single
+#Date/Time:
+#:T   Tue Jul 21 14:16:52 2015
+#------------------------------
+	#Reading CPU.ncd...
+	#Loading device for application Rf_Device from file '6slx16.nph' in environment d:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "CPU" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
+	#Design creation date: 2015.07.21.05.26.13
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes

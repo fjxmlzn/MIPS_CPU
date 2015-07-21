@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-07-21T13:56:17</DateModified>
+  <DateModified>2015-07-22T01:42:25</DateModified>
   <ModuleName>CPU</ModuleName>
-  <SummaryTimeStamp>2015-07-21T13:35:32</SummaryTimeStamp>
+  <SummaryTimeStamp>2015-07-21T15:03:55</SummaryTimeStamp>
   <SavedFilePath>E:/work/ise/MIPS_single/iseconfig/CPU.xreport</SavedFilePath>
   <ImplementationReportsDirectory>E:/work/ise/MIPS_single\</ImplementationReportsDirectory>
   <DateInitialized>2015-07-17T11:09:51</DateInitialized>

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.28 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.29 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: CPU_Pipeline.prj
 
@@ -16712,7 +16712,7 @@ myclk          |         |         |    6.520|         |
 
 
 Total REAL time to Xst completion: 206.00 secs
-Total CPU time to Xst completion: 206.00 secs
+Total CPU time to Xst completion: 206.31 secs
  
 --> 
 

@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-THINK-PC::  Tue Jul 21 00:09:03 2015
+THINK-PC::  Tue Jul 21 20:38:05 2015
 
 par -w -intstyle ise -ol high -mt off CPU_Pipeline_map.ncd CPU_Pipeline.ncd
 CPU_Pipeline.pcf 
@@ -14,11 +14,6 @@ Loading device for application Rf_Device from file '6slx16.nph' in environment d
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
 
-INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
-   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
-   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
-   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
-   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
 
 Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 
@@ -32,11 +27,11 @@ Slice Logic Utilization:
     Number used as Latches:                    286
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      3,851 out of   9,112   42%
+  Number of Slice LUTs:                      3,846 out of   9,112   42%
     Number used as logic:                    3,801 out of   9,112   41%
-      Number using O6 output only:           3,441
+      Number using O6 output only:           3,440
       Number using O5 output only:             109
-      Number using O5 and O6:                  251
+      Number using O5 and O6:                  252
       Number used as ROM:                        0
     Number used as Memory:                      17 out of   2,176    1%
       Number used as Dual Port RAM:             16
@@ -48,18 +43,18 @@ Slice Logic Utilization:
         Number using O6 output only:             1
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:     33
-      Number with same-slice register load:     27
+    Number used exclusively as route-thrus:     28
+      Number with same-slice register load:     22
       Number with same-slice carry load:         5
       Number with other load:                    1
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,769 out of   2,278   77%
+  Number of occupied Slices:                 1,706 out of   2,278   74%
   Number of MUXCYs used:                       240 out of   4,556    5%
-  Number of LUT Flip Flop pairs used:        5,815
-    Number with an unused Flip Flop:         1,762 out of   5,815   30%
-    Number with an unused LUT:               1,964 out of   5,815   33%
-    Number of fully used LUT-FF pairs:       2,089 out of   5,815   35%
+  Number of LUT Flip Flop pairs used:        5,803
+    Number with an unused Flip Flop:         1,755 out of   5,803   30%
+    Number with an unused LUT:               1,957 out of   5,803   33%
+    Number of fully used LUT-FF pairs:       2,091 out of   5,803   36%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -102,8 +97,8 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 9 secs 
-Finished initial Timing Analysis.  REAL time: 9 secs 
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
 
 WARNING:Par:288 - The signal button_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal peri1/Mram_TX_buffer1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
@@ -111,34 +106,29 @@ WARNING:Par:288 - The signal peri1/Mram_RX_buffer1_RAMD_D1_O has no load.  PAR w
 Starting Router
 
 
-Phase  1  : 24791 unrouted;      REAL time: 9 secs 
+Phase  1  : 24479 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 22999 unrouted;      REAL time: 11 secs 
+Phase  2  : 22813 unrouted;      REAL time: 9 secs 
 
-Phase  3  : 9230 unrouted;      REAL time: 55 secs 
+Phase  3  : 10101 unrouted;      REAL time: 41 secs 
 
-Phase  4  : 9238 unrouted; (Par is working to improve performance)     REAL time: 56 secs 
+Phase  4  : 10101 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 42 secs 
 
 Updating file: CPU_Pipeline.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 21 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 55 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 21 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 55 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 21 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 55 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 21 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 55 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 23 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 55 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 24 secs 
-WARNING:Route:452 - 
-    Not all timing constraints have been achieved.  Please consult the `Post-Place & Route Static Timing Report' to determine the actual
-   timing results.  For suggestions on how to work around this problem go to http://support.xilinx.com and `Search Answers Database' using
-   the text of this message.
-
-Total REAL time to Router completion: 1 mins 24 secs 
-Total CPU time to Router completion: 1 mins 26 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 55 secs 
+Total REAL time to Router completion: 55 secs 
+Total CPU time to Router completion: 54 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -148,8 +138,226 @@ Partition Implementation Status
 -------------------------------
 
 Generating "PAR" statistics.
-INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
-Timing Score: 472588 (Setup: 472588, Hold: 0)
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|          myclk_BUFG |  BUFGMUX_X2Y4| No   | 1085 |  0.067     |  0.913      |
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X3Y13| No   |   25 |  0.055     |  0.908      |
++---------------------+--------------+------+------+------------+-------------+
+|alu1/logicer/_n0055_ |              |      |      |            |             |
+|                BUFG |  BUFGMUX_X2Y1| No   |   12 |  0.019     |  0.886      |
++---------------------+--------------+------+------+------------+-------------+
+|alu1/shifter/ctrl[1] |              |      |      |            |             |
+|_PWR_171_o_Mux_215_o |              |      |      |            |             |
+|               _BUFG |  BUFGMUX_X2Y3| No   |   45 |  0.032     |  0.910      |
++---------------------+--------------+------+------+------------+-------------+
+|      peri_read_BUFG |  BUFGMUX_X2Y2| No   |    9 |  0.021     |  0.873      |
++---------------------+--------------+------+------+------------+-------------+
+|peri1/uartReceiver/R |              |      |      |            |             |
+|              X_FLAG |         Local|      |    4 |  0.183     |  0.954      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[2] |              |      |      |            |             |
+|         _AND_1017_o |         Local|      |    2 |  0.000     |  0.562      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[3] |              |      |      |            |             |
+|         _AND_1015_o |         Local|      |    2 |  0.000     |  0.644      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[0]_AND_1085_o |         Local|      |    2 |  0.000     |  0.544      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[4] |              |      |      |            |             |
+|         _AND_1013_o |         Local|      |    2 |  0.000     |  0.679      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[1]_AND_1083_o |         Local|      |    3 |  0.000     |  0.344      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[5] |              |      |      |            |             |
+|         _AND_1011_o |         Local|      |    2 |  0.000     |  0.501      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[6] |              |      |      |            |             |
+|         _AND_1009_o |         Local|      |    2 |  0.000     |  0.998      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[7] |              |      |      |            |             |
+|         _AND_1007_o |         Local|      |    2 |  0.000     |  0.709      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[8] |              |      |      |            |             |
+|         _AND_1005_o |         Local|      |    2 |  0.000     |  0.520      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[9] |              |      |      |            |             |
+|         _AND_1003_o |         Local|      |    2 |  0.000     |  0.310      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[10 |              |      |      |            |             |
+|        ]_AND_1001_o |         Local|      |    2 |  0.000     |  0.310      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[11 |              |      |      |            |             |
+|         ]_AND_999_o |         Local|      |    2 |  0.000     |  0.495      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[20 |              |      |      |            |             |
+|         ]_AND_981_o |         Local|      |    2 |  0.000     |  0.475      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[12 |              |      |      |            |             |
+|         ]_AND_997_o |         Local|      |    2 |  0.000     |  0.502      |
++---------------------+--------------+------+------+------------+-------------+
+|alu1/cmper/ctrl[2]_P |              |      |      |            |             |
+|   WR_204_o_Mux_15_o |         Local|      |    1 |  0.000     |  0.989      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[21 |              |      |      |            |             |
+|         ]_AND_979_o |         Local|      |    2 |  0.000     |  0.505      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[13 |              |      |      |            |             |
+|         ]_AND_995_o |         Local|      |    2 |  0.000     |  0.521      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[30 |              |      |      |            |             |
+|         ]_AND_961_o |         Local|      |    2 |  0.000     |  0.522      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[22 |              |      |      |            |             |
+|         ]_AND_977_o |         Local|      |    2 |  0.000     |  0.498      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[14 |              |      |      |            |             |
+|         ]_AND_993_o |         Local|      |    2 |  0.000     |  0.497      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[23 |              |      |      |            |             |
+|         ]_AND_975_o |         Local|      |    2 |  0.000     |  0.549      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[15 |              |      |      |            |             |
+|         ]_AND_991_o |         Local|      |    2 |  0.000     |  0.494      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[24 |              |      |      |            |             |
+|         ]_AND_973_o |         Local|      |    2 |  0.000     |  0.308      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[16 |              |      |      |            |             |
+|         ]_AND_989_o |         Local|      |    2 |  0.000     |  0.663      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[25 |              |      |      |            |             |
+|         ]_AND_971_o |         Local|      |    2 |  0.000     |  0.526      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[17 |              |      |      |            |             |
+|         ]_AND_987_o |         Local|      |    2 |  0.000     |  0.663      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[26 |              |      |      |            |             |
+|         ]_AND_969_o |         Local|      |    2 |  0.000     |  0.490      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[18 |              |      |      |            |             |
+|         ]_AND_985_o |         Local|      |    2 |  0.000     |  0.721      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[27 |              |      |      |            |             |
+|         ]_AND_967_o |         Local|      |    2 |  0.000     |  0.521      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[19 |              |      |      |            |             |
+|         ]_AND_983_o |         Local|      |    2 |  0.000     |  0.914      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[28 |              |      |      |            |             |
+|         ]_AND_965_o |         Local|      |    2 |  0.000     |  0.469      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[29 |              |      |      |            |             |
+|         ]_AND_963_o |         Local|      |    2 |  0.000     |  0.467      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[10]_AND_1065_o |         Local|      |    2 |  0.000     |  0.495      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[11]_AND_1063_o |         Local|      |    2 |  0.000     |  0.310      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[20]_AND_1045_o |         Local|      |    2 |  0.000     |  0.502      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[12]_AND_1061_o |         Local|      |    2 |  0.000     |  0.302      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[21]_AND_1043_o |         Local|      |    2 |  0.000     |  0.315      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[13]_AND_1059_o |         Local|      |    2 |  0.000     |  0.681      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[30]_AND_1025_o |         Local|      |    2 |  0.000     |  0.505      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[22]_AND_1041_o |         Local|      |    2 |  0.000     |  0.502      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[14]_AND_1057_o |         Local|      |    2 |  0.000     |  0.475      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC[31 |              |      |      |            |             |
+|         ]_AND_959_o |         Local|      |    2 |  0.000     |  0.549      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[23]_AND_1039_o |         Local|      |    2 |  0.000     |  0.515      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[15]_AND_1055_o |         Local|      |    2 |  0.000     |  0.310      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[24]_AND_1037_o |         Local|      |    2 |  0.000     |  0.505      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[16]_AND_1053_o |         Local|      |    2 |  0.000     |  0.310      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[25]_AND_1035_o |         Local|      |    2 |  0.000     |  0.474      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[17]_AND_1051_o |         Local|      |    2 |  0.000     |  0.653      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[26]_AND_1033_o |         Local|      |    2 |  0.000     |  0.471      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[18]_AND_1049_o |         Local|      |    2 |  0.000     |  0.308      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[27]_AND_1031_o |         Local|      |    2 |  0.000     |  0.820      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[19]_AND_1047_o |         Local|      |    2 |  0.000     |  0.314      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[28]_AND_1029_o |         Local|      |    2 |  0.000     |  0.496      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+| us_4[29]_AND_1027_o |         Local|      |    2 |  0.000     |  0.310      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[8]_AND_1069_o |         Local|      |    2 |  0.000     |  0.469      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[5]_AND_1075_o |         Local|      |    2 |  0.000     |  0.629      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[2]_AND_1081_o |         Local|      |    2 |  0.000     |  0.310      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[7]_AND_1071_o |         Local|      |    2 |  0.000     |  0.470      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[4]_AND_1077_o |         Local|      |    2 |  0.000     |  1.095      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[9]_AND_1067_o |         Local|      |    2 |  0.000     |  0.493      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[6]_AND_1073_o |         Local|      |    2 |  0.000     |  0.683      |
++---------------------+--------------+------+------+------------+-------------+
+|IFIDReg1/reset_PC_pl |              |      |      |            |             |
+|  us_4[3]_AND_1079_o |         Local|      |    2 |  0.000     |  0.501      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
 
 Asterisk (*) preceding a constraint indicates it was not met.
    This may be due to a setup or hold violation.
@@ -158,27 +366,12 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net myc | SETUP       |         N/A|    73.774ns|     N/A|      472588
-  lk_BUFG                                   | HOLD        |     0.410ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     5.649ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.415ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net alu | SETUP       |         N/A|     2.064ns|     N/A|           0
-  1/shifter/ctrl[1]_PWR_171_o_Mux_215_o_BUF | HOLD        |     0.470ns|            |       0|           0
-  G                                         |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net per | SETUP       |         N/A|     2.964ns|     N/A|           0
-  i1/uartReceiver/RX_FLAG                   | HOLD        |     0.180ns|            |       0|           0
+  TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH  | SETUP       |     2.728ns|     7.272ns|       0|           0
+  50%                                       | HOLD        |     0.453ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
-1 constraint not met.
-INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
-   constraint is not analyzed due to the following: No paths covered by this 
-   constraint; Other constraints intersect with this constraint; or This 
-   constraint was disabled by a Path Tracing Control. Please run the Timespec 
-   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+All constraints were met.
 
 
 Generating Pad Report.
@@ -187,17 +380,18 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 27 secs 
-Total CPU time to PAR completion: 1 mins 28 secs 
+Total REAL time to PAR completion: 56 secs 
+Total CPU time to PAR completion: 56 secs 
 
-Peak Memory Usage:  695 MB
+Peak Memory Usage:  649 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
+Timing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 6
-Number of info messages: 2
+Number of warning messages: 5
+Number of info messages: 0
 
 Writing design to file CPU_Pipeline.ncd
 

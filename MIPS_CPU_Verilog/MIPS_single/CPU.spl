@@ -1,0 +1,15 @@
+[Inputs]
+resetk
+clk
+button
+RX
+=switch[7:0]=
+[Outputs]
+TX
+=led[7:0]=
+=bcd[7:0]=
+=an[3:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel CPU
+

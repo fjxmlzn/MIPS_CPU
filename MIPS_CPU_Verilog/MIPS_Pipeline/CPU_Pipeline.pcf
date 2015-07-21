@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Jul 21 00:08:58 2015
+// Written by: Map P.20131013 on Tue Jul 21 20:37:59 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -36,5 +36,37 @@ COMP "switch<4>" LOCATE = SITE "N8" LEVEL 1;
 COMP "switch<5>" LOCATE = SITE "U8" LEVEL 1;
 COMP "switch<6>" LOCATE = SITE "V8" LEVEL 1;
 COMP "switch<7>" LOCATE = SITE "T5" LEVEL 1;
+TIMEGRP clk = BEL "cnt_clk_0" BEL "peri1/uartReceiver/RX_DATA_7" BEL
+        "peri1/uartReceiver/RX_DATA_6" BEL "peri1/uartReceiver/RX_DATA_5" BEL
+        "peri1/uartReceiver/RX_DATA_4" BEL "peri1/uartReceiver/RX_DATA_3" BEL
+        "peri1/uartReceiver/RX_DATA_2" BEL "peri1/uartReceiver/RX_DATA_1" BEL
+        "peri1/uartReceiver/RX_DATA_0" BEL "peri1/uartReceiver/count_16" BEL
+        "peri1/uartReceiver/count_15" BEL "peri1/uartReceiver/count_14" BEL
+        "peri1/uartReceiver/count_13" BEL "peri1/uartReceiver/count_12" BEL
+        "peri1/uartReceiver/count_11" BEL "peri1/uartReceiver/count_10" BEL
+        "peri1/uartReceiver/count_9" BEL "peri1/uartReceiver/count_8" BEL
+        "peri1/uartReceiver/count_7" BEL "peri1/uartReceiver/count_6" BEL
+        "peri1/uartReceiver/count_5" BEL "peri1/uartReceiver/count_4" BEL
+        "peri1/uartReceiver/count_3" BEL "peri1/uartReceiver/count_2" BEL
+        "peri1/uartReceiver/count_1" BEL "peri1/uartReceiver/count_0" BEL
+        "peri1/uartSender/count_16" BEL "peri1/uartSender/count_15" BEL
+        "peri1/uartSender/count_14" BEL "peri1/uartSender/count_13" BEL
+        "peri1/uartSender/count_12" BEL "peri1/uartSender/count_11" BEL
+        "peri1/uartSender/count_10" BEL "peri1/uartSender/count_9" BEL
+        "peri1/uartSender/count_8" BEL "peri1/uartSender/count_7" BEL
+        "peri1/uartSender/count_6" BEL "peri1/uartSender/count_5" BEL
+        "peri1/uartSender/count_4" BEL "peri1/uartSender/count_3" BEL
+        "peri1/uartSender/count_2" BEL "peri1/uartSender/count_1" BEL
+        "peri1/uartSender/count_0" BEL "d1/count_23" BEL "d1/count_22" BEL
+        "d1/count_21" BEL "d1/count_20" BEL "d1/count_19" BEL "d1/count_18"
+        BEL "d1/count_17" BEL "d1/count_16" BEL "d1/count_15" BEL
+        "d1/count_14" BEL "d1/count_13" BEL "d1/count_12" BEL "d1/count_11"
+        BEL "d1/count_10" BEL "d1/count_9" BEL "d1/count_8" BEL "d1/count_7"
+        BEL "d1/count_6" BEL "d1/count_5" BEL "d1/count_4" BEL "d1/count_3"
+        BEL "d1/count_2" BEL "d1/count_1" BEL "d1/count_0" BEL "myclk" BEL
+        "peri1/uartReceiver/RX_FLAG" BEL "peri1/uartSender/TX" BEL
+        "peri1/uartSender/TX_WORK" BEL "d1/key_o_temp" BEL "d1/key_m" BEL
+        "clk_BUFGP/BUFG" BEL "d1/Mshreg_key_i_t2" BEL "d1/key_i_t2";
+TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
 SCHEMATIC END;
 

@@ -27,7 +27,7 @@ module CPU(resetk, clk , button, led, switch, bcd, an, RX, TX);
 		else if (cnt_clk==32'd1) 			// frequency = 50MHz
 			begin 
 				myclk<=~myclk;
-				cnt_clk<=1;
+				cnt_clk<=0;
 			end
 		else
 			begin

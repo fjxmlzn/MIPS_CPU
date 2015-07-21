@@ -25,12 +25,12 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   1
+  Number of warnings:   0
 
-Total memory usage is 186564 kilobytes
+Total memory usage is 187780 kilobytes
 
 Writing NGD file "CPU.ngd" ...
 Total REAL time to NGDBUILD completion:  6 sec
-Total CPU time to NGDBUILD completion:   5 sec
+Total CPU time to NGDBUILD completion:   6 sec
 
 Writing NGDBUILD log file "CPU.bld"...
