@@ -2,7 +2,7 @@
 Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+d:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
 -n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf
 
 Design file:              CPU.ncd
@@ -36,8 +36,8 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-RX          |    2.086(R)|      SLOW  |   -0.620(R)|      SLOW  |clk_BUFGP         |   0.000|
-resetk      |    0.309(R)|      FAST  |    0.502(R)|      SLOW  |clk_BUFGP         |   0.000|
+RX          |    1.869(R)|      SLOW  |   -0.300(R)|      SLOW  |clk_BUFGP         |   0.000|
+resetk      |    0.566(R)|      FAST  |    0.101(R)|      SLOW  |clk_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -45,7 +45,7 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-TX          |         8.490(R)|      SLOW  |         4.530(R)|      FAST  |clk_BUFGP         |   0.000|
+TX          |         9.934(R)|      SLOW  |         5.437(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -53,18 +53,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.203|    2.726|    4.962|    3.290|
+clk            |    6.410|    1.994|    4.119|    4.191|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Jul 17 20:30:13 2015 
+Analysis completed Tue Jul 21 13:33:27 2015 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 338 MB
+Peak Memory Usage: 333 MB
 
 
 

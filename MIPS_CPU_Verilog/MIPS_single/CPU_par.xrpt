@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Fri Jul 17 20:24:49 2015">
+  <application stringID="par" timeStamp="Tue Jul 21 13:28:07 2015">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;d:\CTEX\UserData\miktex\bin;d:\CTEX\MiKTeX\miktex\bin;d:\CTEX\CTeX\ctex\bin;d:\CTEX\CTeX\cct\bin;d:\CTEX\CTeX\ty\bin;d:\CTEX\Ghostscript\gs9.04\bin;d:\CTEX\GSview\gsview;d:\CTEX\WinEdt;D:\Program Files (x86)\Java\jdk1.8.0_45\bin;D:\Program Files (x86)\Java\jdk1.8.0_45\jre\bin;D:\Python34;d:\Cadence\SPB_16.3\tools\bin;d:\Cadence\SPB_16.3\tools\libutil\bin;d:\Cadence\SPB_16.3\tools\fet\bin;d:\Cadence\SPB_16.3\tools\pcb\bin;d:\Cadence\SPB_16.3\tools\specctra\bin;d:\Cadence\SPB_16.3\tools\PSpice;d:\Cadence\SPB_16.3\tools\PSpice\Library;d:\Cadence\SPB_16.3\tools\Capture;d:\Cadence\SPB_16.3\OpenAccess\bin\win32\opt;D:\MinGW\bin;D:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Users\lzn\AppData\Roaming\npm;D:\Program Files (x86)\Pandoc\;C:\Users\lzn\AppData\Local\Pandoc\"/>
+          <item stringID="value" value="d:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;d:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;D:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\Xilinx\14.7\ISE_DS\PlanAhead\bin;D:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;D:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Xilinx\14.7\ISE_DS\common\bin\nt64;D:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;d:\CTEX\UserData\miktex\bin;d:\CTEX\MiKTeX\miktex\bin;d:\CTEX\CTeX\ctex\bin;d:\CTEX\CTeX\cct\bin;d:\CTEX\CTeX\ty\bin;d:\CTEX\Ghostscript\gs9.04\bin;d:\CTEX\GSview\gsview;d:\CTEX\WinEdt;D:\Program Files (x86)\Java\jdk1.8.0_45\bin;D:\Program Files (x86)\Java\jdk1.8.0_45\jre\bin;D:\Python34;d:\Cadence\SPB_16.3\tools\bin;d:\Cadence\SPB_16.3\tools\libutil\bin;d:\Cadence\SPB_16.3\tools\fet\bin;d:\Cadence\SPB_16.3\tools\pcb\bin;d:\Cadence\SPB_16.3\tools\specctra\bin;d:\Cadence\SPB_16.3\tools\PSpice;d:\Cadence\SPB_16.3\tools\PSpice\Library;d:\Cadence\SPB_16.3\tools\Capture;d:\Cadence\SPB_16.3\OpenAccess\bin\win32\opt;D:\MinGW\bin;D:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Users\lzn\AppData\Roaming\npm;D:\Program Files (x86)\Pandoc\;C:\Users\lzn\AppData\Local\Pandoc\"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -20,15 +20,23 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE\"/>
+          <item stringID="value" value="d:\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINXD_LICENSE_FILE"/>
           <item stringID="value" value="D:\Xilinx\xilinx_ise_12.lic"/>
         </row>
         <row stringID="row" value="4">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE"/>
+        </row>
+        <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="D:\Xilinx\12.3\ISE_DS\EDK"/>
+          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="6">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
@@ -55,12 +63,12 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="2 mins 11 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="2 mins 13 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="2 mins 47 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="2 mins 49 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="2 mins 50 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="2 mins 52 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="3 mins 21 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="3 mins 23 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -2378,14 +2386,14 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Fri Jul 17 20:24:49 2015">
+  <application stringID="Par" timeStamp="Tue Jul 21 13:28:07 2015">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;d:\CTEX\UserData\miktex\bin;d:\CTEX\MiKTeX\miktex\bin;d:\CTEX\CTeX\ctex\bin;d:\CTEX\CTeX\cct\bin;d:\CTEX\CTeX\ty\bin;d:\CTEX\Ghostscript\gs9.04\bin;d:\CTEX\GSview\gsview;d:\CTEX\WinEdt;D:\Program Files (x86)\Java\jdk1.8.0_45\bin;D:\Program Files (x86)\Java\jdk1.8.0_45\jre\bin;D:\Python34;d:\Cadence\SPB_16.3\tools\bin;d:\Cadence\SPB_16.3\tools\libutil\bin;d:\Cadence\SPB_16.3\tools\fet\bin;d:\Cadence\SPB_16.3\tools\pcb\bin;d:\Cadence\SPB_16.3\tools\specctra\bin;d:\Cadence\SPB_16.3\tools\PSpice;d:\Cadence\SPB_16.3\tools\PSpice\Library;d:\Cadence\SPB_16.3\tools\Capture;d:\Cadence\SPB_16.3\OpenAccess\bin\win32\opt;D:\MinGW\bin;D:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Users\lzn\AppData\Roaming\npm;D:\Program Files (x86)\Pandoc\;C:\Users\lzn\AppData\Local\Pandoc\"/>
+          <item stringID="value" value="d:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;d:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;D:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;D:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;D:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;D:\Xilinx\14.7\ISE_DS\PlanAhead\bin;D:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;D:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;D:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;D:\Xilinx\14.7\ISE_DS\common\bin\nt64;D:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;d:\CTEX\UserData\miktex\bin;d:\CTEX\MiKTeX\miktex\bin;d:\CTEX\CTeX\ctex\bin;d:\CTEX\CTeX\cct\bin;d:\CTEX\CTeX\ty\bin;d:\CTEX\Ghostscript\gs9.04\bin;d:\CTEX\GSview\gsview;d:\CTEX\WinEdt;D:\Program Files (x86)\Java\jdk1.8.0_45\bin;D:\Program Files (x86)\Java\jdk1.8.0_45\jre\bin;D:\Python34;d:\Cadence\SPB_16.3\tools\bin;d:\Cadence\SPB_16.3\tools\libutil\bin;d:\Cadence\SPB_16.3\tools\fet\bin;d:\Cadence\SPB_16.3\tools\pcb\bin;d:\Cadence\SPB_16.3\tools\specctra\bin;d:\Cadence\SPB_16.3\tools\PSpice;d:\Cadence\SPB_16.3\tools\PSpice\Library;d:\Cadence\SPB_16.3\tools\Capture;d:\Cadence\SPB_16.3\OpenAccess\bin\win32\opt;D:\MinGW\bin;D:\Program Files (x86)\CodeBlocks\MinGW\bin;C:\Users\lzn\AppData\Roaming\npm;D:\Program Files (x86)\Pandoc\;C:\Users\lzn\AppData\Local\Pandoc\"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -2393,15 +2401,23 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE\"/>
+          <item stringID="value" value="d:\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINXD_LICENSE_FILE"/>
           <item stringID="value" value="D:\Xilinx\xilinx_ise_12.lic"/>
         </row>
         <row stringID="row" value="4">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\ISE"/>
+        </row>
+        <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="D:\Xilinx\12.3\ISE_DS\EDK"/>
+          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="6">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="D:\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
@@ -2420,16 +2436,16 @@
     </section>
     <task label="Device Utilization Summary" stringID="PAR_DEVICE_UTLIZATION">
       <section stringID="PAR_SLICE_REPORTING">
-        <item AVAILABLE="18224" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="3518">
-          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="3293"/>
+        <item AVAILABLE="18224" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="3519">
+          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="3294"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCH" value="225"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="0"/>
         </item>
-        <item AVAILABLE="9112" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="4775">
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="110"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="4506"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="113"/>
+        <item AVAILABLE="9112" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="4843">
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="111"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="4551"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="116"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ANDO6" value="0"/>
@@ -2442,22 +2458,22 @@
           <item dataType="int" stringID="PAR_NUM_SRL_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O6ONLY" value="1"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O5ANDO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="13"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="16"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="8"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="40"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_O5ANDO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="23"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="42"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="5"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="1"/>
         </item>
-        <item AVAILABLE="2278" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="1498">
-          <item AVAILABLE="595" dataType="int" stringID="PAR_NUM_SLICEL" value="251"/>
+        <item AVAILABLE="2278" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="1517">
+          <item AVAILABLE="595" dataType="int" stringID="PAR_NUM_SLICEL" value="252"/>
           <item AVAILABLE="544" dataType="int" stringID="PAR_NUM_SLICEM" value="5"/>
-          <item AVAILABLE="1139" dataType="int" stringID="PAR_NUM_SLICEX" value="1242"/>
+          <item AVAILABLE="1139" dataType="int" stringID="PAR_NUM_SLICEX" value="1260"/>
         </item>
-        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="5285">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="1811"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="510"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="2964"/>
+        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="5272">
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="1823"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="429"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="3020"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">

@@ -150,7 +150,9 @@ module CPU(resetk, clk , button, led, switch, bcd, an, RX, TX);
 	
 	DataMem data_memory1(.reset(reset), .clk(myclk), .addr(ALU_out), .wdata(Databus2), .rdata(data_rda), .rd(data_read), .wr(data_wr));
 	assign Databus3 = (MemtoReg == 2'b00)? ALU_out: 
-							(MemtoReg == 2'b01)? Read_data: PC_plus_4;
+							(MemtoReg == 2'b01)? Read_data: 
+							(MemtoReg == 2'b10)? PC_plus_4:
+							(MemtoReg == 2'b11)? PC : 0;
 
 	
 	assign Jump_target = {PC_plus_4[31:28], Instruction[25:0], 2'b00};

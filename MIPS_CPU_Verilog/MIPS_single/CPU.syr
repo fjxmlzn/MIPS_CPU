@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: CPU.prj
 
@@ -105,28 +105,28 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "E:\work\ise\MIPS_Single\src\rom.v" into library work
+Analyzing Verilog file "E:\work\ise\MIPS_single\src\rom.v" into library work
 Parsing module <ROM>.
-Analyzing Verilog file "E:\work\ise\MIPS_Single\src\regfile.v" into library work
+Analyzing Verilog file "E:\work\ise\MIPS_single\src\regfile.v" into library work
 Parsing module <RegFile>.
-Analyzing Verilog file "E:\work\ise\MIPS_Single\src\Peripheral.v" into library work
+Analyzing Verilog file "E:\work\ise\MIPS_single\src\Peripheral.v" into library work
 Parsing module <Peripheral>.
 Parsing module <UARTReciever>.
 Parsing module <UARTSender>.
-Analyzing Verilog file "E:\work\ise\MIPS_Single\src\debounce.v" into library work
+Analyzing Verilog file "E:\work\ise\MIPS_single\src\debounce.v" into library work
 Parsing module <debounce>.
-Analyzing Verilog file "E:\work\ise\MIPS_Single\src\DataMemory.v" into library work
+Analyzing Verilog file "E:\work\ise\MIPS_single\src\DataMemory.v" into library work
 Parsing module <DataMem>.
-Analyzing Verilog file "E:\work\ise\MIPS_Single\src\Control.v" into library work
+Analyzing Verilog file "E:\work\ise\MIPS_single\src\Control.v" into library work
 Parsing module <Control>.
-Analyzing Verilog file "E:\work\ise\MIPS_Single\src\ALU.v" into library work
+Analyzing Verilog file "E:\work\ise\MIPS_single\src\ALU.v" into library work
 Parsing module <ALU>.
 Parsing module <ALUShift>.
 Parsing module <ALUMUX>.
 Parsing module <ALULogic>.
 Parsing module <ALUCMP>.
 Parsing module <ALUADD>.
-Analyzing Verilog file "E:\work\ise\MIPS_Single\src\top.v" into library work
+Analyzing Verilog file "E:\work\ise\MIPS_single\src\top.v" into library work
 Parsing module <CPU>.
 
 =========================================================================
@@ -136,6 +136,7 @@ Parsing module <CPU>.
 Elaborating module <CPU>.
 
 Elaborating module <debounce>.
+WARNING:HDLCompiler:413 - "E:\work\ise\MIPS_single\src\debounce.v" Line 50: Result of 26-bit expression is truncated to fit in 25-bit target.
 
 Elaborating module <ROM>.
 
@@ -152,7 +153,7 @@ Elaborating module <RegFile>.
 Elaborating module <ALU>.
 
 Elaborating module <ALUADD>.
-WARNING:HDLCompiler:1127 - "E:\work\ise\MIPS_Single\src\ALU.v" Line 14: Assignment to V ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\work\ise\MIPS_single\src\ALU.v" Line 14: Assignment to V ignored, since the identifier is never used
 
 Elaborating module <ALULogic>.
 
@@ -169,7 +170,7 @@ Elaborating module <DataMem>.
 =========================================================================
 
 Synthesizing Unit <CPU>.
-    Related source file is "E:\work\ise\MIPS_Single\src\top.v".
+    Related source file is "E:\work\ise\MIPS_single\src\top.v".
 WARNING:Xst:647 - Input <button> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 2-bit register for signal <IRQs>.
     Found 32-bit register for signal <cnt_clk>.
@@ -177,8 +178,9 @@ WARNING:Xst:647 - Input <button> is never used. This port will be preserved and 
     Found 1-bit register for signal <myclk>.
     Found 32-bit adder for signal <cnt_clk[31]_GND_1_o_add_1_OUT> created at line 34.
     Found 31-bit adder for signal <PC_plus_4<30:0>> created at line 48.
-    Found 32-bit adder for signal <PC_plus_4[31]_LU_out[29]_add_34_OUT> created at line 159.
+    Found 32-bit adder for signal <PC_plus_4[31]_LU_out[29]_add_38_OUT> created at line 161.
     Found 5-bit 4-to-1 multiplexer for signal <Write_register> created at line 70.
+    Found 32-bit 4-to-1 multiplexer for signal <Databus3> created at line 69.
     Found 32-bit 8-to-1 multiplexer for signal <PC_next> created at line 38.
     Found 32-bit comparator greater for signal <ALU_out[31]_GND_1_o_LessThan_11_o> created at line 95
     Summary:
@@ -189,24 +191,24 @@ WARNING:Xst:647 - Input <button> is never used. This port will be preserved and 
 Unit <CPU> synthesized.
 
 Synthesizing Unit <debounce>.
-    Related source file is "E:\work\ise\MIPS_Single\src\debounce.v".
-        NUMBER = 24'b000000000000001111101000
-        NBITS = 24
+    Related source file is "E:\work\ise\MIPS_single\src\debounce.v".
+        NUMBER = 25'b0100110001001011010000000
+        NBITS = 25
     Found 1-bit register for signal <key_i_t2>.
     Found 1-bit register for signal <key_m>.
-    Found 24-bit register for signal <count>.
+    Found 25-bit register for signal <count>.
     Found 1-bit register for signal <key_o_temp>.
     Found 1-bit register for signal <key_i_t1>.
-    Found 24-bit adder for signal <count[23]_GND_2_o_add_4_OUT> created at line 54.
-    Found 1-bit comparator equal for signal <n0003> created at line 45
+    Found 25-bit adder for signal <count[24]_GND_2_o_add_4_OUT> created at line 50.
+    Found 1-bit comparator equal for signal <n0003> created at line 43
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  28 D-type flip-flop(s).
+	inferred  29 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <debounce> synthesized.
 
 Synthesizing Unit <ROM>.
-    Related source file is "E:\work\ise\MIPS_Single\src\rom.v".
+    Related source file is "E:\work\ise\MIPS_single\src\rom.v".
 WARNING:Xst:647 - Input <addr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <addr<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 256x32-bit Read Only RAM for signal <data>
@@ -215,7 +217,7 @@ WARNING:Xst:647 - Input <addr<31:10>> is never used. This port will be preserved
 Unit <ROM> synthesized.
 
 Synthesizing Unit <Peripheral>.
-    Related source file is "E:\work\ise\MIPS_Single\src\Peripheral.v".
+    Related source file is "E:\work\ise\MIPS_single\src\Peripheral.v".
     Found 16x8-bit dual-port RAM <Mram_RX_buffer> for signal <RX_buffer>.
     Found 16x8-bit dual-port RAM <Mram_TX_buffer> for signal <TX_buffer>.
     Found 2-bit register for signal <flag>.
@@ -287,7 +289,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <rdata<31>>. Latches may be gener
 Unit <Peripheral> synthesized.
 
 Synthesizing Unit <UARTReciever>.
-    Related source file is "E:\work\ise\MIPS_Single\src\Peripheral.v".
+    Related source file is "E:\work\ise\MIPS_single\src\Peripheral.v".
     Found 17-bit register for signal <count>.
     Found 1-bit register for signal <RX_DATA<7>>.
     Found 1-bit register for signal <RX_DATA<6>>.
@@ -307,7 +309,7 @@ Synthesizing Unit <UARTReciever>.
 Unit <UARTReciever> synthesized.
 
 Synthesizing Unit <UARTSender>.
-    Related source file is "E:\work\ise\MIPS_Single\src\Peripheral.v".
+    Related source file is "E:\work\ise\MIPS_single\src\Peripheral.v".
     Found 1-bit register for signal <TX>.
     Found 8-bit register for signal <data>.
     Found 18-bit register for signal <count>.
@@ -320,7 +322,7 @@ Synthesizing Unit <UARTSender>.
 Unit <UARTSender> synthesized.
 
 Synthesizing Unit <Control>.
-    Related source file is "E:\work\ise\MIPS_Single\src\Control.v".
+    Related source file is "E:\work\ise\MIPS_single\src\Control.v".
     Found 6-bit comparator lessequal for signal <n0018> created at line 40
     Found 6-bit comparator lessequal for signal <n0020> created at line 40
     Found 6-bit comparator lessequal for signal <n0030> created at line 41
@@ -329,14 +331,14 @@ Synthesizing Unit <Control>.
     Found 6-bit comparator lessequal for signal <n0051> created at line 48
     Found 6-bit comparator lessequal for signal <n0085> created at line 65
     Found 6-bit comparator lessequal for signal <n0087> created at line 65
-    Found 6-bit comparator lessequal for signal <n0103> created at line 83
+    Found 6-bit comparator lessequal for signal <n0106> created at line 84
     Summary:
 	inferred   9 Comparator(s).
-	inferred  20 Multiplexer(s).
+	inferred  21 Multiplexer(s).
 Unit <Control> synthesized.
 
 Synthesizing Unit <RegFile>.
-    Related source file is "E:\work\ise\MIPS_Single\src\regfile.v".
+    Related source file is "E:\work\ise\MIPS_single\src\regfile.v".
     Found 992-bit register for signal <n0048[991:0]>.
     Found 32-bit 31-to-1 multiplexer for signal <addr1[4]_RF_DATA[31][31]_wide_mux_1_OUT> created at line 13.
     Found 32-bit 31-to-1 multiplexer for signal <addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT> created at line 14.
@@ -346,14 +348,14 @@ Synthesizing Unit <RegFile>.
 Unit <RegFile> synthesized.
 
 Synthesizing Unit <ALU>.
-    Related source file is "E:\work\ise\MIPS_Single\src\ALU.v".
-INFO:Xst:3210 - "E:\work\ise\MIPS_Single\src\ALU.v" line 14: Output port <V> of the instance <adder> is unconnected or connected to loadless signal.
+    Related source file is "E:\work\ise\MIPS_single\src\ALU.v".
+INFO:Xst:3210 - "E:\work\ise\MIPS_single\src\ALU.v" line 14: Output port <V> of the instance <adder> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <ALU> synthesized.
 
 Synthesizing Unit <ALUADD>.
-    Related source file is "E:\work\ise\MIPS_Single\src\ALU.v".
+    Related source file is "E:\work\ise\MIPS_single\src\ALU.v".
     Found 32-bit adder for signal <C> created at line 178.
     Found 32-bit adder for signal <A[31]_B[31]_add_12_OUT> created at line 183.
     Found 32-bit adder for signal <A[31]_C[31]_add_13_OUT> created at line 184.
@@ -363,7 +365,7 @@ Synthesizing Unit <ALUADD>.
 Unit <ALUADD> synthesized.
 
 Synthesizing Unit <ALULogic>.
-    Related source file is "E:\work\ise\MIPS_Single\src\ALU.v".
+    Related source file is "E:\work\ise\MIPS_single\src\ALU.v".
 WARNING:Xst:737 - Found 1-bit latch for signal <result<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <result<29>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <result<28>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -401,7 +403,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <result<31>>. Latches may be gene
 Unit <ALULogic> synthesized.
 
 Synthesizing Unit <ALUShift>.
-    Related source file is "E:\work\ise\MIPS_Single\src\ALU.v".
+    Related source file is "E:\work\ise\MIPS_single\src\ALU.v".
     Found 1-bit 3-to-1 multiplexer for signal <ctrl[1]_B[31]_wide_mux_82_OUT<31>> created at line 32.
     Found 1-bit 3-to-1 multiplexer for signal <ctrl[1]_B[31]_wide_mux_82_OUT<30>> created at line 32.
     Found 1-bit 3-to-1 multiplexer for signal <ctrl[1]_B[31]_wide_mux_82_OUT<29>> created at line 32.
@@ -599,7 +601,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <layer4<31>>. Latches may be gene
 Unit <ALUShift> synthesized.
 
 Synthesizing Unit <ALUCMP>.
-    Related source file is "E:\work\ise\MIPS_Single\src\ALU.v".
+    Related source file is "E:\work\ise\MIPS_single\src\ALU.v".
     Found 1-bit 6-to-1 multiplexer for signal <ctrl[2]_GND_240_o_wide_mux_14_OUT<0>> created at line 140.
 WARNING:Xst:737 - Found 1-bit latch for signal <result<30>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <result<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -609,14 +611,14 @@ WARNING:Xst:737 - Found 1-bit latch for signal <result<0>>. Latches may be gener
 Unit <ALUCMP> synthesized.
 
 Synthesizing Unit <ALUMUX>.
-    Related source file is "E:\work\ise\MIPS_Single\src\ALU.v".
+    Related source file is "E:\work\ise\MIPS_single\src\ALU.v".
     Found 32-bit 4-to-1 multiplexer for signal <out> created at line 105.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <ALUMUX> synthesized.
 
 Synthesizing Unit <DataMem>.
-    Related source file is "E:\work\ise\MIPS_Single\src\DataMemory.v".
+    Related source file is "E:\work\ise\MIPS_single\src\DataMemory.v".
         RAM_SIZE = 256
     Found 1-bit register for signal <RAMDATA<255><30>>.
     Found 1-bit register for signal <RAMDATA<255><29>>.
@@ -8829,7 +8831,7 @@ Macro Statistics
 # Adders/Subtractors                                   : 15
  17-bit adder                                          : 1
  18-bit adder                                          : 1
- 24-bit adder                                          : 1
+ 25-bit adder                                          : 1
  31-bit adder                                          : 1
  32-bit adder                                          : 5
  4-bit adder                                           : 4
@@ -8840,7 +8842,7 @@ Macro Statistics
  17-bit register                                       : 1
  18-bit register                                       : 1
  2-bit register                                        : 2
- 24-bit register                                       : 1
+ 25-bit register                                       : 1
  32-bit register                                       : 5
  4-bit register                                        : 4
  8-bit register                                        : 5
@@ -8852,19 +8854,19 @@ Macro Statistics
  30-bit comparator lessequal                           : 1
  32-bit comparator greater                             : 2
  6-bit comparator lessequal                            : 9
-# Multiplexers                                         : 635
+# Multiplexers                                         : 636
  1-bit 2-to-1 multiplexer                              : 505
  1-bit 3-to-1 multiplexer                              : 31
  1-bit 6-to-1 multiplexer                              : 1
  16-bit 2-to-1 multiplexer                             : 1
  17-bit 2-to-1 multiplexer                             : 11
  18-bit 2-to-1 multiplexer                             : 11
- 2-bit 2-to-1 multiplexer                              : 5
+ 2-bit 2-to-1 multiplexer                              : 6
  3-bit 2-to-1 multiplexer                              : 7
- 32-bit 2-to-1 multiplexer                             : 46
+ 32-bit 2-to-1 multiplexer                             : 45
  32-bit 256-to-1 multiplexer                           : 1
  32-bit 31-to-1 multiplexer                            : 2
- 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 2
  32-bit 8-to-1 multiplexer                             : 1
  5-bit 4-to-1 multiplexer                              : 1
  6-bit 2-to-1 multiplexer                              : 10
@@ -8957,7 +8959,7 @@ Macro Statistics
  32-bit adder                                          : 4
  4-bit subtractor                                      : 2
 # Counters                                             : 6
- 24-bit up counter                                     : 1
+ 25-bit up counter                                     : 1
  32-bit up counter                                     : 1
  4-bit up counter                                      : 4
 # Registers                                            : 9397
@@ -8967,19 +8969,19 @@ Macro Statistics
  30-bit comparator lessequal                           : 1
  32-bit comparator greater                             : 2
  6-bit comparator lessequal                            : 9
-# Multiplexers                                         : 663
+# Multiplexers                                         : 664
  1-bit 2-to-1 multiplexer                              : 535
  1-bit 3-to-1 multiplexer                              : 31
  1-bit 6-to-1 multiplexer                              : 1
  16-bit 2-to-1 multiplexer                             : 1
  17-bit 2-to-1 multiplexer                             : 11
  18-bit 2-to-1 multiplexer                             : 11
- 2-bit 2-to-1 multiplexer                              : 5
+ 2-bit 2-to-1 multiplexer                              : 6
  3-bit 2-to-1 multiplexer                              : 7
- 32-bit 2-to-1 multiplexer                             : 44
+ 32-bit 2-to-1 multiplexer                             : 43
  32-bit 256-to-1 multiplexer                           : 1
  32-bit 31-to-1 multiplexer                            : 2
- 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 2
  32-bit 8-to-1 multiplexer                             : 1
  5-bit 4-to-1 multiplexer                              : 1
  6-bit 2-to-1 multiplexer                              : 10
@@ -15208,8 +15210,8 @@ Unit <CPU> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3292
- Flip-Flops                                            : 3292
+# Registers                                            : 3293
+ Flip-Flops                                            : 3293
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -15234,30 +15236,30 @@ Top Level Output File Name         : CPU.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 5850
+# BELS                             : 5901
 #      GND                         : 1
 #      INV                         : 19
-#      LUT1                        : 114
-#      LUT2                        : 47
-#      LUT3                        : 74
-#      LUT4                        : 173
-#      LUT5                        : 1227
-#      LUT6                        : 3226
-#      MUXCY                       : 220
+#      LUT1                        : 116
+#      LUT2                        : 51
+#      LUT3                        : 1068
+#      LUT4                        : 160
+#      LUT5                        : 273
+#      LUT6                        : 3240
+#      MUXCY                       : 223
 #      MUXF7                       : 345
 #      MUXF8                       : 188
 #      VCC                         : 1
-#      XORCY                       : 215
-# FlipFlops/Latches                : 3518
+#      XORCY                       : 216
+# FlipFlops/Latches                : 3519
 #      FD                          : 2
-#      FDC                         : 82
+#      FDC                         : 83
 #      FDC_1                       : 2
-#      FDCE                        : 3114
+#      FDCE                        : 3113
 #      FDE                         : 55
 #      FDE_1                       : 8
 #      FDP                         : 4
 #      FDP_1                       : 2
-#      FDRE                        : 24
+#      FDRE                        : 25
 #      LD                          : 225
 # RAMS                             : 6
 #      RAM16X1D                    : 4
@@ -15278,19 +15280,19 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3518  out of  18224    19%  
- Number of Slice LUTs:                 4897  out of   9112    53%  
-    Number used as Logic:              4880  out of   9112    53%  
+ Number of Slice Registers:            3519  out of  18224    19%  
+ Number of Slice LUTs:                 4944  out of   9112    54%  
+    Number used as Logic:              4927  out of   9112    54%  
     Number used as Memory:               17  out of   2176     0%  
        Number used as RAM:               16
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   5477
-   Number with an unused Flip Flop:    1959  out of   5477    35%  
-   Number with an unused LUT:           580  out of   5477    10%  
-   Number of fully used LUT-FF pairs:  2938  out of   5477    53%  
-   Number of unique control sets:        50
+ Number of LUT Flip Flop pairs used:   5508
+   Number with an unused Flip Flop:    1989  out of   5508    36%  
+   Number with an unused LUT:           564  out of   5508    10%  
+   Number of fully used LUT-FF pairs:  2955  out of   5508    53%  
+   Number of unique control sets:        49
 
 IO Utilization: 
  Number of IOs:                          33
@@ -15321,7 +15323,7 @@ Clock Information:
 Clock Signal                                                                         | Clock buffer(FF name)          | Load  |
 -------------------------------------------------------------------------------------+--------------------------------+-------+
 myclk                                                                                | BUFG                           | 3192  |
-clk                                                                                  | BUFGP                          | 108   |
+clk                                                                                  | BUFGP                          | 109   |
 peri_read(Mmux_peri_read11:O)                                                        | BUFG(*)(peri1/rdata_31)        | 32    |
 alu1/logicer/_n0055(alu1/logicer/out1:O)                                             | BUFG(*)(alu1/logicer/result_31)| 32    |
 alu1/cmper/ctrl[2]_PWR_208_o_Mux_15_o(alu1/cmper/ctrl[2]_PWR_208_o_Mux_15_o1:O)      | NONE(*)(alu1/cmper/result_0)   | 1     |
@@ -15340,9 +15342,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 18.493ns (Maximum Frequency: 54.075MHz)
+   Minimum period: 19.118ns (Maximum Frequency: 52.307MHz)
    Minimum input arrival time before clock: 3.159ns
-   Maximum output required time after clock: 4.453ns
+   Maximum output required time after clock: 4.419ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -15351,73 +15353,45 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'myclk'
-  Clock period: 18.493ns (frequency: 54.075MHz)
-  Total number of paths / destination ports: 60079593336 / 6358
+  Clock period: 19.118ns (frequency: 52.307MHz)
+  Total number of paths / destination ports: 61528524151 / 6357
 -------------------------------------------------------------------------
-Delay:               18.493ns (Levels of Logic = 42)
-  Source:            PC_4 (FF)
-  Destination:       data_memory1/RAMDATA_11_0 (FF)
+Delay:               19.118ns (Levels of Logic = 14)
+  Source:            PC_7 (FF)
+  Destination:       data_memory1/RAMDATA_31 (FF)
   Source Clock:      myclk rising
   Destination Clock: myclk rising
 
-  Data Path: PC_4 to data_memory1/RAMDATA_11_0
+  Data Path: PC_7 to data_memory1/RAMDATA_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDC:C->Q             90   0.447   2.040  PC_4 (PC_4)
-     LUT3:I0->O            1   0.205   0.580  rom1/Mram_data61111_SW0 (N51)
-     LUT6:I5->O           23   0.205   1.154  rom1/Mram_data61111 (Instruction<30>)
-     LUT4:I3->O            4   0.205   0.684  control1/Mmux_PCSrc151 (control1/Mmux_PCSrc15)
-     LUT5:I4->O           32   0.205   1.292  control1/Ins[31]_Ins[31]_OR_192_o11 (control1/Ins[31]_Ins[31]_OR_192_o1)
-     LUT3:I2->O           12   0.205   0.909  control1/Ins[31]_Ins[5]_AND_55_o11 (control1/Ins[31]_Ins[5]_AND_55_o1)
-     LUT5:I4->O           35   0.205   1.335  Mmux_ALU_in1231 (ALU_in1<2>)
-     LUT6:I5->O            1   0.205   0.000  alu1/adder/Mmux_result_rs_lut<2> (alu1/adder/Mmux_result_rs_lut<2>)
-     MUXCY:S->O            1   0.172   0.000  alu1/adder/Mmux_result_rs_cy<2> (alu1/adder/Mmux_result_rs_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<3> (alu1/adder/Mmux_result_rs_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<4> (alu1/adder/Mmux_result_rs_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<5> (alu1/adder/Mmux_result_rs_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<6> (alu1/adder/Mmux_result_rs_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<7> (alu1/adder/Mmux_result_rs_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<8> (alu1/adder/Mmux_result_rs_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<9> (alu1/adder/Mmux_result_rs_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<10> (alu1/adder/Mmux_result_rs_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<11> (alu1/adder/Mmux_result_rs_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<12> (alu1/adder/Mmux_result_rs_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<13> (alu1/adder/Mmux_result_rs_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<14> (alu1/adder/Mmux_result_rs_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<15> (alu1/adder/Mmux_result_rs_cy<15>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<16> (alu1/adder/Mmux_result_rs_cy<16>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<17> (alu1/adder/Mmux_result_rs_cy<17>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<18> (alu1/adder/Mmux_result_rs_cy<18>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<19> (alu1/adder/Mmux_result_rs_cy<19>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<20> (alu1/adder/Mmux_result_rs_cy<20>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<21> (alu1/adder/Mmux_result_rs_cy<21>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<22> (alu1/adder/Mmux_result_rs_cy<22>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<23> (alu1/adder/Mmux_result_rs_cy<23>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<24> (alu1/adder/Mmux_result_rs_cy<24>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<25> (alu1/adder/Mmux_result_rs_cy<25>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<26> (alu1/adder/Mmux_result_rs_cy<26>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<27> (alu1/adder/Mmux_result_rs_cy<27>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<28> (alu1/adder/Mmux_result_rs_cy<28>)
-     MUXCY:CI->O           1   0.019   0.000  alu1/adder/Mmux_result_rs_cy<29> (alu1/adder/Mmux_result_rs_cy<29>)
-     MUXCY:CI->O           0   0.019   0.000  alu1/adder/Mmux_result_rs_cy<30> (alu1/adder/Mmux_result_rs_cy<30>)
-     XORCY:CI->O           5   0.180   0.715  alu1/adder/Mmux_result_rs_xor<31> (alu1/outcome0<31>)
-     LUT5:I4->O            4   0.205   0.931  alu1/muxer/Mmux_out251 (ALU_out<31>)
+     FDC:C->Q             91   0.447   2.182  PC_7 (PC_7)
+     LUT6:I0->O            1   0.203   0.000  rom1/Mram_data321 (rom1/Mram_data321)
+     MUXF7:I1->O           1   0.140   0.000  rom1/Mram_data32_f7_0 (rom1/Mram_data32_f71)
+     MUXF8:I0->O         261   0.144   2.172  rom1/Mram_data32_f8 (Instruction<16>)
+     LUT6:I4->O            1   0.203   0.827  register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_873 (register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_873)
+     LUT6:I2->O           46   0.203   1.595  register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_324 (register_file1/Mmux_addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT_324)
+     LUT4:I2->O           23   0.203   1.154  register_file1/Mmux_data2251 (Databus2<31>)
+     LUT5:I4->O           35   0.205   1.335  Mmux_ALU_in2251 (ALU_in2<31>)
+     LUT4:I3->O            0   0.205   0.000  alu1/adder/Mmux_result_rs_lut<31> (alu1/adder/Mmux_result_rs_lut<31>)
+     XORCY:LI->O           4   0.136   0.684  alu1/adder/Mmux_result_rs_xor<31> (alu1/outcome0<31>)
+     LUT5:I4->O            8   0.205   1.050  alu1/muxer/Mmux_out251 (ALU_out<31>)
      LUT4:I0->O            0   0.203   0.000  data_memory1/Mcompar_addr[31]_GND_274_o_LessThan_2_o_lutdi4 (data_memory1/Mcompar_addr[31]_GND_274_o_LessThan_2_o_lutdi4)
-     MUXCY:DI->O          46   0.145   1.491  data_memory1/Mcompar_addr[31]_GND_274_o_LessThan_2_o_cy<4> (data_memory1/Mcompar_addr[31]_GND_274_o_LessThan_2_o_cy<4>)
-     LUT6:I5->O          163   0.205   2.020  data_memory1/_n30000_inv3211_cy_cy_cy_cy_cy_cy (data_memory1/_n30000_inv321)
-     LUT6:I5->O           32   0.205   1.291  data_memory1/_n55088_inv321 (data_memory1/_n55088_inv)
-     FDCE:CE                   0.322          data_memory1/RAMDATA_27_31
+     MUXCY:DI->O          40   0.145   1.406  data_memory1/Mcompar_addr[31]_GND_274_o_LessThan_2_o_cy<4> (data_memory1/Mcompar_addr[31]_GND_274_o_LessThan_2_o_cy<4>)
+     LUT6:I5->O          194   0.205   2.048  data_memory1/_n28080_inv3211_cy_cy_cy_cy_cy (data_memory1/_n28080_inv321)
+     LUT6:I5->O           32   0.205   1.291  data_memory1/_n52912_inv321 (data_memory1/_n52912_inv)
+     FDCE:CE                   0.322          data_memory1/RAMDATA_44_31
     ----------------------------------------
-    Total                     18.493ns (4.051ns logic, 14.442ns route)
-                                       (21.9% logic, 78.1% route)
+    Total                     19.118ns (3.374ns logic, 15.744ns route)
+                                       (17.6% logic, 82.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 9.717ns (frequency: 102.912MHz)
-  Total number of paths / destination ports: 9204 / 262
+  Clock period: 9.712ns (frequency: 102.968MHz)
+  Total number of paths / destination ports: 9281 / 265
 -------------------------------------------------------------------------
-Delay:               4.859ns (Levels of Logic = 1)
+Delay:               4.856ns (Levels of Logic = 1)
   Source:            d1/key_o_temp (FF)
   Destination:       peri1/TX_DATA_7 (FF)
   Source Clock:      clk rising
@@ -15427,11 +15401,11 @@ Delay:               4.859ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q            3223   0.447   3.085  d1/key_o_temp (d1/key_o_temp)
+     FD:C->Q            3212   0.447   3.082  d1/key_o_temp (d1/key_o_temp)
      LUT6:I1->O            8   0.203   0.802  peri1/_n0320_inv1 (peri1/_n0320_inv)
      FDE_1:CE                  0.322          peri1/TX_DATA_0
     ----------------------------------------
-    Total                      4.859ns (0.972ns logic, 3.887ns route)
+    Total                      4.856ns (0.972ns logic, 3.884ns route)
                                        (20.0% logic, 80.0% route)
 
 =========================================================================
@@ -15440,18 +15414,18 @@ Timing constraint: Default period analysis for Clock 'alu1/shifter/ctrl[1]_PWR_1
   Total number of paths / destination ports: 354 / 128
 -------------------------------------------------------------------------
 Delay:               1.733ns (Levels of Logic = 1)
-  Source:            alu1/shifter/layer1_1 (LATCH)
-  Destination:       alu1/shifter/result_0 (LATCH)
+  Source:            alu1/shifter/layer1_2 (LATCH)
+  Destination:       alu1/shifter/result_1 (LATCH)
   Source Clock:      alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o falling
   Destination Clock: alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o falling
 
-  Data Path: alu1/shifter/layer1_1 to alu1/shifter/result_0
+  Data Path: alu1/shifter/layer1_2 to alu1/shifter/result_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               3   0.498   0.995  alu1/shifter/layer1_1 (alu1/shifter/layer1_1)
-     LUT6:I1->O            1   0.203   0.000  alu1/shifter/Mmux_ctrl[1]_layer1[31]_wide_mux_86_OUT<0>11 (alu1/shifter/ctrl[1]_layer1[31]_wide_mux_86_OUT<0>)
-     LD:D                      0.037          alu1/shifter/result_0
+     LD:G->Q               3   0.498   0.995  alu1/shifter/layer1_2 (alu1/shifter/layer1_2)
+     LUT6:I1->O            1   0.203   0.000  alu1/shifter/Mmux_ctrl[1]_layer1[31]_wide_mux_86_OUT<1>11 (alu1/shifter/ctrl[1]_layer1[31]_wide_mux_86_OUT<1>)
+     LD:D                      0.037          alu1/shifter/result_1
     ----------------------------------------
     Total                      1.733ns (0.738ns logic, 0.995ns route)
                                        (42.6% logic, 57.4% route)
@@ -15501,7 +15475,7 @@ Offset:              2.488ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'myclk'
   Total number of paths / destination ports: 20 / 20
 -------------------------------------------------------------------------
-Offset:              4.453ns (Levels of Logic = 2)
+Offset:              4.419ns (Levels of Logic = 2)
   Source:            peri1/digi_7 (FF)
   Destination:       bcd<7> (PAD)
   Source Clock:      myclk rising
@@ -15510,12 +15484,12 @@ Offset:              4.453ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.447   0.650  peri1/digi_7 (peri1/digi_7)
+     FDE:C->Q              2   0.447   0.616  peri1/digi_7 (peri1/digi_7)
      INV:I->O              1   0.206   0.579  bcd<7>1_INV_0 (bcd_7_OBUF)
      OBUF:I->O                 2.571          bcd_7_OBUF (bcd<7>)
     ----------------------------------------
-    Total                      4.453ns (3.224ns logic, 1.229ns route)
-                                       (72.4% logic, 27.6% route)
+    Total                      4.419ns (3.224ns logic, 1.195ns route)
+                                       (73.0% logic, 27.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -15546,7 +15520,7 @@ Clock to Setup on destination clock alu1/cmper/ctrl[2]_PWR_208_o_Mux_15_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-myclk          |         |         |   17.551|         |
+myclk          |         |         |   17.482|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock alu1/logicer/_n0055
@@ -15554,7 +15528,7 @@ Clock to Setup on destination clock alu1/logicer/_n0055
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-myclk          |         |         |   14.166|         |
+myclk          |         |         |   12.242|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o
@@ -15563,7 +15537,7 @@ Clock to Setup on destination clock alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
 alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o|         |         |    1.733|         |
-myclk                                   |         |         |   14.183|         |
+myclk                                   |         |         |   12.259|         |
 ----------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -15571,7 +15545,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    9.360|    2.524|    4.859|         |
+clk            |    9.360|    2.524|    4.856|         |
 myclk          |         |         |    4.029|         |
 ---------------+---------+---------+---------+---------+
 
@@ -15580,12 +15554,12 @@ Clock to Setup on destination clock myclk
                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
-alu1/cmper/ctrl[2]_PWR_208_o_Mux_15_o   |         |    7.658|         |         |
-alu1/logicer/_n0055                     |         |    8.554|         |         |
-alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o|         |    8.651|         |         |
-clk                                     |    6.153|    4.007|         |         |
-myclk                                   |   18.493|         |         |         |
-peri_read                               |         |    3.285|         |         |
+alu1/cmper/ctrl[2]_PWR_208_o_Mux_15_o   |         |    7.916|         |         |
+alu1/logicer/_n0055                     |         |    8.721|         |         |
+alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o|         |    8.818|         |         |
+clk                                     |    6.150|    4.007|         |         |
+myclk                                   |   19.118|         |         |         |
+peri_read                               |         |    4.277|         |         |
 ----------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock peri_read
@@ -15593,23 +15567,23 @@ Clock to Setup on destination clock peri_read
                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------------------------+---------+---------+---------+---------+
-alu1/cmper/ctrl[2]_PWR_208_o_Mux_15_o   |         |         |    7.630|         |
-alu1/logicer/_n0055                     |         |         |    7.647|         |
-alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o|         |         |    7.741|         |
-myclk                                   |         |         |   17.258|         |
+alu1/cmper/ctrl[2]_PWR_208_o_Mux_15_o   |         |         |    7.462|         |
+alu1/logicer/_n0055                     |         |         |    7.603|         |
+alu1/shifter/ctrl[1]_PWR_175_o_Mux_215_o|         |         |    7.700|         |
+myclk                                   |         |         |   17.147|         |
 ----------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 216.00 secs
-Total CPU time to Xst completion: 216.00 secs
+Total REAL time to Xst completion: 259.00 secs
+Total CPU time to Xst completion: 258.52 secs
  
 --> 
 
-Total memory usage is 399124 kilobytes
+Total memory usage is 399636 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 6407 (   0 filtered)
+Number of warnings : 6408 (   0 filtered)
 Number of infos    :    6 (   0 filtered)
 

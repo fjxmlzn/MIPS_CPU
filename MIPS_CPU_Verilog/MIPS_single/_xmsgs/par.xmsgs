@@ -11,10 +11,10 @@
 <msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">button_IBUF</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
-<msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">peri1/Mram_RX_buffer1_RAMD_D1_O</arg> has no load.  PAR will not attempt to route this signal.
+<msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">peri1/Mram_TX_buffer1_RAMD_D1_O</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
-<msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">peri1/Mram_TX_buffer1_RAMD_D1_O</arg> has no load.  PAR will not attempt to route this signal.
+<msg type="warning" file="Par" num="288" delta="old" >The signal <arg fmt="%s" index="1">peri1/Mram_RX_buffer1_RAMD_D1_O</arg> has no load.  PAR will not attempt to route this signal.
 </msg>
 
 <msg type="info" file="Par" num="459" delta="old" >The Clock Report is not displayed in the non timing-driven mode.
