@@ -126,9 +126,8 @@ module CPU_Pipeline(resetk, clk , button, led, switch, bcd, an, RX, TX);
 		begin
 			if (reset)
 				PC <= 32'h80000000;
-			else 
-				if (PCWrite)			//risk control
-					PC <= PC_next;
+			else if (PCWrite)			//risk control
+				PC <= PC_next;
 		end
 	
 

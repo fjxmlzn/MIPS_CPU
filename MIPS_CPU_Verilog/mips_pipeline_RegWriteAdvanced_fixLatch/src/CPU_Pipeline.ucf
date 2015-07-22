@@ -43,4 +43,4 @@ NET "clk" TNM_NET = clk;
 TIMESPEC TS_clk = PERIOD "clk" 10 ns HIGH 50%;
 #Created by Constraints Editor (xc6slx16-csg324-3) - 2015/07/22
 NET "PC<0>" TNM_NET = PC<0>;
-TIMESPEC TS_PC_0_ = PERIOD "PC<0>" 20 ns HIGH 50%;
+TIMESPEC TS_PC_0_ = PERIOD "PC<0>" 10 ns HIGH 50%;

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-07-22T20:27:31</DateModified>
+  <DateModified>2015-07-22T21:24:43</DateModified>
   <ModuleName>CPU_Pipeline</ModuleName>
-  <SummaryTimeStamp>2015-07-22T16:44:42</SummaryTimeStamp>
-  <SavedFilePath>E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/iseconfig/CPU_Pipeline.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2015-07-22T20:59:13</SummaryTimeStamp>
+  <SavedFilePath>E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/iseconfig/CPU_Pipeline.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn\</ImplementationReportsDirectory>
   <DateInitialized>2015-07-21T15:09:16</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
@@ -24,7 +24,7 @@
    <view inputState="Translated" program="map" locator="MAP_MODULE_HIERARCHY" contextTags="FPGA_ONLY" type="Module_Utilization" file="CPU_Pipeline_map.xrpt" label="Module Level Utilization" />
    <view inputState="Mapped" program="par" locator="CONSTRAINT_TABLE" contextTags="FPGA_ONLY" type="ConstraintsData" file="CPU_Pipeline.ptwx" showConstraints="0" label="Timing Constraints" translator="ptwxToTableXML.xslt" />
    <view inputState="Mapped" program="par" locator="PAR_PINOUT_BY_PIN_NUMBER" contextTags="FPGA_ONLY" type="PinoutData" file="CPU_Pipeline_par.xrpt" label="Pinout Report" />
-   <view inputState="Mapped" program="par" locator="PAR_CLOCK_TABLE" contextTags="FPGA_ONLY" type="ClocksData" file="CPU_Pipeline_par.xrpt" showConstraints="0" label="Clock Report" />
+   <view inputState="Mapped" program="par" locator="PAR_CLOCK_TABLE" contextTags="FPGA_ONLY" type="ClocksData" file="CPU_Pipeline_par.xrpt" label="Clock Report" />
    <view inputState="Mapped" program="par" contextTags="FPGA_ONLY,EDK_OFF" type="Timing_Analyzer" file="CPU_Pipeline.twx" label="Static Timing" />
    <view inputState="Translated" program="cpldfit" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="EXTERNAL_HTML" file="CPU_Pipeline_html/fit/report.htm" label="CPLD Fitter Report" />
    <view inputState="Fitted" program="taengine" contextTags="CPLD_ONLY,EDK_OFF" hidden="true" type="EXTERNAL_HTML" file="CPU_Pipeline_html/tim/report.htm" label="CPLD Timing Report" />

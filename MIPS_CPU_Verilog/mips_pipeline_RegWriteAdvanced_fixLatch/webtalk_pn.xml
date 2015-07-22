@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Wed Jul 22 16:47:35 2015">
+<application name="pn" timeStamp="Wed Jul 22 21:14:12 2015">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="8E839699048E47BA9277778A274558AF" type="project"/>
-<property name="ProjectIteration" value="11" type="project"/>
-<property name="ProjectFile" value="E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced/mips_pipeline2.xise" type="project"/>
+<property name="ProjectIteration" value="13" type="project"/>
+<property name="ProjectFile" value="E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/mips_pipeline2.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2015-07-21T15:08:50" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -25,7 +25,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2015-07-21T15:08:50" type="design"/>
 <property name="PROP_intWbtProjectID" value="8E839699048E47BA9277778A274558AF" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="11" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="13" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_selectedSimRootSourceNode_behav" value="work.tbpipeline" type="process"/>

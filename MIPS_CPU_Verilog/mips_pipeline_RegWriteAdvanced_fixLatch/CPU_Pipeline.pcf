@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Jul 22 16:47:30 2015
+// Written by: Map P.20131013 on Wed Jul 22 21:14:08 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -42,68 +42,70 @@ TIMEGRP clk = BEL "IRQs_0" BEL "IRQs_1" BEL "PC_0" BEL "PC_1" BEL "PC_2" BEL
         "PC_15" BEL "PC_16" BEL "PC_17" BEL "PC_18" BEL "PC_19" BEL "PC_20"
         BEL "PC_21" BEL "PC_22" BEL "PC_23" BEL "PC_24" BEL "PC_25" BEL
         "PC_26" BEL "PC_27" BEL "PC_28" BEL "PC_29" BEL "PC_30" BEL "PC_31"
-        BEL "peri1/RX_buf_in_tag_3" BEL "peri1/RX_buf_in_tag_2" BEL
-        "peri1/RX_buf_in_tag_1" BEL "peri1/RX_buf_in_tag_0" BEL
-        "peri1/TX_buf_out_tag_3" BEL "peri1/TX_buf_out_tag_2" BEL
+        BEL "peri1/TX_buf_out_tag_3" BEL "peri1/TX_buf_out_tag_2" BEL
         "peri1/TX_buf_out_tag_1" BEL "peri1/TX_buf_out_tag_0" BEL
-        "peri1/RX_buf_out_tag_3" BEL "peri1/TX_buf_in_tag_3" BEL
-        "peri1/TX_buf_in_tag_2" BEL "peri1/TX_buf_in_tag_1" BEL
-        "peri1/TX_buf_in_tag_0" BEL "peri1/TCON_2" BEL "peri1/flag_1" BEL
-        "peri1/flag_0" BEL "peri1/UART_RXD_7" BEL "peri1/UART_RXD_6" BEL
-        "peri1/UART_RXD_5" BEL "peri1/UART_RXD_4" BEL "peri1/UART_RXD_3" BEL
-        "peri1/UART_RXD_2" BEL "peri1/UART_RXD_1" BEL "peri1/UART_RXD_0" BEL
-        "peri1/TX_DATA_7" BEL "peri1/TX_DATA_6" BEL "peri1/TX_DATA_5" BEL
-        "peri1/TX_DATA_4" BEL "peri1/TX_DATA_3" BEL "peri1/TX_DATA_2" BEL
-        "peri1/TX_DATA_1" BEL "peri1/TX_DATA_0" BEL "peri1/TCON_1" BEL
-        "peri1/TL_31" BEL "peri1/TL_30" BEL "peri1/TL_29" BEL "peri1/TL_28"
-        BEL "peri1/TL_27" BEL "peri1/TL_26" BEL "peri1/TL_25" BEL
-        "peri1/TL_24" BEL "peri1/TL_23" BEL "peri1/TL_22" BEL "peri1/TL_21"
-        BEL "peri1/TL_20" BEL "peri1/TL_19" BEL "peri1/TL_18" BEL
-        "peri1/TL_17" BEL "peri1/TL_16" BEL "peri1/TL_15" BEL "peri1/TL_14"
-        BEL "peri1/TL_13" BEL "peri1/TL_12" BEL "peri1/TL_11" BEL
-        "peri1/TL_10" BEL "peri1/TL_9" BEL "peri1/TL_8" BEL "peri1/TL_7" BEL
-        "peri1/TL_6" BEL "peri1/TL_5" BEL "peri1/TL_4" BEL "peri1/TL_3" BEL
-        "peri1/TL_2" BEL "peri1/TL_1" BEL "peri1/TL_0" BEL "peri1/UART_CON_1"
-        BEL "peri1/digi_11" BEL "peri1/digi_10" BEL "peri1/digi_9" BEL
-        "peri1/digi_8" BEL "peri1/digi_7" BEL "peri1/digi_6" BEL
-        "peri1/digi_5" BEL "peri1/digi_4" BEL "peri1/digi_3" BEL
-        "peri1/digi_2" BEL "peri1/digi_1" BEL "peri1/digi_0" BEL
-        "peri1/UART_CON_0" BEL "peri1/led_7" BEL "peri1/led_6" BEL
-        "peri1/led_5" BEL "peri1/led_4" BEL "peri1/led_3" BEL "peri1/led_2"
-        BEL "peri1/led_1" BEL "peri1/led_0" BEL "peri1/TX_complete" BEL
-        "peri1/UART_CON_2" BEL "peri1/UART_CON_3" BEL "peri1/TX_EN" BEL
-        "peri1/TCON_0" BEL "peri1/UART_TXD_7" BEL "peri1/UART_TXD_6" BEL
-        "peri1/UART_TXD_5" BEL "peri1/UART_TXD_4" BEL "peri1/UART_TXD_3" BEL
-        "peri1/UART_TXD_2" BEL "peri1/UART_TXD_1" BEL "peri1/UART_TXD_0" BEL
-        "peri1/TH_31" BEL "peri1/TH_30" BEL "peri1/TH_29" BEL "peri1/TH_28"
-        BEL "peri1/TH_27" BEL "peri1/TH_26" BEL "peri1/TH_25" BEL
-        "peri1/TH_24" BEL "peri1/TH_23" BEL "peri1/TH_22" BEL "peri1/TH_21"
-        BEL "peri1/TH_20" BEL "peri1/TH_19" BEL "peri1/TH_18" BEL
-        "peri1/TH_17" BEL "peri1/TH_16" BEL "peri1/TH_15" BEL "peri1/TH_14"
-        BEL "peri1/TH_13" BEL "peri1/TH_12" BEL "peri1/TH_11" BEL
-        "peri1/TH_10" BEL "peri1/TH_9" BEL "peri1/TH_8" BEL "peri1/TH_7" BEL
-        "peri1/TH_6" BEL "peri1/TH_5" BEL "peri1/TH_4" BEL "peri1/TH_3" BEL
-        "peri1/TH_2" BEL "peri1/TH_1" BEL "peri1/TH_0" BEL "peri1/re/count_16"
-        BEL "peri1/re/count_15" BEL "peri1/re/count_14" BEL
-        "peri1/re/count_13" BEL "peri1/re/count_12" BEL "peri1/re/count_11"
-        BEL "peri1/re/count_10" BEL "peri1/re/count_9" BEL "peri1/re/count_8"
-        BEL "peri1/re/count_7" BEL "peri1/re/count_6" BEL "peri1/re/count_5"
-        BEL "peri1/re/count_4" BEL "peri1/re/count_3" BEL "peri1/re/count_2"
-        BEL "peri1/re/count_1" BEL "peri1/re/count_0" BEL "peri1/re/RX_STATUS"
-        BEL "peri1/re/enable" BEL "peri1/re/RX_DATA_0" BEL
-        "peri1/re/RX_DATA_1" BEL "peri1/re/RX_DATA_3" BEL "peri1/re/RX_DATA_4"
-        BEL "peri1/re/RX_DATA_2" BEL "peri1/re/RX_DATA_5" BEL
-        "peri1/re/RX_DATA_6" BEL "peri1/re/RX_DATA_7" BEL "peri1/se/count_17"
-        BEL "peri1/se/count_16" BEL "peri1/se/count_15" BEL
-        "peri1/se/count_14" BEL "peri1/se/count_13" BEL "peri1/se/count_12"
-        BEL "peri1/se/count_11" BEL "peri1/se/count_10" BEL "peri1/se/count_9"
-        BEL "peri1/se/count_8" BEL "peri1/se/count_7" BEL "peri1/se/count_6"
-        BEL "peri1/se/count_5" BEL "peri1/se/count_4" BEL "peri1/se/count_3"
-        BEL "peri1/se/count_2" BEL "peri1/se/count_1" BEL "peri1/se/count_0"
-        BEL "peri1/se/TX" BEL "peri1/se/enable" BEL "peri1/se/data_7" BEL
-        "peri1/se/data_6" BEL "peri1/se/data_5" BEL "peri1/se/data_4" BEL
-        "peri1/se/data_3" BEL "peri1/se/data_2" BEL "peri1/se/data_1" BEL
-        "peri1/se/data_0" BEL "d1/count_23" BEL "d1/count_22" BEL
+        "peri1/TX_buf_in_tag_3" BEL "peri1/TX_buf_in_tag_2" BEL
+        "peri1/TX_buf_in_tag_1" BEL "peri1/TX_buf_in_tag_0" BEL
+        "peri1/RX_buf_out_tag_3" BEL "peri1/RX_buf_out_tag_2" BEL
+        "peri1/RX_buf_out_tag_1" BEL "peri1/RX_buf_out_tag_0" BEL
+        "peri1/TX_LAST_WORK" BEL "peri1/TX_DATA_7" BEL "peri1/TX_DATA_6" BEL
+        "peri1/TX_DATA_5" BEL "peri1/TX_DATA_4" BEL "peri1/TX_DATA_3" BEL
+        "peri1/TX_DATA_2" BEL "peri1/TX_DATA_1" BEL "peri1/TX_DATA_0" BEL
+        "peri1/UART_RXD_7" BEL "peri1/UART_RXD_6" BEL "peri1/UART_RXD_5" BEL
+        "peri1/UART_RXD_4" BEL "peri1/UART_RXD_3" BEL "peri1/UART_RXD_2" BEL
+        "peri1/UART_RXD_1" BEL "peri1/UART_RXD_0" BEL "peri1/TCON_2" BEL
+        "peri1/TX_EN" BEL "peri1/UART_CON_3" BEL "peri1/UART_CON_2" BEL
+        "peri1/UART_CON_0" BEL "peri1/UART_CON_1" BEL "peri1/TCON_1" BEL
+        "peri1/TCON_0" BEL "peri1/digi_11" BEL "peri1/digi_10" BEL
+        "peri1/digi_9" BEL "peri1/digi_8" BEL "peri1/digi_7" BEL
+        "peri1/digi_6" BEL "peri1/digi_5" BEL "peri1/digi_4" BEL
+        "peri1/digi_3" BEL "peri1/digi_2" BEL "peri1/digi_1" BEL
+        "peri1/digi_0" BEL "peri1/led_7" BEL "peri1/led_6" BEL "peri1/led_5"
+        BEL "peri1/led_4" BEL "peri1/led_3" BEL "peri1/led_2" BEL
+        "peri1/led_1" BEL "peri1/led_0" BEL "peri1/UART_TXD_7" BEL
+        "peri1/UART_TXD_6" BEL "peri1/UART_TXD_5" BEL "peri1/UART_TXD_4" BEL
+        "peri1/UART_TXD_3" BEL "peri1/UART_TXD_2" BEL "peri1/UART_TXD_1" BEL
+        "peri1/UART_TXD_0" BEL "peri1/TL_31" BEL "peri1/TL_30" BEL
+        "peri1/TL_29" BEL "peri1/TL_28" BEL "peri1/TL_27" BEL "peri1/TL_26"
+        BEL "peri1/TL_25" BEL "peri1/TL_24" BEL "peri1/TL_23" BEL
+        "peri1/TL_22" BEL "peri1/TL_21" BEL "peri1/TL_20" BEL "peri1/TL_19"
+        BEL "peri1/TL_18" BEL "peri1/TL_17" BEL "peri1/TL_16" BEL
+        "peri1/TL_15" BEL "peri1/TL_14" BEL "peri1/TL_13" BEL "peri1/TL_12"
+        BEL "peri1/TL_11" BEL "peri1/TL_10" BEL "peri1/TL_9" BEL "peri1/TL_8"
+        BEL "peri1/TL_7" BEL "peri1/TL_6" BEL "peri1/TL_5" BEL "peri1/TL_4"
+        BEL "peri1/TL_3" BEL "peri1/TL_2" BEL "peri1/TL_1" BEL "peri1/TL_0"
+        BEL "peri1/TH_31" BEL "peri1/TH_30" BEL "peri1/TH_29" BEL
+        "peri1/TH_28" BEL "peri1/TH_27" BEL "peri1/TH_26" BEL "peri1/TH_25"
+        BEL "peri1/TH_24" BEL "peri1/TH_23" BEL "peri1/TH_22" BEL
+        "peri1/TH_21" BEL "peri1/TH_20" BEL "peri1/TH_19" BEL "peri1/TH_18"
+        BEL "peri1/TH_17" BEL "peri1/TH_16" BEL "peri1/TH_15" BEL
+        "peri1/TH_14" BEL "peri1/TH_13" BEL "peri1/TH_12" BEL "peri1/TH_11"
+        BEL "peri1/TH_10" BEL "peri1/TH_9" BEL "peri1/TH_8" BEL "peri1/TH_7"
+        BEL "peri1/TH_6" BEL "peri1/TH_5" BEL "peri1/TH_4" BEL "peri1/TH_3"
+        BEL "peri1/TH_2" BEL "peri1/TH_1" BEL "peri1/TH_0" BEL
+        "peri1/uartReceiver/RX_FLAG" BEL "peri1/uartReceiver/RX_DATA_7" BEL
+        "peri1/uartReceiver/RX_DATA_6" BEL "peri1/uartReceiver/RX_DATA_5" BEL
+        "peri1/uartReceiver/RX_DATA_4" BEL "peri1/uartReceiver/RX_DATA_3" BEL
+        "peri1/uartReceiver/RX_DATA_2" BEL "peri1/uartReceiver/RX_DATA_1" BEL
+        "peri1/uartReceiver/RX_DATA_0" BEL "peri1/uartReceiver/count_16" BEL
+        "peri1/uartReceiver/count_15" BEL "peri1/uartReceiver/count_14" BEL
+        "peri1/uartReceiver/count_13" BEL "peri1/uartReceiver/count_12" BEL
+        "peri1/uartReceiver/count_11" BEL "peri1/uartReceiver/count_10" BEL
+        "peri1/uartReceiver/count_9" BEL "peri1/uartReceiver/count_8" BEL
+        "peri1/uartReceiver/count_7" BEL "peri1/uartReceiver/count_6" BEL
+        "peri1/uartReceiver/count_5" BEL "peri1/uartReceiver/count_4" BEL
+        "peri1/uartReceiver/count_3" BEL "peri1/uartReceiver/count_2" BEL
+        "peri1/uartReceiver/count_1" BEL "peri1/uartReceiver/count_0" BEL
+        "peri1/uartSender/TX" BEL "peri1/uartSender/count_16" BEL
+        "peri1/uartSender/count_15" BEL "peri1/uartSender/count_14" BEL
+        "peri1/uartSender/count_13" BEL "peri1/uartSender/count_12" BEL
+        "peri1/uartSender/count_11" BEL "peri1/uartSender/count_10" BEL
+        "peri1/uartSender/count_9" BEL "peri1/uartSender/count_8" BEL
+        "peri1/uartSender/count_7" BEL "peri1/uartSender/count_6" BEL
+        "peri1/uartSender/count_5" BEL "peri1/uartSender/count_4" BEL
+        "peri1/uartSender/count_3" BEL "peri1/uartSender/count_2" BEL
+        "peri1/uartSender/count_1" BEL "peri1/uartSender/count_0" BEL
+        "peri1/uartSender/TX_WORK" BEL "d1/count_23" BEL "d1/count_22" BEL
         "d1/count_21" BEL "d1/count_20" BEL "d1/count_19" BEL "d1/count_18"
         BEL "d1/count_17" BEL "d1/count_16" BEL "d1/count_15" BEL
         "d1/count_14" BEL "d1/count_13" BEL "d1/count_12" BEL "d1/count_11"
@@ -817,79 +819,80 @@ TIMEGRP clk = BEL "IRQs_0" BEL "IRQs_1" BEL "PC_0" BEL "PC_1" BEL "PC_2" BEL
         "IFIDReg1/Instruction_n_5" BEL "IFIDReg1/Instruction_n_4" BEL
         "IFIDReg1/Instruction_n_3" BEL "IFIDReg1/Instruction_n_2" BEL
         "IFIDReg1/Instruction_n_1" BEL "IFIDReg1/Instruction_n_0" BEL
-        "peri1/RX_buf_out_tag_2" BEL "peri1/RX_buf_out_tag_1" BEL
-        "peri1/RX_buf_out_tag_0" BEL "IFIDReg1/PC_plus_4_n_0_C_0" BEL
-        "IFIDReg1/PC_plus_4_n_0_P_0" BEL "IFIDReg1/PC_plus_4_n_1_C_1" BEL
-        "IFIDReg1/PC_plus_4_n_1_P_1" BEL "IFIDReg1/PC_plus_4_n_2_C_2" BEL
-        "IFIDReg1/PC_plus_4_n_2_P_2" BEL "IFIDReg1/PC_plus_4_n_3_C_3" BEL
-        "IFIDReg1/PC_plus_4_n_3_P_3" BEL "IFIDReg1/PC_plus_4_n_4_C_4" BEL
-        "IFIDReg1/PC_plus_4_n_4_P_4" BEL "IFIDReg1/PC_plus_4_n_5_C_5" BEL
-        "IFIDReg1/PC_plus_4_n_5_P_5" BEL "IFIDReg1/PC_plus_4_n_6_C_6" BEL
-        "IFIDReg1/PC_plus_4_n_6_P_6" BEL "IFIDReg1/PC_plus_4_n_7_C_7" BEL
-        "IFIDReg1/PC_plus_4_n_7_P_7" BEL "IFIDReg1/PC_plus_4_n_8_C_8" BEL
-        "IFIDReg1/PC_plus_4_n_8_P_8" BEL "IFIDReg1/PC_plus_4_n_9_C_9" BEL
-        "IFIDReg1/PC_plus_4_n_9_P_9" BEL "IFIDReg1/PC_plus_4_n_10_C_10" BEL
-        "IFIDReg1/PC_plus_4_n_10_P_10" BEL "IFIDReg1/PC_plus_4_n_11_C_11" BEL
-        "IFIDReg1/PC_plus_4_n_11_P_11" BEL "IFIDReg1/PC_plus_4_n_12_C_12" BEL
-        "IFIDReg1/PC_plus_4_n_12_P_12" BEL "IFIDReg1/PC_plus_4_n_14_C_14" BEL
-        "IFIDReg1/PC_plus_4_n_14_P_14" BEL "IFIDReg1/PC_plus_4_n_15_C_15" BEL
-        "IFIDReg1/PC_plus_4_n_15_P_15" BEL "IFIDReg1/PC_plus_4_n_13_C_13" BEL
-        "IFIDReg1/PC_plus_4_n_13_P_13" BEL "IFIDReg1/PC_plus_4_n_16_C_16" BEL
-        "IFIDReg1/PC_plus_4_n_16_P_16" BEL "IFIDReg1/PC_plus_4_n_17_C_17" BEL
-        "IFIDReg1/PC_plus_4_n_17_P_17" BEL "IFIDReg1/PC_plus_4_n_18_C_18" BEL
-        "IFIDReg1/PC_plus_4_n_18_P_18" BEL "IFIDReg1/PC_plus_4_n_19_C_19" BEL
-        "IFIDReg1/PC_plus_4_n_19_P_19" BEL "IFIDReg1/PC_plus_4_n_20_C_20" BEL
-        "IFIDReg1/PC_plus_4_n_20_P_20" BEL "IFIDReg1/PC_plus_4_n_21_C_21" BEL
-        "IFIDReg1/PC_plus_4_n_21_P_21" BEL "IFIDReg1/PC_plus_4_n_23_C_23" BEL
-        "IFIDReg1/PC_plus_4_n_23_P_23" BEL "IFIDReg1/PC_plus_4_n_24_C_24" BEL
-        "IFIDReg1/PC_plus_4_n_24_P_24" BEL "IFIDReg1/PC_plus_4_n_22_C_22" BEL
-        "IFIDReg1/PC_plus_4_n_22_P_22" BEL "IFIDReg1/PC_plus_4_n_25_C_25" BEL
-        "IFIDReg1/PC_plus_4_n_25_P_25" BEL "IFIDReg1/PC_plus_4_n_26_C_26" BEL
-        "IFIDReg1/PC_plus_4_n_26_P_26" BEL "IFIDReg1/PC_plus_4_n_27_C_27" BEL
-        "IFIDReg1/PC_plus_4_n_27_P_27" BEL "IFIDReg1/PC_plus_4_n_28_C_28" BEL
-        "IFIDReg1/PC_plus_4_n_28_P_28" BEL "IFIDReg1/PC_plus_4_n_29_C_29" BEL
-        "IFIDReg1/PC_plus_4_n_29_P_29" BEL "IFIDReg1/PC_plus_4_n_30_C_30" BEL
-        "IFIDReg1/PC_plus_4_n_30_P_30" BEL "IFIDReg1/PC_n_0_C_0" BEL
-        "IFIDReg1/PC_n_0_P_0" BEL "IFIDReg1/PC_n_1_C_1" BEL
-        "IFIDReg1/PC_n_1_P_1" BEL "IFIDReg1/PC_plus_4_n_31_C_31" BEL
-        "IFIDReg1/PC_plus_4_n_31_P_31" BEL "IFIDReg1/PC_n_2_C_2" BEL
-        "IFIDReg1/PC_n_2_P_2" BEL "IFIDReg1/PC_n_3_C_3" BEL
-        "IFIDReg1/PC_n_3_P_3" BEL "IFIDReg1/PC_n_4_C_4" BEL
-        "IFIDReg1/PC_n_4_P_4" BEL "IFIDReg1/PC_n_5_C_5" BEL
-        "IFIDReg1/PC_n_5_P_5" BEL "IFIDReg1/PC_n_6_C_6" BEL
-        "IFIDReg1/PC_n_6_P_6" BEL "IFIDReg1/PC_n_7_C_7" BEL
-        "IFIDReg1/PC_n_7_P_7" BEL "IFIDReg1/PC_n_8_C_8" BEL
-        "IFIDReg1/PC_n_8_P_8" BEL "IFIDReg1/PC_n_9_C_9" BEL
-        "IFIDReg1/PC_n_9_P_9" BEL "IFIDReg1/PC_n_10_C_10" BEL
-        "IFIDReg1/PC_n_10_P_10" BEL "IFIDReg1/PC_n_11_C_11" BEL
-        "IFIDReg1/PC_n_11_P_11" BEL "IFIDReg1/PC_n_12_C_12" BEL
-        "IFIDReg1/PC_n_12_P_12" BEL "IFIDReg1/PC_n_13_C_13" BEL
-        "IFIDReg1/PC_n_13_P_13" BEL "IFIDReg1/PC_n_14_C_14" BEL
-        "IFIDReg1/PC_n_14_P_14" BEL "IFIDReg1/PC_n_15_C_15" BEL
-        "IFIDReg1/PC_n_15_P_15" BEL "IFIDReg1/PC_n_17_C_17" BEL
-        "IFIDReg1/PC_n_17_P_17" BEL "IFIDReg1/PC_n_18_C_18" BEL
-        "IFIDReg1/PC_n_18_P_18" BEL "IFIDReg1/PC_n_16_C_16" BEL
-        "IFIDReg1/PC_n_16_P_16" BEL "IFIDReg1/PC_n_19_C_19" BEL
-        "IFIDReg1/PC_n_19_P_19" BEL "IFIDReg1/PC_n_20_C_20" BEL
-        "IFIDReg1/PC_n_20_P_20" BEL "IFIDReg1/PC_n_21_C_21" BEL
-        "IFIDReg1/PC_n_21_P_21" BEL "IFIDReg1/PC_n_22_C_22" BEL
-        "IFIDReg1/PC_n_22_P_22" BEL "IFIDReg1/PC_n_23_C_23" BEL
-        "IFIDReg1/PC_n_23_P_23" BEL "IFIDReg1/PC_n_24_C_24" BEL
-        "IFIDReg1/PC_n_24_P_24" BEL "IFIDReg1/PC_n_26_C_26" BEL
-        "IFIDReg1/PC_n_26_P_26" BEL "IFIDReg1/PC_n_27_C_27" BEL
-        "IFIDReg1/PC_n_27_P_27" BEL "IFIDReg1/PC_n_25_C_25" BEL
-        "IFIDReg1/PC_n_25_P_25" BEL "IFIDReg1/PC_n_28_C_28" BEL
-        "IFIDReg1/PC_n_28_P_28" BEL "IFIDReg1/PC_n_29_C_29" BEL
-        "IFIDReg1/PC_n_29_P_29" BEL "IFIDReg1/PC_n_30_C_30" BEL
-        "IFIDReg1/PC_n_30_P_30" BEL "EXMEMReg1/Write_register_n_2_1" BEL
+        "IFIDReg1/PC_plus_4_n_0_C_0" BEL "IFIDReg1/PC_plus_4_n_0_P_0" BEL
+        "IFIDReg1/PC_plus_4_n_1_C_1" BEL "IFIDReg1/PC_plus_4_n_1_P_1" BEL
+        "IFIDReg1/PC_plus_4_n_2_C_2" BEL "IFIDReg1/PC_plus_4_n_2_P_2" BEL
+        "IFIDReg1/PC_plus_4_n_3_C_3" BEL "IFIDReg1/PC_plus_4_n_3_P_3" BEL
+        "IFIDReg1/PC_plus_4_n_4_C_4" BEL "IFIDReg1/PC_plus_4_n_4_P_4" BEL
+        "IFIDReg1/PC_plus_4_n_5_C_5" BEL "IFIDReg1/PC_plus_4_n_5_P_5" BEL
+        "IFIDReg1/PC_plus_4_n_6_C_6" BEL "IFIDReg1/PC_plus_4_n_6_P_6" BEL
+        "IFIDReg1/PC_plus_4_n_7_C_7" BEL "IFIDReg1/PC_plus_4_n_7_P_7" BEL
+        "IFIDReg1/PC_plus_4_n_8_C_8" BEL "IFIDReg1/PC_plus_4_n_8_P_8" BEL
+        "IFIDReg1/PC_plus_4_n_9_C_9" BEL "IFIDReg1/PC_plus_4_n_9_P_9" BEL
+        "IFIDReg1/PC_plus_4_n_10_C_10" BEL "IFIDReg1/PC_plus_4_n_10_P_10" BEL
+        "IFIDReg1/PC_plus_4_n_11_C_11" BEL "IFIDReg1/PC_plus_4_n_11_P_11" BEL
+        "IFIDReg1/PC_plus_4_n_12_C_12" BEL "IFIDReg1/PC_plus_4_n_12_P_12" BEL
+        "IFIDReg1/PC_plus_4_n_14_C_14" BEL "IFIDReg1/PC_plus_4_n_14_P_14" BEL
+        "IFIDReg1/PC_plus_4_n_15_C_15" BEL "IFIDReg1/PC_plus_4_n_15_P_15" BEL
+        "IFIDReg1/PC_plus_4_n_13_C_13" BEL "IFIDReg1/PC_plus_4_n_13_P_13" BEL
+        "IFIDReg1/PC_plus_4_n_16_C_16" BEL "IFIDReg1/PC_plus_4_n_16_P_16" BEL
+        "IFIDReg1/PC_plus_4_n_17_C_17" BEL "IFIDReg1/PC_plus_4_n_17_P_17" BEL
+        "IFIDReg1/PC_plus_4_n_18_C_18" BEL "IFIDReg1/PC_plus_4_n_18_P_18" BEL
+        "IFIDReg1/PC_plus_4_n_19_C_19" BEL "IFIDReg1/PC_plus_4_n_19_P_19" BEL
+        "IFIDReg1/PC_plus_4_n_20_C_20" BEL "IFIDReg1/PC_plus_4_n_20_P_20" BEL
+        "IFIDReg1/PC_plus_4_n_21_C_21" BEL "IFIDReg1/PC_plus_4_n_21_P_21" BEL
+        "IFIDReg1/PC_plus_4_n_23_C_23" BEL "IFIDReg1/PC_plus_4_n_23_P_23" BEL
+        "IFIDReg1/PC_plus_4_n_24_C_24" BEL "IFIDReg1/PC_plus_4_n_24_P_24" BEL
+        "IFIDReg1/PC_plus_4_n_22_C_22" BEL "IFIDReg1/PC_plus_4_n_22_P_22" BEL
+        "IFIDReg1/PC_plus_4_n_25_C_25" BEL "IFIDReg1/PC_plus_4_n_25_P_25" BEL
+        "IFIDReg1/PC_plus_4_n_26_C_26" BEL "IFIDReg1/PC_plus_4_n_26_P_26" BEL
+        "IFIDReg1/PC_plus_4_n_27_C_27" BEL "IFIDReg1/PC_plus_4_n_27_P_27" BEL
+        "IFIDReg1/PC_plus_4_n_28_C_28" BEL "IFIDReg1/PC_plus_4_n_28_P_28" BEL
+        "IFIDReg1/PC_plus_4_n_29_C_29" BEL "IFIDReg1/PC_plus_4_n_29_P_29" BEL
+        "IFIDReg1/PC_plus_4_n_30_C_30" BEL "IFIDReg1/PC_plus_4_n_30_P_30" BEL
+        "IFIDReg1/PC_n_0_C_0" BEL "IFIDReg1/PC_n_0_P_0" BEL
+        "IFIDReg1/PC_n_1_C_1" BEL "IFIDReg1/PC_n_1_P_1" BEL
+        "IFIDReg1/PC_plus_4_n_31_C_31" BEL "IFIDReg1/PC_plus_4_n_31_P_31" BEL
+        "IFIDReg1/PC_n_2_C_2" BEL "IFIDReg1/PC_n_2_P_2" BEL
+        "IFIDReg1/PC_n_3_C_3" BEL "IFIDReg1/PC_n_3_P_3" BEL
+        "IFIDReg1/PC_n_4_C_4" BEL "IFIDReg1/PC_n_4_P_4" BEL
+        "IFIDReg1/PC_n_5_C_5" BEL "IFIDReg1/PC_n_5_P_5" BEL
+        "IFIDReg1/PC_n_6_C_6" BEL "IFIDReg1/PC_n_6_P_6" BEL
+        "IFIDReg1/PC_n_7_C_7" BEL "IFIDReg1/PC_n_7_P_7" BEL
+        "IFIDReg1/PC_n_8_C_8" BEL "IFIDReg1/PC_n_8_P_8" BEL
+        "IFIDReg1/PC_n_9_C_9" BEL "IFIDReg1/PC_n_9_P_9" BEL
+        "IFIDReg1/PC_n_10_C_10" BEL "IFIDReg1/PC_n_10_P_10" BEL
+        "IFIDReg1/PC_n_11_C_11" BEL "IFIDReg1/PC_n_11_P_11" BEL
+        "IFIDReg1/PC_n_12_C_12" BEL "IFIDReg1/PC_n_12_P_12" BEL
+        "IFIDReg1/PC_n_13_C_13" BEL "IFIDReg1/PC_n_13_P_13" BEL
+        "IFIDReg1/PC_n_14_C_14" BEL "IFIDReg1/PC_n_14_P_14" BEL
+        "IFIDReg1/PC_n_15_C_15" BEL "IFIDReg1/PC_n_15_P_15" BEL
+        "IFIDReg1/PC_n_17_C_17" BEL "IFIDReg1/PC_n_17_P_17" BEL
+        "IFIDReg1/PC_n_18_C_18" BEL "IFIDReg1/PC_n_18_P_18" BEL
+        "IFIDReg1/PC_n_16_C_16" BEL "IFIDReg1/PC_n_16_P_16" BEL
+        "IFIDReg1/PC_n_19_C_19" BEL "IFIDReg1/PC_n_19_P_19" BEL
+        "IFIDReg1/PC_n_20_C_20" BEL "IFIDReg1/PC_n_20_P_20" BEL
+        "IFIDReg1/PC_n_21_C_21" BEL "IFIDReg1/PC_n_21_P_21" BEL
+        "IFIDReg1/PC_n_22_C_22" BEL "IFIDReg1/PC_n_22_P_22" BEL
+        "IFIDReg1/PC_n_23_C_23" BEL "IFIDReg1/PC_n_23_P_23" BEL
+        "IFIDReg1/PC_n_24_C_24" BEL "IFIDReg1/PC_n_24_P_24" BEL
+        "IFIDReg1/PC_n_26_C_26" BEL "IFIDReg1/PC_n_26_P_26" BEL
+        "IFIDReg1/PC_n_27_C_27" BEL "IFIDReg1/PC_n_27_P_27" BEL
+        "IFIDReg1/PC_n_25_C_25" BEL "IFIDReg1/PC_n_25_P_25" BEL
+        "IFIDReg1/PC_n_28_C_28" BEL "IFIDReg1/PC_n_28_P_28" BEL
+        "IFIDReg1/PC_n_29_C_29" BEL "IFIDReg1/PC_n_29_P_29" BEL
+        "IFIDReg1/PC_n_30_C_30" BEL "IFIDReg1/PC_n_30_P_30" BEL
+        "EXMEMReg1/Write_register_n_4_1" BEL "EXMEMReg1/Write_register_n_2_1"
+        BEL "EXMEMReg1/Write_register_n_3_1" BEL
         "EXMEMReg1/Write_register_n_1_1" BEL "EXMEMReg1/Write_register_n_0_1"
-        BEL "EXMEMReg1/Write_register_n_3_1" BEL "MEMWBReg1/MemtoReg_n_0_1"
-        BEL "MEMWBReg1/MemtoReg_n_1_1" BEL "IDEXReg1/ALUSrc2_n_1" BEL
-        "EXMEMReg1/Write_register_n_2_2" BEL "IDEXReg1/ALUSrc2_n_2" BEL
-        "MEMWBReg1/RegWrite_n_1" BEL "EXMEMReg1/Write_register_n_4_1" BEL
-        "IDEXReg1/ALUSrc1_n_1" BEL "MEMWBReg1/MemtoReg_n_1_2" BEL
-        "MEMWBReg1/MemtoReg_n_0_2" BEL "EXMEMReg1/Write_register_n_4_2" BEL
-        "clk_BUFGP/BUFG" BEL "d1/Mshreg_key_i_t2" BEL "d1/key_i_t2" BEL
+        BEL "MEMWBReg1/MemtoReg_n_0_1" BEL "MEMWBReg1/MemtoReg_n_1_1" BEL
+        "IDEXReg1/ALUSrc2_n_1" BEL "EXMEMReg1/Write_register_n_3_2" BEL
+        "EXMEMReg1/Write_register_n_2_2" BEL "IFIDReg1/Instruction_n_17_1" BEL
+        "MEMWBReg1/RegWrite_n_1" BEL "IDEXReg1/ALUSrc1_n_1" BEL
+        "MEMWBReg1/MemtoReg_n_1_2" BEL "IDEXReg1/ALUSrc2_n_2" BEL
+        "IDEXReg1/ALUSrc2_n_3" BEL "EXMEMReg1/Write_register_n_4_2" BEL
+        "MEMWBReg1/MemtoReg_n_0_2" BEL "clk_BUFGP/BUFG" BEL
+        "d1/Mshreg_key_i_t2" BEL "d1/key_i_t2" BEL
         "data_memory1/Mram_RAMDATA1/D" BEL "data_memory1/Mram_RAMDATA1/C" BEL
         "data_memory1/Mram_RAMDATA1/B" BEL "data_memory1/Mram_RAMDATA1/A" BEL
         "data_memory1/Mram_RAMDATA2/D" BEL "data_memory1/Mram_RAMDATA2/C" BEL
@@ -969,14 +972,8 @@ TIMEGRP clk = BEL "IRQs_0" BEL "IRQs_1" BEL "PC_0" BEL "PC_1" BEL "PC_2" BEL
         "data_memory1/Mram_RAMDATA31/A" BEL "data_memory1/Mram_RAMDATA32/D"
         BEL "data_memory1/Mram_RAMDATA32/C" BEL
         "data_memory1/Mram_RAMDATA32/B" BEL "data_memory1/Mram_RAMDATA32/A"
-        BEL "peri1/Mram_RX_buffer21/SP" BEL "peri1/Mram_RX_buffer21/DP" BEL
+        BEL "peri1/Mram_TX_buffer21/SP" BEL "peri1/Mram_TX_buffer21/DP" BEL
         "peri1/Mram_TX_buffer22/SP" BEL "peri1/Mram_TX_buffer22/DP" BEL
-        "peri1/Mram_RX_buffer22/SP" BEL "peri1/Mram_RX_buffer22/DP" BEL
-        "peri1/Mram_TX_buffer21/SP" BEL "peri1/Mram_TX_buffer21/DP" BEL
-        "peri1/Mram_RX_buffer1_RAMA_D1" BEL "peri1/Mram_RX_buffer1_RAMA" BEL
-        "peri1/Mram_RX_buffer1_RAMB_D1" BEL "peri1/Mram_RX_buffer1_RAMB" BEL
-        "peri1/Mram_RX_buffer1_RAMC_D1" BEL "peri1/Mram_RX_buffer1_RAMC" BEL
-        "peri1/Mram_RX_buffer1_RAMD_D1" BEL "peri1/Mram_RX_buffer1_RAMD" BEL
         "peri1/Mram_TX_buffer1_RAMA_D1" BEL "peri1/Mram_TX_buffer1_RAMA" BEL
         "peri1/Mram_TX_buffer1_RAMB_D1" BEL "peri1/Mram_TX_buffer1_RAMB" BEL
         "peri1/Mram_TX_buffer1_RAMC_D1" BEL "peri1/Mram_TX_buffer1_RAMC" BEL
@@ -1046,7 +1043,7 @@ TIMEGRP TO_IFIDReg1PC_n_28_LDC = BEL "IFIDReg1/PC_n_28_LDC";
 TIMEGRP TO_IFIDReg1PC_n_29_LDC = BEL "IFIDReg1/PC_n_29_LDC";
 TIMEGRP TO_IFIDReg1PC_n_30_LDC = BEL "IFIDReg1/PC_n_30_LDC";
 TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
-TS_PC_0_ = PERIOD TIMEGRP "PC<0>" 20 ns HIGH 50%;
+TS_PC_0_ = PERIOD TIMEGRP "PC<0>" 10 ns HIGH 50%;
 TS_TO_IFIDReg1PC_plus_4_n_0_LDC = MAXDELAY TO TIMEGRP
         "TO_IFIDReg1PC_plus_4_n_0_LDC" TS_clk DATAPATHONLY;
 TS_TO_IFIDReg1PC_plus_4_n_1_LDC = MAXDELAY TO TIMEGRP

@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-THINK-PC::  Wed Jul 22 16:47:37 2015
+THINK-PC::  Wed Jul 22 21:14:15 2015
 
 par -w -intstyle ise -ol high -mt off CPU_Pipeline_map.ncd CPU_Pipeline.ncd
 CPU_Pipeline.pcf 
@@ -22,16 +22,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,886 out of  18,224   10%
-    Number used as Flip Flops:               1,825
+  Number of Slice Registers:                 1,877 out of  18,224   10%
+    Number used as Flip Flops:               1,816
     Number used as Latches:                     61
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      3,232 out of   9,112   35%
-    Number used as logic:                    3,077 out of   9,112   33%
-      Number using O6 output only:           2,290
-      Number using O5 output only:             110
-      Number using O5 and O6:                  677
+  Number of Slice LUTs:                      3,262 out of   9,112   35%
+    Number used as logic:                    3,109 out of   9,112   34%
+      Number using O6 output only:           2,342
+      Number using O5 output only:             109
+      Number using O5 and O6:                  658
       Number used as ROM:                        0
     Number used as Memory:                     145 out of   2,176    6%
       Number used as Dual Port RAM:             16
@@ -46,18 +46,18 @@ Slice Logic Utilization:
         Number using O6 output only:             1
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:     10
-      Number with same-slice register load:      4
+    Number used exclusively as route-thrus:      8
+      Number with same-slice register load:      2
       Number with same-slice carry load:         5
       Number with other load:                    1
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,117 out of   2,278   49%
+  Number of occupied Slices:                 1,208 out of   2,278   53%
   Number of MUXCYs used:                       228 out of   4,556    5%
-  Number of LUT Flip Flop pairs used:        3,361
-    Number with an unused Flip Flop:         2,024 out of   3,361   60%
-    Number with an unused LUT:                 129 out of   3,361    3%
-    Number of fully used LUT-FF pairs:       1,208 out of   3,361   35%
+  Number of LUT Flip Flop pairs used:        3,472
+    Number with an unused Flip Flop:         2,121 out of   3,472   61%
+    Number with an unused LUT:                 210 out of   3,472    6%
+    Number of fully used LUT-FF pairs:       1,141 out of   3,472   32%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -100,8 +100,8 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 11 secs 
-Finished initial Timing Analysis.  REAL time: 11 secs 
+Starting initial Timing Analysis.  REAL time: 8 secs 
+Finished initial Timing Analysis.  REAL time: 8 secs 
 
 WARNING:Par:288 - The signal button_IBUF has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal peri1/Mram_RX_buffer1_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
@@ -109,31 +109,31 @@ WARNING:Par:288 - The signal peri1/Mram_TX_buffer1_RAMD_D1_O has no load.  PAR w
 Starting Router
 
 
-Phase  1  : 19436 unrouted;      REAL time: 12 secs 
+Phase  1  : 19696 unrouted;      REAL time: 9 secs 
 
-Phase  2  : 17996 unrouted;      REAL time: 13 secs 
+Phase  2  : 18257 unrouted;      REAL time: 9 secs 
 
-Phase  3  : 7534 unrouted;      REAL time: 26 secs 
+Phase  3  : 7235 unrouted;      REAL time: 20 secs 
 
-Phase  4  : 7789 unrouted; (Setup:972, Hold:0, Component Switching Limit:0)     REAL time: 30 secs 
-
-Updating file: CPU_Pipeline.ncd with current fully routed design.
-
-Phase  5  : 0 unrouted; (Setup:4298, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 37 secs 
-
-Phase  6  : 0 unrouted; (Setup:3805, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 1 secs 
+Phase  4  : 7370 unrouted; (Setup:899, Hold:0, Component Switching Limit:0)     REAL time: 24 secs 
 
 Updating file: CPU_Pipeline.ncd with current fully routed design.
 
-Phase  7  : 0 unrouted; (Setup:3805, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 51 secs 
+Phase  5  : 0 unrouted; (Setup:5049, Hold:0, Component Switching Limit:0)     REAL time: 58 secs 
 
-Phase  8  : 0 unrouted; (Setup:3805, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 51 secs 
+Phase  6  : 0 unrouted; (Setup:1193, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 6 secs 
 
-Phase  9  : 0 unrouted; (Setup:3805, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 51 secs 
+Updating file: CPU_Pipeline.ncd with current fully routed design.
 
-Phase 10  : 0 unrouted; (Setup:3276, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 53 secs 
-Total REAL time to Router completion: 3 mins 53 secs 
-Total CPU time to Router completion: 3 mins 59 secs 
+Phase  7  : 0 unrouted; (Setup:290, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 2 secs 
+
+Phase  8  : 0 unrouted; (Setup:290, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 2 secs 
+
+Phase  9  : 0 unrouted; (Setup:290, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 2 secs 
+
+Phase 10  : 0 unrouted; (Setup:194, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 3 secs 
+Total REAL time to Router completion: 2 mins 3 secs 
+Total CPU time to Router completion: 2 mins 10 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -151,190 +151,193 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X3Y13| No   |  561 |  0.066     |  0.912      |
+|           clk_BUFGP | BUFGMUX_X3Y13| No   |  585 |  0.061     |  0.908      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[2] |              |      |      |            |             |
-|          _AND_263_o |         Local|      |    2 |  0.000     |  0.521      |
+|          _AND_251_o |         Local|      |    2 |  0.000     |  0.638      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[3] |              |      |      |            |             |
-|          _AND_261_o |         Local|      |    2 |  0.000     |  0.469      |
+|          _AND_249_o |         Local|      |    2 |  0.000     |  0.502      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[0]_AND_331_o |         Local|      |    3 |  0.000     |  0.318      |
+|   us_4[0]_AND_319_o |         Local|      |    3 |  0.000     |  0.657      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[4] |              |      |      |            |             |
-|          _AND_259_o |         Local|      |    2 |  0.000     |  0.505      |
+|          _AND_247_o |         Local|      |    2 |  0.000     |  0.310      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[1]_AND_329_o |         Local|      |    3 |  0.000     |  0.829      |
+|   us_4[1]_AND_317_o |         Local|      |    3 |  0.000     |  0.587      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[5] |              |      |      |            |             |
-|          _AND_257_o |         Local|      |    2 |  0.000     |  0.521      |
+|          _AND_245_o |         Local|      |    2 |  0.000     |  0.502      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[6] |              |      |      |            |             |
-|          _AND_255_o |         Local|      |    2 |  0.000     |  0.471      |
+|          _AND_243_o |         Local|      |    2 |  0.000     |  0.498      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[7] |              |      |      |            |             |
-|          _AND_253_o |         Local|      |    2 |  0.000     |  0.497      |
+|          _AND_241_o |         Local|      |    2 |  0.000     |  0.521      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[8] |              |      |      |            |             |
-|          _AND_251_o |         Local|      |    2 |  0.000     |  0.469      |
+|          _AND_239_o |         Local|      |    2 |  0.000     |  0.663      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[9] |              |      |      |            |             |
-|          _AND_249_o |         Local|      |    2 |  0.000     |  0.638      |
+|          _AND_237_o |         Local|      |    2 |  0.000     |  0.496      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[10 |              |      |      |            |             |
-|         ]_AND_247_o |         Local|      |    2 |  0.000     |  0.964      |
+|         ]_AND_235_o |         Local|      |    2 |  0.000     |  0.637      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[11 |              |      |      |            |             |
-|         ]_AND_245_o |         Local|      |    2 |  0.000     |  0.496      |
+|         ]_AND_233_o |         Local|      |    2 |  0.000     |  0.311      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[20 |              |      |      |            |             |
-|         ]_AND_227_o |         Local|      |    2 |  0.000     |  0.663      |
+|         ]_AND_215_o |         Local|      |    2 |  0.000     |  0.505      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[12 |              |      |      |            |             |
-|         ]_AND_243_o |         Local|      |    2 |  0.000     |  0.496      |
+|         ]_AND_231_o |         Local|      |    2 |  0.000     |  0.288      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[21 |              |      |      |            |             |
-|         ]_AND_225_o |         Local|      |    2 |  0.000     |  0.501      |
+|         ]_AND_213_o |         Local|      |    2 |  0.000     |  0.497      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[13 |              |      |      |            |             |
-|         ]_AND_241_o |         Local|      |    2 |  0.000     |  0.535      |
+|         ]_AND_229_o |         Local|      |    2 |  0.000     |  0.681      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[30 |              |      |      |            |             |
-|         ]_AND_207_o |         Local|      |    2 |  0.000     |  0.914      |
+|         ]_AND_195_o |         Local|      |    2 |  0.000     |  0.496      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[22 |              |      |      |            |             |
-|         ]_AND_223_o |         Local|      |    2 |  0.000     |  0.469      |
+|         ]_AND_211_o |         Local|      |    2 |  0.000     |  0.310      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[14 |              |      |      |            |             |
-|         ]_AND_239_o |         Local|      |    2 |  0.000     |  0.475      |
+|         ]_AND_227_o |         Local|      |    2 |  0.000     |  0.817      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[23 |              |      |      |            |             |
-|         ]_AND_221_o |         Local|      |    2 |  0.000     |  0.502      |
+|         ]_AND_209_o |         Local|      |    2 |  0.000     |  0.497      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[15 |              |      |      |            |             |
-|         ]_AND_237_o |         Local|      |    2 |  0.000     |  0.310      |
+|         ]_AND_225_o |         Local|      |    2 |  0.000     |  0.901      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[24 |              |      |      |            |             |
-|         ]_AND_219_o |         Local|      |    2 |  0.000     |  0.638      |
+|         ]_AND_207_o |         Local|      |    2 |  0.000     |  0.521      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[16 |              |      |      |            |             |
-|         ]_AND_235_o |         Local|      |    2 |  0.000     |  0.895      |
+|         ]_AND_223_o |         Local|      |    2 |  0.000     |  1.201      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[25 |              |      |      |            |             |
-|         ]_AND_217_o |         Local|      |    2 |  0.000     |  0.638      |
+|         ]_AND_205_o |         Local|      |    2 |  0.000     |  0.315      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[17 |              |      |      |            |             |
-|         ]_AND_233_o |         Local|      |    2 |  0.000     |  0.469      |
+|         ]_AND_221_o |         Local|      |    2 |  0.000     |  1.154      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[26 |              |      |      |            |             |
-|         ]_AND_215_o |         Local|      |    2 |  0.000     |  0.496      |
+|         ]_AND_203_o |         Local|      |    2 |  0.000     |  0.496      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[18 |              |      |      |            |             |
-|         ]_AND_231_o |         Local|      |    2 |  0.000     |  0.895      |
+|         ]_AND_219_o |         Local|      |    2 |  0.000     |  1.233      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[27 |              |      |      |            |             |
-|         ]_AND_213_o |         Local|      |    2 |  0.000     |  0.302      |
+|         ]_AND_201_o |         Local|      |    2 |  0.000     |  0.310      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[19 |              |      |      |            |             |
-|         ]_AND_229_o |         Local|      |    2 |  0.000     |  0.502      |
+|         ]_AND_217_o |         Local|      |    2 |  0.000     |  0.879      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[28 |              |      |      |            |             |
-|         ]_AND_211_o |         Local|      |    2 |  0.000     |  0.317      |
+|         ]_AND_199_o |         Local|      |    2 |  0.000     |  0.502      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[29 |              |      |      |            |             |
-|         ]_AND_209_o |         Local|      |    2 |  0.000     |  0.495      |
+|         ]_AND_197_o |         Local|      |    2 |  0.000     |  0.525      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[10]_AND_311_o |         Local|      |    2 |  0.000     |  0.632      |
+|  us_4[10]_AND_299_o |         Local|      |    2 |  0.000     |  0.930      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[11]_AND_309_o |         Local|      |    2 |  0.000     |  0.502      |
+|  us_4[11]_AND_297_o |         Local|      |    2 |  0.000     |  0.496      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[20]_AND_291_o |         Local|      |    2 |  0.000     |  0.502      |
+|  us_4[20]_AND_279_o |         Local|      |    2 |  0.000     |  0.448      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[12]_AND_307_o |         Local|      |    2 |  0.000     |  0.497      |
+|  us_4[12]_AND_295_o |         Local|      |    2 |  0.000     |  1.113      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[21]_AND_289_o |         Local|      |    2 |  0.000     |  0.521      |
+|  us_4[21]_AND_277_o |         Local|      |    2 |  0.000     |  1.308      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[13]_AND_305_o |         Local|      |    2 |  0.000     |  0.497      |
+|  us_4[13]_AND_293_o |         Local|      |    2 |  0.000     |  0.469      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[30]_AND_271_o |         Local|      |    2 |  0.000     |  0.519      |
+|  us_4[30]_AND_259_o |         Local|      |    2 |  0.000     |  0.495      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[22]_AND_287_o |         Local|      |    2 |  0.000     |  0.302      |
+|  us_4[22]_AND_275_o |         Local|      |    2 |  0.000     |  0.826      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[14]_AND_303_o |         Local|      |    2 |  0.000     |  0.721      |
+|  us_4[14]_AND_291_o |         Local|      |    2 |  0.000     |  0.469      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC[31 |              |      |      |            |             |
-|         ]_AND_205_o |         Local|      |    2 |  0.000     |  0.793      |
+|         ]_AND_193_o |         Local|      |    2 |  0.000     |  0.502      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[23]_AND_285_o |         Local|      |    2 |  0.000     |  0.496      |
+|  us_4[23]_AND_273_o |         Local|      |    2 |  0.000     |  0.542      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[15]_AND_301_o |         Local|      |    2 |  0.000     |  0.721      |
+|  us_4[15]_AND_289_o |         Local|      |    2 |  0.000     |  0.471      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[24]_AND_283_o |         Local|      |    2 |  0.000     |  0.663      |
+|  us_4[24]_AND_271_o |         Local|      |    2 |  0.000     |  0.313      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[16]_AND_299_o |         Local|      |    2 |  0.000     |  0.895      |
+|  us_4[16]_AND_287_o |         Local|      |    2 |  0.000     |  0.939      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[25]_AND_281_o |         Local|      |    2 |  0.000     |  0.502      |
+|  us_4[25]_AND_269_o |         Local|      |    2 |  0.000     |  0.495      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[17]_AND_297_o |         Local|      |    2 |  0.000     |  0.900      |
+|  us_4[17]_AND_285_o |         Local|      |    2 |  0.000     |  0.870      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[26]_AND_279_o |         Local|      |    2 |  0.000     |  0.496      |
+|  us_4[26]_AND_267_o |         Local|      |    2 |  0.000     |  0.497      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[18]_AND_295_o |         Local|      |    2 |  0.000     |  0.310      |
+|  us_4[18]_AND_283_o |         Local|      |    2 |  0.000     |  0.916      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[27]_AND_277_o |         Local|      |    2 |  0.000     |  0.521      |
+|  us_4[27]_AND_265_o |         Local|      |    2 |  0.000     |  0.587      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[19]_AND_293_o |         Local|      |    2 |  0.000     |  0.498      |
+|  us_4[19]_AND_281_o |         Local|      |    2 |  0.000     |  0.544      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[28]_AND_275_o |         Local|      |    2 |  0.000     |  0.317      |
+|  us_4[28]_AND_263_o |         Local|      |    2 |  0.000     |  0.663      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|  us_4[29]_AND_273_o |         Local|      |    2 |  0.000     |  0.315      |
+|  us_4[29]_AND_261_o |         Local|      |    2 |  0.000     |  1.156      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[2]_AND_327_o |         Local|      |    2 |  0.000     |  0.910      |
+|   us_4[2]_AND_315_o |         Local|      |    2 |  0.000     |  0.496      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[3]_AND_325_o |         Local|      |    2 |  0.000     |  0.521      |
+|   us_4[3]_AND_313_o |         Local|      |    2 |  0.000     |  0.872      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[4]_AND_323_o |         Local|      |    2 |  0.000     |  0.310      |
+|   us_4[4]_AND_311_o |         Local|      |    2 |  0.000     |  0.890      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[5]_AND_321_o |         Local|      |    2 |  0.000     |  0.496      |
+|   us_4[5]_AND_309_o |         Local|      |    2 |  0.000     |  0.920      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[6]_AND_319_o |         Local|      |    2 |  0.000     |  0.638      |
+|   us_4[6]_AND_307_o |         Local|      |    2 |  0.000     |  0.873      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[7]_AND_317_o |         Local|      |    2 |  0.000     |  0.302      |
+|   us_4[7]_AND_305_o |         Local|      |    2 |  0.000     |  0.314      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[8]_AND_315_o |         Local|      |    2 |  0.000     |  0.823      |
+|   us_4[8]_AND_303_o |         Local|      |    2 |  0.000     |  0.497      |
 +---------------------+--------------+------+------+------------+-------------+
 |IFIDReg1/reset_PC_pl |              |      |      |            |             |
-|   us_4[9]_AND_313_o |         Local|      |    2 |  0.000     |  0.502      |
+|   us_4[9]_AND_301_o |         Local|      |    2 |  0.000     |  0.495      |
++---------------------+--------------+------+------+------------+-------------+
+|peri1/uartReceiver/R |              |      |      |            |             |
+|              X_FLAG |         Local|      |    3 |  0.169     |  1.110      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -345,7 +348,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 3276 (Setup: 3276, Hold: 0, Component Switching Limit: 0)
+Timing Score: 194 (Setup: 194, Hold: 0, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
 
@@ -370,255 +373,255 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH  | SETUP       |    -0.699ns|    10.699ns|      16|        3276
-  50%                                       | HOLD        |     0.304ns|            |       0|           0
+* TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH  | SETUP       |    -0.153ns|    10.153ns|       3|         194
+  50%                                       | HOLD        |     0.361ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_29_LDC = MAXDEL | SETUP       |     3.320ns|     6.680ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.928ns|            |       0|           0
-  _4_n_29_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_28_LDC = MAXDEL | SETUP       |     3.355ns|     6.645ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.173ns|            |       0|           0
-  _4_n_28_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_8_LDC = MAXDELAY TO TI | SETUP       |     3.515ns|     6.485ns|       0|           0
-  MEGRP "TO_IFIDReg1PC_n_8_LDC" TS_clk      | HOLD        |     3.151ns|            |       0|           0
-      DATAPATHONLY                          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_10_LDC = MAXDEL | SETUP       |     3.538ns|     6.462ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.979ns|            |       0|           0
-  _4_n_10_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_13_LDC = MAXDEL | SETUP       |     3.540ns|     6.460ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.985ns|            |       0|           0
-  _4_n_13_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_12_LDC = MAXDEL | SETUP       |     3.612ns|     6.388ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.868ns|            |       0|           0
-  _4_n_12_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_25_LDC = MAXDEL | SETUP       |     3.805ns|     6.195ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.326ns|            |       0|           0
-  _4_n_25_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_27_LDC = MAXDEL | SETUP       |     3.830ns|     6.170ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.281ns|            |       0|           0
-  _4_n_27_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_11_LDC = MAXDEL | SETUP       |     3.982ns|     6.018ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.697ns|            |       0|           0
-  _4_n_11_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_5_LDC = MAXDELAY TO TI | SETUP       |     4.007ns|     5.993ns|       0|           0
-  MEGRP "TO_IFIDReg1PC_n_5_LDC" TS_clk      | HOLD        |     2.920ns|            |       0|           0
-      DATAPATHONLY                          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_15_LDC = MAXDEL | SETUP       |     4.035ns|     5.965ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.519ns|            |       0|           0
-  _4_n_15_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_3_LDC = MAXDELAY TO TI | SETUP       |     4.080ns|     5.920ns|       0|           0
-  MEGRP "TO_IFIDReg1PC_n_3_LDC" TS_clk      | HOLD        |     2.113ns|            |       0|           0
-      DATAPATHONLY                          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_30_LDC = MAXDEL | SETUP       |     4.192ns|     5.808ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.479ns|            |       0|           0
-  _4_n_30_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_24_LDC = MAXDEL | SETUP       |     4.204ns|     5.796ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.234ns|            |       0|           0
-  _4_n_24_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_18_LDC = MAXDEL | SETUP       |     4.334ns|     5.666ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.317ns|            |       0|           0
-  _4_n_18_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_4_LDC = MAXDELAY TO TI | SETUP       |     4.348ns|     5.652ns|       0|           0
-  MEGRP "TO_IFIDReg1PC_n_4_LDC" TS_clk      | HOLD        |     2.582ns|            |       0|           0
-      DATAPATHONLY                          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_26_LDC = MAXDEL | SETUP       |     4.428ns|     5.572ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.555ns|            |       0|           0
-  _4_n_26_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_4_LDC = MAXDELA | SETUP       |     4.432ns|     5.568ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.961ns|            |       0|           0
-  4_n_4_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_14_LDC = MAXDEL | SETUP       |     4.446ns|     5.554ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.308ns|            |       0|           0
-  _4_n_14_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_8_LDC = MAXDELA | SETUP       |     4.466ns|     5.534ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.221ns|            |       0|           0
-  4_n_8_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_22_LDC = MAXDEL | SETUP       |     4.513ns|     5.487ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.114ns|            |       0|           0
-  _4_n_22_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_9_LDC = MAXDELAY TO TI | SETUP       |     4.525ns|     5.475ns|       0|           0
-  MEGRP "TO_IFIDReg1PC_n_9_LDC" TS_clk      | HOLD        |     2.700ns|            |       0|           0
-      DATAPATHONLY                          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_23_LDC = MAXDEL | MAXDELAY    |     4.547ns|     5.453ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.894ns|            |       0|           0
-  _4_n_23_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_17_LDC = MAXDEL | MAXDELAY    |     4.547ns|     5.453ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.114ns|            |       0|           0
-  _4_n_17_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_16_LDC = MAXDEL | SETUP       |     4.607ns|     5.393ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.200ns|            |       0|           0
-  _4_n_16_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_10_LDC = MAXDELAY TO T | MAXDELAY    |     4.628ns|     5.372ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_10_LDC"         T | HOLD        |     1.528ns|            |       0|           0
-  S_clk DATAPATHONLY                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_19_LDC = MAXDEL | SETUP       |     4.687ns|     5.313ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.020ns|            |       0|           0
+  TS_TO_IFIDReg1PC_plus_4_n_19_LDC = MAXDEL | SETUP       |     2.181ns|     7.819ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     3.581ns|            |       0|           0
   _4_n_19_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_7_LDC = MAXDELA | SETUP       |     4.705ns|     5.295ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.042ns|            |       0|           0
-  4_n_7_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
+  TS_TO_IFIDReg1PC_plus_4_n_17_LDC = MAXDEL | MAXDELAY    |     2.689ns|     7.311ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.984ns|            |       0|           0
+  _4_n_17_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_2_LDC = MAXDELAY TO TI | SETUP       |     4.713ns|     5.287ns|       0|           0
-  MEGRP "TO_IFIDReg1PC_n_2_LDC" TS_clk      | HOLD        |     2.583ns|            |       0|           0
-      DATAPATHONLY                          |             |            |            |        |            
+  TS_TO_IFIDReg1PC_plus_4_n_29_LDC = MAXDEL | MAXDELAY    |     2.783ns|     7.217ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.577ns|            |       0|           0
+  _4_n_29_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_11_LDC = MAXDELAY TO T | SETUP       |     4.741ns|     5.259ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_11_LDC"         T | HOLD        |     1.934ns|            |       0|           0
-  S_clk DATAPATHONLY                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_6_LDC = MAXDELAY TO TI | MAXDELAY    |     4.762ns|     5.238ns|       0|           0
-  MEGRP "TO_IFIDReg1PC_n_6_LDC" TS_clk      | HOLD        |     2.687ns|            |       0|           0
-      DATAPATHONLY                          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_12_LDC = MAXDELAY TO T | SETUP       |     4.838ns|     5.162ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_12_LDC"         T | HOLD        |     1.719ns|            |       0|           0
-  S_clk DATAPATHONLY                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_6_LDC = MAXDELA | SETUP       |     4.888ns|     5.112ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.008ns|            |       0|           0
-  4_n_6_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_9_LDC = MAXDELA | SETUP       |     4.894ns|     5.106ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     1.748ns|            |       0|           0
-  4_n_9_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_2_LDC = MAXDELA | MAXDELAY    |     4.925ns|     5.075ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.648ns|            |       0|           0
-  4_n_2_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_20_LDC = MAXDEL | MAXDELAY    |     4.991ns|     5.009ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.828ns|            |       0|           0
-  _4_n_20_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_21_LDC = MAXDEL | MAXDELAY    |     4.992ns|     5.008ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.745ns|            |       0|           0
+  TS_TO_IFIDReg1PC_plus_4_n_21_LDC = MAXDEL | MAXDELAY    |     2.880ns|     7.120ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.755ns|            |       0|           0
   _4_n_21_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_15_LDC = MAXDELAY TO T | SETUP       |     5.006ns|     4.994ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_15_LDC"         T | HOLD        |     1.994ns|            |       0|           0
+  TS_TO_IFIDReg1PC_plus_4_n_18_LDC = MAXDEL | SETUP       |     2.909ns|     7.091ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     3.337ns|            |       0|           0
+  _4_n_18_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_16_LDC = MAXDEL | MAXDELAY    |     3.023ns|     6.977ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.042ns|            |       0|           0
+  _4_n_16_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_4_LDC = MAXDELA | MAXDELAY    |     3.033ns|     6.967ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.681ns|            |       0|           0
+  4_n_4_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_7_LDC = MAXDELA | SETUP       |     3.050ns|     6.950ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     3.102ns|            |       0|           0
+  4_n_7_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_23_LDC = MAXDEL | SETUP       |     3.102ns|     6.898ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.460ns|            |       0|           0
+  _4_n_23_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_17_LDC = MAXDELAY TO T | MAXDELAY    |     3.157ns|     6.843ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_17_LDC"         T | HOLD        |     2.133ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_13_LDC = MAXDELAY TO T | SETUP       |     5.117ns|     4.883ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_13_LDC"         T | HOLD        |     1.707ns|            |       0|           0
+  TS_TO_IFIDReg1PC_plus_4_n_12_LDC = MAXDEL | MAXDELAY    |     3.189ns|     6.811ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.583ns|            |       0|           0
+  _4_n_12_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_27_LDC = MAXDEL | SETUP       |     3.199ns|     6.801ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.668ns|            |       0|           0
+  _4_n_27_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_20_LDC = MAXDEL | SETUP       |     3.229ns|     6.771ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.995ns|            |       0|           0
+  _4_n_20_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_28_LDC = MAXDEL | SETUP       |     3.230ns|     6.770ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.534ns|            |       0|           0
+  _4_n_28_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_24_LDC = MAXDEL | SETUP       |     3.258ns|     6.742ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.713ns|            |       0|           0
+  _4_n_24_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_22_LDC = MAXDEL | MAXDELAY    |     3.298ns|     6.702ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.376ns|            |       0|           0
+  _4_n_22_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_16_LDC = MAXDELAY TO T | MAXDELAY    |     3.353ns|     6.647ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_16_LDC"         T | HOLD        |     1.386ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_17_LDC = MAXDELAY TO T | SETUP       |     5.200ns|     4.800ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_17_LDC"         T | HOLD        |     1.582ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_15_LDC = MAXDELAY TO T | SETUP       |     3.379ns|     6.621ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_15_LDC"         T | HOLD        |     2.407ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_5_LDC = MAXDELA | SETUP       |     5.250ns|     4.750ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.179ns|            |       0|           0
+  TS_TO_IFIDReg1PC_plus_4_n_30_LDC = MAXDEL | SETUP       |     3.383ns|     6.617ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.542ns|            |       0|           0
+  _4_n_30_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_10_LDC = MAXDEL | SETUP       |     3.424ns|     6.576ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.975ns|            |       0|           0
+  _4_n_10_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_25_LDC = MAXDEL | SETUP       |     3.509ns|     6.491ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.379ns|            |       0|           0
+  _4_n_25_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_14_LDC = MAXDEL | SETUP       |     3.525ns|     6.475ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.081ns|            |       0|           0
+  _4_n_14_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_14_LDC = MAXDELAY TO T | MAXDELAY    |     3.565ns|     6.435ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_14_LDC"         T | HOLD        |     1.440ns|            |       0|           0
+  S_clk DATAPATHONLY                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_5_LDC = MAXDELA | MAXDELAY    |     3.613ns|     6.387ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     3.076ns|            |       0|           0
   4_n_5_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_16_LDC = MAXDELAY TO T | SETUP       |     5.261ns|     4.739ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_16_LDC"         T | HOLD        |     1.588ns|            |       0|           0
+  TS_TO_IFIDReg1PC_plus_4_n_8_LDC = MAXDELA | SETUP       |     3.815ns|     6.185ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.729ns|            |       0|           0
+  4_n_8_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_19_LDC = MAXDELAY TO T | SETUP       |     3.882ns|     6.118ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_19_LDC"         T | HOLD        |     1.957ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_7_LDC = MAXDELAY TO TI | SETUP       |     5.270ns|     4.730ns|       0|           0
-  MEGRP "TO_IFIDReg1PC_n_7_LDC" TS_clk      | HOLD        |     2.595ns|            |       0|           0
-      DATAPATHONLY                          |             |            |            |        |            
+  TS_TO_IFIDReg1PC_plus_4_n_9_LDC = MAXDELA | MAXDELAY    |     3.927ns|     6.073ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.619ns|            |       0|           0
+  4_n_9_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_18_LDC = MAXDELAY TO T | SETUP       |     5.337ns|     4.663ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_18_LDC"         T | HOLD        |     1.974ns|            |       0|           0
-  S_clk DATAPATHONLY                        |             |            |            |        |            
+  TS_TO_IFIDReg1PC_plus_4_n_15_LDC = MAXDEL | SETUP       |     3.952ns|     6.048ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.771ns|            |       0|           0
+  _4_n_15_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_1_LDC = MAXDELA | SETUP       |     5.539ns|     4.461ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     1.795ns|            |       0|           0
-  4_n_1_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
+  TS_TO_IFIDReg1PC_plus_4_n_6_LDC = MAXDELA | SETUP       |     4.143ns|     5.857ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.688ns|            |       0|           0
+  4_n_6_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_14_LDC = MAXDELAY TO T | SETUP       |     5.735ns|     4.265ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_14_LDC"         T | HOLD        |     1.549ns|            |       0|           0
-  S_clk DATAPATHONLY                        |             |            |            |        |            
+  TS_TO_IFIDReg1PC_plus_4_n_26_LDC = MAXDEL | SETUP       |     4.204ns|     5.796ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.994ns|            |       0|           0
+  _4_n_26_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_21_LDC = MAXDELAY TO T | SETUP       |     5.826ns|     4.174ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_21_LDC"         T | HOLD        |     1.653ns|            |       0|           0
-  S_clk DATAPATHONLY                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_0_LDC = MAXDELA | SETUP       |     5.835ns|     4.165ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     1.755ns|            |       0|           0
-  4_n_0_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_20_LDC = MAXDELAY TO T | SETUP       |     5.953ns|     4.047ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_20_LDC"         T | HOLD        |     1.193ns|            |       0|           0
-  S_clk DATAPATHONLY                        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_3_LDC = MAXDELA | MAXDELAY    |     5.988ns|     4.012ns|       0|           0
-  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.084ns|            |       0|           0
+  TS_TO_IFIDReg1PC_plus_4_n_3_LDC = MAXDELA | SETUP       |     4.243ns|     5.757ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     3.183ns|            |       0|           0
   4_n_3_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_19_LDC = MAXDELAY TO T | SETUP       |     6.070ns|     3.930ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_19_LDC"         T | HOLD        |     1.441ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_4_LDC = MAXDELAY TO TI | SETUP       |     4.275ns|     5.725ns|       0|           0
+  MEGRP "TO_IFIDReg1PC_n_4_LDC" TS_clk      | HOLD        |     1.564ns|            |       0|           0
+      DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_0_LDC = MAXDELA | SETUP       |     4.337ns|     5.663ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.015ns|            |       0|           0
+  4_n_0_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_3_LDC = MAXDELAY TO TI | MAXDELAY    |     4.358ns|     5.642ns|       0|           0
+  MEGRP "TO_IFIDReg1PC_n_3_LDC" TS_clk      | HOLD        |     1.939ns|            |       0|           0
+      DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_10_LDC = MAXDELAY TO T | SETUP       |     4.370ns|     5.630ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_10_LDC"         T | HOLD        |     2.119ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_24_LDC = MAXDELAY TO T | SETUP       |     6.462ns|     3.538ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_24_LDC"         T | HOLD        |     1.965ns|            |       0|           0
+  TS_TO_IFIDReg1PC_plus_4_n_2_LDC = MAXDELA | SETUP       |     4.389ns|     5.611ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     2.851ns|            |       0|           0
+  4_n_2_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_1_LDC = MAXDELA | SETUP       |     4.400ns|     5.600ns|       0|           0
+  Y TO TIMEGRP         "TO_IFIDReg1PC_plus_ | HOLD        |     1.756ns|            |       0|           0
+  4_n_1_LDC" TS_clk DATAPATHONLY            |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_2_LDC = MAXDELAY TO TI | SETUP       |     4.405ns|     5.595ns|       0|           0
+  MEGRP "TO_IFIDReg1PC_n_2_LDC" TS_clk      | HOLD        |     2.218ns|            |       0|           0
+      DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_5_LDC = MAXDELAY TO TI | MAXDELAY    |     4.430ns|     5.570ns|       0|           0
+  MEGRP "TO_IFIDReg1PC_n_5_LDC" TS_clk      | HOLD        |     2.209ns|            |       0|           0
+      DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_11_LDC = MAXDEL | SETUP       |     4.493ns|     5.507ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.277ns|            |       0|           0
+  _4_n_11_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_8_LDC = MAXDELAY TO TI | SETUP       |     4.566ns|     5.434ns|       0|           0
+  MEGRP "TO_IFIDReg1PC_n_8_LDC" TS_clk      | HOLD        |     2.152ns|            |       0|           0
+      DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_13_LDC = MAXDEL | SETUP       |     4.567ns|     5.433ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     2.122ns|            |       0|           0
+  _4_n_13_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_11_LDC = MAXDELAY TO T | SETUP       |     4.570ns|     5.430ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_11_LDC"         T | HOLD        |     1.548ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_23_LDC = MAXDELAY TO T | SETUP       |     6.471ns|     3.529ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_23_LDC"         T | HOLD        |     1.848ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_12_LDC = MAXDELAY TO T | SETUP       |     4.617ns|     5.383ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_12_LDC"         T | HOLD        |     1.452ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_22_LDC = MAXDELAY TO T | SETUP       |     6.712ns|     3.288ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_22_LDC"         T | HOLD        |     1.774ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_6_LDC = MAXDELAY TO TI | SETUP       |     4.736ns|     5.264ns|       0|           0
+  MEGRP "TO_IFIDReg1PC_n_6_LDC" TS_clk      | HOLD        |     2.457ns|            |       0|           0
+      DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_13_LDC = MAXDELAY TO T | SETUP       |     4.759ns|     5.241ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_13_LDC"         T | HOLD        |     1.792ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_25_LDC = MAXDELAY TO T | SETUP       |     6.718ns|     3.282ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_25_LDC"         T | HOLD        |     1.931ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_7_LDC = MAXDELAY TO TI | MAXDELAY    |     4.784ns|     5.216ns|       0|           0
+  MEGRP "TO_IFIDReg1PC_n_7_LDC" TS_clk      | HOLD        |     1.784ns|            |       0|           0
+      DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_18_LDC = MAXDELAY TO T | SETUP       |     4.808ns|     5.192ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_18_LDC"         T | HOLD        |     1.892ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_plus_4_n_31_LDC = MAXDEL | SETUP       |     6.926ns|     3.074ns|       0|           0
-  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.515ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_9_LDC = MAXDELAY TO TI | SETUP       |     4.940ns|     5.060ns|       0|           0
+  MEGRP "TO_IFIDReg1PC_n_9_LDC" TS_clk      | HOLD        |     1.723ns|            |       0|           0
+      DATAPATHONLY                          |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_PC_0_ = PERIOD TIMEGRP "PC<0>" 10 ns H | SETUP       |     5.214ns|     4.786ns|       0|           0
+  IGH 50%                                   | HOLD        |     0.990ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_plus_4_n_31_LDC = MAXDEL | SETUP       |     5.968ns|     4.032ns|       0|           0
+  AY TO TIMEGRP         "TO_IFIDReg1PC_plus | HOLD        |     1.917ns|            |       0|           0
   _4_n_31_LDC" TS_clk DATAPATHONLY          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_27_LDC = MAXDELAY TO T | SETUP       |     7.000ns|     3.000ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_27_LDC"         T | HOLD        |     1.620ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_20_LDC = MAXDELAY TO T | MAXDELAY    |     6.010ns|     3.990ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_20_LDC"         T | HOLD        |     1.311ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_30_LDC = MAXDELAY TO T | MAXDELAY    |     7.079ns|     2.921ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_30_LDC"         T | HOLD        |     1.163ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_22_LDC = MAXDELAY TO T | SETUP       |     6.060ns|     3.940ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_22_LDC"         T | HOLD        |     1.311ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_28_LDC = MAXDELAY TO T | SETUP       |     7.227ns|     2.773ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_28_LDC"         T | HOLD        |     1.573ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_21_LDC = MAXDELAY TO T | SETUP       |     6.093ns|     3.907ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_21_LDC"         T | HOLD        |     1.341ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_29_LDC = MAXDELAY TO T | SETUP       |     7.425ns|     2.575ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_29_LDC"         T | HOLD        |     1.122ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_26_LDC = MAXDELAY TO T | SETUP       |     6.100ns|     3.900ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_26_LDC"         T | HOLD        |     1.273ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_TO_IFIDReg1PC_n_26_LDC = MAXDELAY TO T | SETUP       |     7.466ns|     2.534ns|       0|           0
-  IMEGRP "TO_IFIDReg1PC_n_26_LDC"         T | HOLD        |     1.334ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_23_LDC = MAXDELAY TO T | SETUP       |     6.245ns|     3.755ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_23_LDC"         T | HOLD        |     1.277ns|            |       0|           0
   S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_PC_0_ = PERIOD TIMEGRP "PC<0>" 20 ns H | SETUP       |    16.268ns|     3.732ns|       0|           0
-  IGH 50%                                   | HOLD        |     0.908ns|            |       0|           0
+  TS_TO_IFIDReg1PC_n_27_LDC = MAXDELAY TO T | SETUP       |     6.322ns|     3.678ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_27_LDC"         T | HOLD        |     1.531ns|            |       0|           0
+  S_clk DATAPATHONLY                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_30_LDC = MAXDELAY TO T | SETUP       |     6.541ns|     3.459ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_30_LDC"         T | HOLD        |     1.564ns|            |       0|           0
+  S_clk DATAPATHONLY                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_24_LDC = MAXDELAY TO T | SETUP       |     7.082ns|     2.918ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_24_LDC"         T | HOLD        |     1.520ns|            |       0|           0
+  S_clk DATAPATHONLY                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_29_LDC = MAXDELAY TO T | SETUP       |     7.250ns|     2.750ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_29_LDC"         T | HOLD        |     1.387ns|            |       0|           0
+  S_clk DATAPATHONLY                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_28_LDC = MAXDELAY TO T | SETUP       |     7.346ns|     2.654ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_28_LDC"         T | HOLD        |     1.391ns|            |       0|           0
+  S_clk DATAPATHONLY                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_TO_IFIDReg1PC_n_25_LDC = MAXDELAY TO T | SETUP       |     7.630ns|     2.370ns|       0|           0
+  IMEGRP "TO_IFIDReg1PC_n_25_LDC"         T | HOLD        |     1.047ns|            |       0|           0
+  S_clk DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -632,100 +635,100 @@ Derived Constraints for TS_clk
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_clk                         |     10.000ns|     10.699ns|      6.680ns|           16|            0|     84668723|         1056|
-| TS_TO_IFIDReg1PC_plus_4_n_0_LD|     10.000ns|      4.165ns|          N/A|            0|            0|            4|            0|
+|TS_clk                         |     10.000ns|     10.153ns|      7.819ns|            3|            0|     86384022|         1056|
+| TS_TO_IFIDReg1PC_plus_4_n_0_LD|     10.000ns|      5.663ns|          N/A|            0|            0|            4|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_1_LD|     10.000ns|      4.461ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_1_LD|     10.000ns|      5.600ns|          N/A|            0|            0|            4|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_2_LD|     10.000ns|      5.075ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_2_LD|     10.000ns|      5.611ns|          N/A|            0|            0|            4|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_3_LD|     10.000ns|      4.012ns|          N/A|            0|            0|            6|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_3_LD|     10.000ns|      5.757ns|          N/A|            0|            0|            6|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_4_LD|     10.000ns|      5.568ns|          N/A|            0|            0|            8|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_4_LD|     10.000ns|      6.967ns|          N/A|            0|            0|            8|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_5_LD|     10.000ns|      4.750ns|          N/A|            0|            0|           10|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_5_LD|     10.000ns|      6.387ns|          N/A|            0|            0|           10|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_6_LD|     10.000ns|      5.112ns|          N/A|            0|            0|           12|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_6_LD|     10.000ns|      5.857ns|          N/A|            0|            0|           12|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_7_LD|     10.000ns|      5.295ns|          N/A|            0|            0|           14|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_7_LD|     10.000ns|      6.950ns|          N/A|            0|            0|           14|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_8_LD|     10.000ns|      5.534ns|          N/A|            0|            0|           16|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_8_LD|     10.000ns|      6.185ns|          N/A|            0|            0|           16|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_9_LD|     10.000ns|      5.106ns|          N/A|            0|            0|           18|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_9_LD|     10.000ns|      6.073ns|          N/A|            0|            0|           18|            0|
 | C                             |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_10_L|     10.000ns|      6.462ns|          N/A|            0|            0|           20|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_10_L|     10.000ns|      6.576ns|          N/A|            0|            0|           20|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_11_L|     10.000ns|      6.018ns|          N/A|            0|            0|           22|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_11_L|     10.000ns|      5.507ns|          N/A|            0|            0|           22|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_12_L|     10.000ns|      6.388ns|          N/A|            0|            0|           24|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_12_L|     10.000ns|      6.811ns|          N/A|            0|            0|           24|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_14_L|     10.000ns|      5.554ns|          N/A|            0|            0|           28|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_14_L|     10.000ns|      6.475ns|          N/A|            0|            0|           28|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_15_L|     10.000ns|      5.965ns|          N/A|            0|            0|           30|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_15_L|     10.000ns|      6.048ns|          N/A|            0|            0|           30|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_13_L|     10.000ns|      6.460ns|          N/A|            0|            0|           26|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_13_L|     10.000ns|      5.433ns|          N/A|            0|            0|           26|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_16_L|     10.000ns|      5.393ns|          N/A|            0|            0|           32|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_16_L|     10.000ns|      6.977ns|          N/A|            0|            0|           32|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_17_L|     10.000ns|      5.453ns|          N/A|            0|            0|           34|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_17_L|     10.000ns|      7.311ns|          N/A|            0|            0|           34|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_18_L|     10.000ns|      5.666ns|          N/A|            0|            0|           36|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_18_L|     10.000ns|      7.091ns|          N/A|            0|            0|           36|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_19_L|     10.000ns|      5.313ns|          N/A|            0|            0|           38|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_19_L|     10.000ns|      7.819ns|          N/A|            0|            0|           38|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_20_L|     10.000ns|      5.009ns|          N/A|            0|            0|           40|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_20_L|     10.000ns|      6.771ns|          N/A|            0|            0|           40|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_21_L|     10.000ns|      5.008ns|          N/A|            0|            0|           42|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_21_L|     10.000ns|      7.120ns|          N/A|            0|            0|           42|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_23_L|     10.000ns|      5.453ns|          N/A|            0|            0|           46|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_23_L|     10.000ns|      6.898ns|          N/A|            0|            0|           46|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_24_L|     10.000ns|      5.796ns|          N/A|            0|            0|           48|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_24_L|     10.000ns|      6.742ns|          N/A|            0|            0|           48|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_22_L|     10.000ns|      5.487ns|          N/A|            0|            0|           44|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_22_L|     10.000ns|      6.702ns|          N/A|            0|            0|           44|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_25_L|     10.000ns|      6.195ns|          N/A|            0|            0|           50|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_25_L|     10.000ns|      6.491ns|          N/A|            0|            0|           50|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_26_L|     10.000ns|      5.572ns|          N/A|            0|            0|           52|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_26_L|     10.000ns|      5.796ns|          N/A|            0|            0|           52|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_27_L|     10.000ns|      6.170ns|          N/A|            0|            0|           54|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_27_L|     10.000ns|      6.801ns|          N/A|            0|            0|           54|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_28_L|     10.000ns|      6.645ns|          N/A|            0|            0|           56|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_28_L|     10.000ns|      6.770ns|          N/A|            0|            0|           56|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_29_L|     10.000ns|      6.680ns|          N/A|            0|            0|           58|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_29_L|     10.000ns|      7.217ns|          N/A|            0|            0|           58|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_30_L|     10.000ns|      5.808ns|          N/A|            0|            0|           60|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_30_L|     10.000ns|      6.617ns|          N/A|            0|            0|           60|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_plus_4_n_31_L|     10.000ns|      3.074ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_plus_4_n_31_L|     10.000ns|      4.032ns|          N/A|            0|            0|            4|            0|
 | DC                            |             |             |             |             |             |             |             |
-| TS_TO_IFIDReg1PC_n_2_LDC      |     10.000ns|      5.287ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_3_LDC      |     10.000ns|      5.920ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_4_LDC      |     10.000ns|      5.652ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_5_LDC      |     10.000ns|      5.993ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_6_LDC      |     10.000ns|      5.238ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_7_LDC      |     10.000ns|      4.730ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_8_LDC      |     10.000ns|      6.485ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_9_LDC      |     10.000ns|      5.475ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_10_LDC     |     10.000ns|      5.372ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_11_LDC     |     10.000ns|      5.259ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_12_LDC     |     10.000ns|      5.162ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_13_LDC     |     10.000ns|      4.883ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_14_LDC     |     10.000ns|      4.265ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_15_LDC     |     10.000ns|      4.994ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_17_LDC     |     10.000ns|      4.800ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_18_LDC     |     10.000ns|      4.663ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_16_LDC     |     10.000ns|      4.739ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_19_LDC     |     10.000ns|      3.930ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_20_LDC     |     10.000ns|      4.047ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_21_LDC     |     10.000ns|      4.174ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_22_LDC     |     10.000ns|      3.288ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_23_LDC     |     10.000ns|      3.529ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_24_LDC     |     10.000ns|      3.538ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_26_LDC     |     10.000ns|      2.534ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_27_LDC     |     10.000ns|      3.000ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_25_LDC     |     10.000ns|      3.282ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_28_LDC     |     10.000ns|      2.773ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_29_LDC     |     10.000ns|      2.575ns|          N/A|            0|            0|            4|            0|
-| TS_TO_IFIDReg1PC_n_30_LDC     |     10.000ns|      2.921ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_2_LDC      |     10.000ns|      5.595ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_3_LDC      |     10.000ns|      5.642ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_4_LDC      |     10.000ns|      5.725ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_5_LDC      |     10.000ns|      5.570ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_6_LDC      |     10.000ns|      5.264ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_7_LDC      |     10.000ns|      5.216ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_8_LDC      |     10.000ns|      5.434ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_9_LDC      |     10.000ns|      5.060ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_10_LDC     |     10.000ns|      5.630ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_11_LDC     |     10.000ns|      5.430ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_12_LDC     |     10.000ns|      5.383ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_13_LDC     |     10.000ns|      5.241ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_14_LDC     |     10.000ns|      6.435ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_15_LDC     |     10.000ns|      6.621ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_17_LDC     |     10.000ns|      6.843ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_18_LDC     |     10.000ns|      5.192ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_16_LDC     |     10.000ns|      6.647ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_19_LDC     |     10.000ns|      6.118ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_20_LDC     |     10.000ns|      3.990ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_21_LDC     |     10.000ns|      3.907ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_22_LDC     |     10.000ns|      3.940ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_23_LDC     |     10.000ns|      3.755ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_24_LDC     |     10.000ns|      2.918ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_26_LDC     |     10.000ns|      3.900ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_27_LDC     |     10.000ns|      3.678ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_25_LDC     |     10.000ns|      2.370ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_28_LDC     |     10.000ns|      2.654ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_29_LDC     |     10.000ns|      2.750ns|          N/A|            0|            0|            4|            0|
+| TS_TO_IFIDReg1PC_n_30_LDC     |     10.000ns|      3.459ns|          N/A|            0|            0|            4|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 1 constraint not met.
@@ -737,14 +740,14 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 3 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 3 mins 58 secs 
-Total CPU time to PAR completion: 4 mins 3 secs 
+Total REAL time to PAR completion: 2 mins 8 secs 
+Total CPU time to PAR completion: 2 mins 12 secs 
 
-Peak Memory Usage:  679 MB
+Peak Memory Usage:  692 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 16 errors found.
+Timing: Completed - 3 errors found.
 
 Number of error messages: 0
 Number of warning messages: 6

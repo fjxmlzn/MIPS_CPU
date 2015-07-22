@@ -8,46 +8,46 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/ALU.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/ALU.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/CPU_Pipeline.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/CPU_Pipeline.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/Control.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/Control.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/DataMemory.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/DataMemory.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/EXMEMReg.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/EXMEMReg.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/ForwardControl.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/ForwardControl.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/IDEXReg.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/IDEXReg.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/IFIDReg.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/IFIDReg.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/MEMWBReg.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/MEMWBReg.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/Peripheral.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/Peripheral.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/RiskControl.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/RiskControl.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/debounce.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/debounce.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/regfile.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/regfile.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced_fixLatch/src/rom.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/work/ise/MIPS_CPU_Verilog/mips_pipeline_RegWriteAdvanced - lzn/src/rom.v&quot; into library work</arg>
 </msg>
 
 </messages>

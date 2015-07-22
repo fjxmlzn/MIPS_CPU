@@ -188,7 +188,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1437554682" xil_pn:in_ck="-1145949237579994004" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="4317417039829033008" xil_pn:start_ts="1437554596">
+    <transform xil_pn:end_ts="1437557079" xil_pn:in_ck="-1145949237579994004" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="4317417039829033008" xil_pn:start_ts="1437556994">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -206,11 +206,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1437551013" xil_pn:in_ck="3717317330993716032" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8849406878961362815" xil_pn:start_ts="1437551012">
+    <transform xil_pn:end_ts="1437570733" xil_pn:in_ck="3717317330993716032" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8849406878961362815" xil_pn:start_ts="1437570733">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1437554728" xil_pn:in_ck="3349753497857636675" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3227337307125026018" xil_pn:start_ts="1437554714">
+    <transform xil_pn:end_ts="1437570745" xil_pn:in_ck="3349753497857636675" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3227337307125026018" xil_pn:start_ts="1437570733">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CPU_Pipeline.bld"/>
@@ -219,7 +219,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1437554855" xil_pn:in_ck="-773099734083947580" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1437554728">
+    <transform xil_pn:end_ts="1437570852" xil_pn:in_ck="-773099734083947580" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1437570745">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CPU_Pipeline.pcf"/>
@@ -232,7 +232,7 @@
       <outfile xil_pn:name="CPU_Pipeline_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1437555118" xil_pn:in_ck="-6863141534116504739" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1437554855">
+    <transform xil_pn:end_ts="1437571000" xil_pn:in_ck="-6863141534116504739" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1437570852">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -264,16 +264,18 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1437555118" xil_pn:in_ck="8487948744628177216" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1437555099">
+    <transform xil_pn:end_ts="1437571000" xil_pn:in_ck="8487948744628177216" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1437570986">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="CPU_Pipeline.twr"/>
       <outfile xil_pn:name="CPU_Pipeline.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1437557904" xil_pn:in_ck="-773099734083947580" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1437557904">
+    <transform xil_pn:end_ts="1437545737" xil_pn:in_ck="-773099734083947580" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1437545737">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>
 
