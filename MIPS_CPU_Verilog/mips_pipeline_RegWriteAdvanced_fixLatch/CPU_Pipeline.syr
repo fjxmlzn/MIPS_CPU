@@ -1,0 +1,1823 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: CPU_Pipeline.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU_Pipeline.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU_Pipeline"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : CPU_Pipeline
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\rom.v" into library work
+Parsing module <ROM>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\RiskControl.v" into library work
+Parsing module <RiskControl>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\regfile.v" into library work
+Parsing module <RegFile>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\Peripheral.v" into library work
+Parsing module <Peripheral>.
+Parsing module <UARTReciever>.
+Parsing module <UARTSender>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\MEMWBReg.v" into library work
+Parsing module <MEMWBReg>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\IFIDReg.v" into library work
+Parsing module <IFIDReg>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\IDEXReg.v" into library work
+Parsing module <IDEXReg>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ForwardControl.v" into library work
+Parsing module <ForwardControl>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\EXMEMReg.v" into library work
+Parsing module <EXMEMReg>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\debounce.v" into library work
+Parsing module <debounce>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\DataMemory.v" into library work
+Parsing module <DataMem>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\Control.v" into library work
+Parsing module <Control>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ALU.v" into library work
+Parsing module <ALU>.
+Parsing module <ALUShift>.
+Parsing module <ALUMUX>.
+Parsing module <ALULogic>.
+Parsing module <ALUCMP>.
+Parsing module <ALUADD>.
+Analyzing Verilog file "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\CPU_Pipeline.v" into library work
+Parsing module <CPU_Pipeline>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <CPU_Pipeline>.
+
+Elaborating module <debounce>.
+
+Elaborating module <ROM>.
+
+Elaborating module <Control>.
+
+Elaborating module <RegFile>.
+
+Elaborating module <ALU>.
+
+Elaborating module <ALUADD>.
+WARNING:HDLCompiler:1127 - "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ALU.v" Line 14: Assignment to V ignored, since the identifier is never used
+
+Elaborating module <ALULogic>.
+
+Elaborating module <ALUShift>.
+
+Elaborating module <ALUCMP>.
+
+Elaborating module <ALUMUX>.
+
+Elaborating module <DataMem>.
+
+Elaborating module <Peripheral>.
+
+Elaborating module <UARTReciever>.
+
+Elaborating module <UARTSender>.
+
+Elaborating module <ForwardControl>.
+
+Elaborating module <RiskControl>.
+
+Elaborating module <IFIDReg>.
+
+Elaborating module <IDEXReg>.
+
+Elaborating module <EXMEMReg>.
+
+Elaborating module <MEMWBReg>.
+WARNING:HDLCompiler:1127 - "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\CPU_Pipeline.v" Line 283: Assignment to PC_plus_4_wb ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CPU_Pipeline>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\CPU_Pipeline.v".
+WARNING:Xst:647 - Input <button> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\CPU_Pipeline.v" line 280: Output port <PC_plus_4_n> of the instance <MEMWBReg1> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <IRQs>.
+    Found 32-bit register for signal <PC>.
+    Found 32-bit adder for signal <PC_plus_4_ex[31]_LU_out_ex[29]_add_3_OUT> created at line 137.
+    Found 31-bit adder for signal <PC_plus_4<30:0>> created at line 140.
+    Found 32-bit 3-to-1 multiplexer for signal <_n0195> created at line 151.
+    Found 5-bit 4-to-1 multiplexer for signal <Write_register> created at line 63.
+    Found 32-bit 4-to-1 multiplexer for signal <Databus3> created at line 66.
+    Found 32-bit 4-to-1 multiplexer for signal <Databus3_ADVANCE> created at line 66.
+    Found 32-bit 4-to-1 multiplexer for signal <ALU_inf1> created at line 69.
+    Found 32-bit 4-to-1 multiplexer for signal <ALU_inf2> created at line 70.
+    Found 32-bit comparator greater for signal <ALU_out_mem[31]_GND_1_o_LessThan_61_o> created at line 219
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  20 Multiplexer(s).
+Unit <CPU_Pipeline> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\debounce.v".
+        NUMBER = 24'b100110001001011010000000
+        NBITS = 24
+    Found 1-bit register for signal <key_i_t2>.
+    Found 1-bit register for signal <key_m>.
+    Found 24-bit register for signal <count>.
+    Found 1-bit register for signal <key_o_temp>.
+    Found 1-bit register for signal <key_i_t1>.
+    Found 24-bit adder for signal <count[23]_GND_2_o_add_4_OUT> created at line 54.
+    Found 1-bit comparator equal for signal <n0003> created at line 45
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <debounce> synthesized.
+
+Synthesizing Unit <ROM>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\rom.v".
+WARNING:Xst:647 - Input <addr<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <addr<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 256x32-bit Read Only RAM for signal <data>
+    Summary:
+	inferred   1 RAM(s).
+Unit <ROM> synthesized.
+
+Synthesizing Unit <Control>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\Control.v".
+    Found 6-bit comparator lessequal for signal <n0018> created at line 40
+    Found 6-bit comparator lessequal for signal <n0020> created at line 40
+    Found 6-bit comparator lessequal for signal <n0030> created at line 41
+    Found 6-bit comparator lessequal for signal <n0032> created at line 41
+    Found 6-bit comparator lessequal for signal <n0049> created at line 48
+    Found 6-bit comparator lessequal for signal <n0051> created at line 48
+    Found 6-bit comparator lessequal for signal <n0085> created at line 65
+    Found 6-bit comparator lessequal for signal <n0087> created at line 65
+    Found 6-bit comparator lessequal for signal <n0106> created at line 84
+    Summary:
+	inferred   9 Comparator(s).
+	inferred  21 Multiplexer(s).
+Unit <Control> synthesized.
+
+Synthesizing Unit <RegFile>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\regfile.v".
+    Found 992-bit register for signal <n0048[991:0]>.
+    Found 32-bit 31-to-1 multiplexer for signal <addr1[4]_RF_DATA[31][31]_wide_mux_1_OUT> created at line 13.
+    Found 32-bit 31-to-1 multiplexer for signal <addr2[4]_RF_DATA[31][31]_wide_mux_4_OUT> created at line 14.
+    Summary:
+	inferred 992 D-type flip-flop(s).
+	inferred  35 Multiplexer(s).
+Unit <RegFile> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ALU.v".
+INFO:Xst:3210 - "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ALU.v" line 14: Output port <V> of the instance <adder> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <ALU> synthesized.
+
+Synthesizing Unit <ALUADD>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ALU.v".
+    Found 32-bit adder for signal <C> created at line 189.
+    Found 32-bit adder for signal <A[31]_B[31]_add_12_OUT> created at line 194.
+    Found 32-bit adder for signal <A[31]_C[31]_add_13_OUT> created at line 195.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   3 Multiplexer(s).
+Unit <ALUADD> synthesized.
+
+Synthesizing Unit <ALULogic>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ALU.v".
+    Summary:
+Unit <ALULogic> synthesized.
+
+Synthesizing Unit <ALUShift>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ALU.v".
+    Found 32-bit 4-to-1 multiplexer for signal <result> created at line 34.
+    Summary:
+	inferred  28 Multiplexer(s).
+Unit <ALUShift> synthesized.
+
+Synthesizing Unit <ALUCMP>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ALU.v".
+    Found 32-bit 8-to-1 multiplexer for signal <result> created at line 152.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <ALUCMP> synthesized.
+
+Synthesizing Unit <ALUMUX>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ALU.v".
+    Found 32-bit 4-to-1 multiplexer for signal <out> created at line 113.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <ALUMUX> synthesized.
+
+Synthesizing Unit <DataMem>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\DataMemory.v".
+        RAM_SIZE = 256
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 256x32-bit single-port RAM <Mram_RAMDATA> for signal <RAMDATA>.
+    Found 32-bit comparator greater for signal <addr[31]_GND_12_o_LessThan_7_o> created at line 21
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <DataMem> synthesized.
+
+Synthesizing Unit <Peripheral>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\Peripheral.v".
+    Found 16x8-bit dual-port RAM <Mram_RX_buffer> for signal <RX_buffer>.
+    Found 16x8-bit dual-port RAM <Mram_TX_buffer> for signal <TX_buffer>.
+    Found 2-bit register for signal <flag>.
+    Found 32-bit register for signal <TL>.
+    Found 32-bit register for signal <TH>.
+    Found 4-bit register for signal <RX_buf_out_tag>.
+    Found 4-bit register for signal <TX_buf_in_tag>.
+    Found 4-bit register for signal <RX_buf_in_tag>.
+    Found 4-bit register for signal <TX_buf_out_tag>.
+    Found 8-bit register for signal <UART_RXD>.
+    Found 8-bit register for signal <UART_TXD>.
+    Found 1-bit register for signal <TCON<2>>.
+    Found 1-bit register for signal <TCON<1>>.
+    Found 1-bit register for signal <TCON<0>>.
+    Found 1-bit register for signal <UART_CON<3>>.
+    Found 1-bit register for signal <UART_CON<2>>.
+    Found 1-bit register for signal <TX_EN>.
+    Found 1-bit register for signal <TX_complete>.
+    Found 8-bit register for signal <led>.
+    Found 12-bit register for signal <digi>.
+    Found 8-bit register for signal <TX_DATA>.
+    Found 1-bit register for signal <UART_CON<1>>.
+    Found 1-bit register for signal <UART_CON<0>>.
+    Found 4-bit subtractor for signal <RX_buf_num> created at line 175.
+    Found 4-bit subtractor for signal <TX_buf_num> created at line 176.
+    Found 32-bit adder for signal <TL[31]_GND_13_o_add_15_OUT> created at line 90.
+    Found 4-bit adder for signal <TX_buf_in_tag[3]_GND_13_o_add_40_OUT> created at line 111.
+    Found 4-bit adder for signal <RX_buf_out_tag[3]_GND_13_o_add_48_OUT> created at line 127.
+    Found 4-bit adder for signal <RX_buf_in_tag[3]_GND_13_o_add_64_OUT> created at line 146.
+    Found 4-bit adder for signal <TX_buf_out_tag[3]_GND_13_o_add_69_OUT> created at line 160.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred 135 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
+Unit <Peripheral> synthesized.
+
+Synthesizing Unit <UARTReciever>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\Peripheral.v".
+    Found 17-bit register for signal <count>.
+    Found 1-bit register for signal <RX_DATA<7>>.
+    Found 1-bit register for signal <RX_DATA<6>>.
+    Found 1-bit register for signal <RX_DATA<5>>.
+    Found 1-bit register for signal <RX_DATA<4>>.
+    Found 1-bit register for signal <RX_DATA<3>>.
+    Found 1-bit register for signal <RX_DATA<2>>.
+    Found 1-bit register for signal <RX_DATA<1>>.
+    Found 1-bit register for signal <RX_DATA<0>>.
+    Found 1-bit register for signal <enable>.
+    Found 1-bit register for signal <RX_STATUS>.
+    Found 17-bit adder for signal <count[16]_GND_14_o_add_20_OUT> created at line 269.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
+Unit <UARTReciever> synthesized.
+
+Synthesizing Unit <UARTSender>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\Peripheral.v".
+    Found 1-bit register for signal <TX>.
+    Found 8-bit register for signal <data>.
+    Found 18-bit register for signal <count>.
+    Found 1-bit register for signal <enable>.
+    Found 18-bit adder for signal <count[17]_GND_16_o_add_21_OUT> created at line 371.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred  22 Multiplexer(s).
+Unit <UARTSender> synthesized.
+
+Synthesizing Unit <ForwardControl>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\ForwardControl.v".
+WARNING:Xst:647 - Input <Rs_mem> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit comparator equal for signal <Write_register_mem[4]_Rs_ex[4]_equal_2_o> created at line 18
+    Found 5-bit comparator equal for signal <Write_register_wb[4]_Rs_ex[4]_equal_4_o> created at line 20
+    Found 5-bit comparator equal for signal <Write_register_mem[4]_Rt_ex[4]_equal_8_o> created at line 25
+    Found 5-bit comparator equal for signal <Write_register_wb[4]_Rt_ex[4]_equal_10_o> created at line 27
+    Found 5-bit comparator equal for signal <Write_register[4]_Rs[4]_equal_14_o> created at line 35
+    Found 5-bit comparator equal for signal <Write_register_wb[4]_Rt_mem[4]_equal_15_o> created at line 43
+    Summary:
+	inferred   6 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <ForwardControl> synthesized.
+
+Synthesizing Unit <RiskControl>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\RiskControl.v".
+    Found 5-bit comparator equal for signal <Write_register[4]_Rs[4]_equal_1_o> created at line 12
+    Found 5-bit comparator equal for signal <Write_register[4]_Rt[4]_equal_2_o> created at line 12
+    Summary:
+	inferred   2 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <RiskControl> synthesized.
+
+Synthesizing Unit <IFIDReg>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\IFIDReg.v".
+    Found 32-bit register for signal <Instruction_n>.
+    Found 1-bit register for signal <PC_n<31>>.
+    Found 1-bit register for signal <PC_n<30>>.
+    Found 1-bit register for signal <PC_n<29>>.
+    Found 1-bit register for signal <PC_n<28>>.
+    Found 1-bit register for signal <PC_n<27>>.
+    Found 1-bit register for signal <PC_n<26>>.
+    Found 1-bit register for signal <PC_n<25>>.
+    Found 1-bit register for signal <PC_n<24>>.
+    Found 1-bit register for signal <PC_n<23>>.
+    Found 1-bit register for signal <PC_n<22>>.
+    Found 1-bit register for signal <PC_n<21>>.
+    Found 1-bit register for signal <PC_n<20>>.
+    Found 1-bit register for signal <PC_n<19>>.
+    Found 1-bit register for signal <PC_n<18>>.
+    Found 1-bit register for signal <PC_n<17>>.
+    Found 1-bit register for signal <PC_n<16>>.
+    Found 1-bit register for signal <PC_n<15>>.
+    Found 1-bit register for signal <PC_n<14>>.
+    Found 1-bit register for signal <PC_n<13>>.
+    Found 1-bit register for signal <PC_n<12>>.
+    Found 1-bit register for signal <PC_n<11>>.
+    Found 1-bit register for signal <PC_n<10>>.
+    Found 1-bit register for signal <PC_n<9>>.
+    Found 1-bit register for signal <PC_n<8>>.
+    Found 1-bit register for signal <PC_n<7>>.
+    Found 1-bit register for signal <PC_n<6>>.
+    Found 1-bit register for signal <PC_n<5>>.
+    Found 1-bit register for signal <PC_n<4>>.
+    Found 1-bit register for signal <PC_n<3>>.
+    Found 1-bit register for signal <PC_n<2>>.
+    Found 1-bit register for signal <PC_n<1>>.
+    Found 1-bit register for signal <PC_n<0>>.
+    Found 1-bit register for signal <PC_plus_4_n<31>>.
+    Found 1-bit register for signal <PC_plus_4_n<30>>.
+    Found 1-bit register for signal <PC_plus_4_n<29>>.
+    Found 1-bit register for signal <PC_plus_4_n<28>>.
+    Found 1-bit register for signal <PC_plus_4_n<27>>.
+    Found 1-bit register for signal <PC_plus_4_n<26>>.
+    Found 1-bit register for signal <PC_plus_4_n<25>>.
+    Found 1-bit register for signal <PC_plus_4_n<24>>.
+    Found 1-bit register for signal <PC_plus_4_n<23>>.
+    Found 1-bit register for signal <PC_plus_4_n<22>>.
+    Found 1-bit register for signal <PC_plus_4_n<21>>.
+    Found 1-bit register for signal <PC_plus_4_n<20>>.
+    Found 1-bit register for signal <PC_plus_4_n<19>>.
+    Found 1-bit register for signal <PC_plus_4_n<18>>.
+    Found 1-bit register for signal <PC_plus_4_n<17>>.
+    Found 1-bit register for signal <PC_plus_4_n<16>>.
+    Found 1-bit register for signal <PC_plus_4_n<15>>.
+    Found 1-bit register for signal <PC_plus_4_n<14>>.
+    Found 1-bit register for signal <PC_plus_4_n<13>>.
+    Found 1-bit register for signal <PC_plus_4_n<12>>.
+    Found 1-bit register for signal <PC_plus_4_n<11>>.
+    Found 1-bit register for signal <PC_plus_4_n<10>>.
+    Found 1-bit register for signal <PC_plus_4_n<9>>.
+    Found 1-bit register for signal <PC_plus_4_n<8>>.
+    Found 1-bit register for signal <PC_plus_4_n<7>>.
+    Found 1-bit register for signal <PC_plus_4_n<6>>.
+    Found 1-bit register for signal <PC_plus_4_n<5>>.
+    Found 1-bit register for signal <PC_plus_4_n<4>>.
+    Found 1-bit register for signal <PC_plus_4_n<3>>.
+    Found 1-bit register for signal <PC_plus_4_n<2>>.
+    Found 1-bit register for signal <PC_plus_4_n<1>>.
+    Found 1-bit register for signal <PC_plus_4_n<0>>.
+    Summary:
+	inferred  96 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <IFIDReg> synthesized.
+
+Synthesizing Unit <IDEXReg>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\IDEXReg.v".
+    Found 32-bit register for signal <PC_plus_4_n>.
+    Found 32-bit register for signal <PC_n>.
+    Found 32-bit register for signal <LU_out_n>.
+    Found 32-bit register for signal <Databus1_n>.
+    Found 32-bit register for signal <Databus2_n>.
+    Found 32-bit register for signal <Instruction_n>.
+    Found 5-bit register for signal <Rs_n>.
+    Found 5-bit register for signal <Rd_n>.
+    Found 5-bit register for signal <Rt_n>.
+    Found 2-bit register for signal <RegDst_n>.
+    Found 2-bit register for signal <MemtoReg_n>.
+    Found 3-bit register for signal <PCSrc_n>.
+    Found 6-bit register for signal <ALUFun_n>.
+    Found 1-bit register for signal <MemWrite_n>.
+    Found 1-bit register for signal <MemRead_n>.
+    Found 1-bit register for signal <RegWrite_n>.
+    Found 1-bit register for signal <ALUSrc1_n>.
+    Found 1-bit register for signal <ALUSrc2_n>.
+    Found 1-bit register for signal <Sign_n>.
+    Summary:
+	inferred 226 D-type flip-flop(s).
+	inferred  10 Multiplexer(s).
+Unit <IDEXReg> synthesized.
+
+Synthesizing Unit <EXMEMReg>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\EXMEMReg.v".
+    Found 2-bit register for signal <MemtoReg_n>.
+    Found 5-bit register for signal <Write_register_n>.
+    Found 5-bit register for signal <Rs_n>.
+    Found 5-bit register for signal <Rt_n>.
+    Found 32-bit register for signal <Databus2_n>.
+    Found 32-bit register for signal <ALU_out_n>.
+    Found 32-bit register for signal <PC_plus_4_n>.
+    Found 32-bit register for signal <PC_n>.
+    Found 1-bit register for signal <MemRead_n>.
+    Found 1-bit register for signal <MemWrite_n>.
+    Found 1-bit register for signal <RegWrite_n>.
+    Summary:
+	inferred 148 D-type flip-flop(s).
+Unit <EXMEMReg> synthesized.
+
+Synthesizing Unit <MEMWBReg>.
+    Related source file is "E:\work\ise\MIPS_CPU_Verilog\mips_pipeline_RegWriteAdvanced\src\MEMWBReg.v".
+    Found 32-bit register for signal <ALU_out_n>.
+    Found 32-bit register for signal <Read_data_n>.
+    Found 32-bit register for signal <PC_plus_4_n>.
+    Found 2-bit register for signal <MemtoReg_n>.
+    Found 5-bit register for signal <Write_register_n>.
+    Found 1-bit register for signal <RegWrite_n>.
+    Summary:
+	inferred 104 D-type flip-flop(s).
+Unit <MEMWBReg> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x8-bit dual-port RAM                                : 2
+ 256x32-bit single-port RAM                            : 1
+ 256x32-bit single-port Read Only RAM                  : 1
+# Adders/Subtractors                                   : 14
+ 17-bit adder                                          : 1
+ 18-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 4
+ 4-bit adder                                           : 4
+ 4-bit subtractor                                      : 2
+# Registers                                            : 145
+ 1-bit register                                        : 99
+ 12-bit register                                       : 1
+ 17-bit register                                       : 1
+ 18-bit register                                       : 1
+ 2-bit register                                        : 6
+ 24-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 17
+ 4-bit register                                        : 4
+ 5-bit register                                        : 7
+ 6-bit register                                        : 1
+ 8-bit register                                        : 5
+ 992-bit register                                      : 1
+# Comparators                                          : 20
+ 1-bit comparator equal                                : 1
+ 32-bit comparator greater                             : 2
+ 5-bit comparator equal                                : 8
+ 6-bit comparator lessequal                            : 9
+# Multiplexers                                         : 180
+ 1-bit 2-to-1 multiplexer                              : 36
+ 16-bit 2-to-1 multiplexer                             : 6
+ 17-bit 2-to-1 multiplexer                             : 11
+ 18-bit 2-to-1 multiplexer                             : 11
+ 2-bit 2-to-1 multiplexer                              : 13
+ 24-bit 2-to-1 multiplexer                             : 3
+ 28-bit 2-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 8
+ 30-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 57
+ 32-bit 3-to-1 multiplexer                             : 1
+ 32-bit 31-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 6
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 11
+ 8-bit 2-to-1 multiplexer                              : 4
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <Instruction_n_0> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_1> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_2> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_3> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_4> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_5> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_11> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_12> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_13> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_14> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_15> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_16> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_17> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_18> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_19> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_20> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_21> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_22> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_23> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_24> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_25> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_26> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_27> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_28> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_29> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_30> of sequential type is unconnected in block <IDEXReg1>.
+WARNING:Xst:2677 - Node <Instruction_n_31> of sequential type is unconnected in block <IDEXReg1>.
+
+Synthesizing (advanced) Unit <DataMem>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAMDATA> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <addr<9:2>>     |          |
+    |     diA            | connected to signal <wdata>         |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <DataMem> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Peripheral>.
+The following registers are absorbed into counter <RX_buf_out_tag>: 1 register on signal <RX_buf_out_tag>.
+The following registers are absorbed into counter <TX_buf_in_tag>: 1 register on signal <TX_buf_in_tag>.
+The following registers are absorbed into counter <TX_buf_out_tag>: 1 register on signal <TX_buf_out_tag>.
+The following registers are absorbed into counter <RX_buf_in_tag>: 1 register on signal <RX_buf_in_tag>.
+INFO:Xst:3217 - HDL ADVISOR - Register <UART_RXD> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_RX_buffer> for implementation on block RAM resources if you made this reset synchronous instead.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <sysclk>        | fall     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <RX_buf_in_tag> |          |
+    |     diA            | connected to signal <RX_DATA>       |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to signal <RX_buf_out_tag> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_TX_buffer> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <TX_buf_in_tag> |          |
+    |     diA            | connected to signal <wdata<7:0>>    |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     addrB          | connected to signal <TX_buf_out_tag> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Peripheral> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ROM>.
+INFO:Xst:3217 - HDL ADVISOR - Register <Instruction_n> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_data> for implementation on block RAM resources if you made this reset synchronous instead.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 32-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data>          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_data> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+Unit <ROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <debounce>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <debounce> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x8-bit dual-port distributed RAM                    : 2
+ 256x32-bit single-port distributed RAM                : 1
+ 256x32-bit single-port distributed Read Only RAM      : 1
+# Adders/Subtractors                                   : 9
+ 17-bit adder                                          : 1
+ 18-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 4
+ 4-bit subtractor                                      : 2
+# Counters                                             : 5
+ 24-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+# Registers                                            : 1778
+ Flip-Flops                                            : 1778
+# Comparators                                          : 20
+ 1-bit comparator equal                                : 1
+ 32-bit comparator greater                             : 2
+ 5-bit comparator equal                                : 8
+ 6-bit comparator lessequal                            : 9
+# Multiplexers                                         : 271
+ 1-bit 2-to-1 multiplexer                              : 130
+ 16-bit 2-to-1 multiplexer                             : 6
+ 17-bit 2-to-1 multiplexer                             : 11
+ 18-bit 2-to-1 multiplexer                             : 11
+ 2-bit 2-to-1 multiplexer                              : 13
+ 24-bit 2-to-1 multiplexer                             : 3
+ 28-bit 2-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 8
+ 30-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 54
+ 32-bit 3-to-1 multiplexer                             : 1
+ 32-bit 31-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 6
+ 32-bit 8-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 5-bit 4-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 11
+ 8-bit 2-to-1 multiplexer                              : 4
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <Instruction_n_11> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rd_n_0> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_12> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rd_n_1> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_13> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rd_n_2> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_14> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rd_n_3> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_15> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rd_n_4> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_20> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rt_n_4> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_16> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rt_n_0> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_21> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rs_n_0> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_17> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rt_n_1> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_22> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rs_n_1> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_18> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rt_n_2> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_23> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rs_n_2> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_19> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rt_n_3> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_24> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rs_n_3> 
+INFO:Xst:2261 - The FF/Latch <Instruction_n_25> in Unit <IDEXReg> is equivalent to the following FF/Latch, which will be removed : <Rs_n_4> 
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    PC_plus_4_n_0 in unit <IFIDReg>
+    PC_plus_4_n_1 in unit <IFIDReg>
+    PC_plus_4_n_2 in unit <IFIDReg>
+    PC_plus_4_n_3 in unit <IFIDReg>
+    PC_plus_4_n_4 in unit <IFIDReg>
+    PC_plus_4_n_5 in unit <IFIDReg>
+    PC_plus_4_n_6 in unit <IFIDReg>
+    PC_plus_4_n_7 in unit <IFIDReg>
+    PC_plus_4_n_8 in unit <IFIDReg>
+    PC_plus_4_n_9 in unit <IFIDReg>
+    PC_plus_4_n_10 in unit <IFIDReg>
+    PC_plus_4_n_11 in unit <IFIDReg>
+    PC_plus_4_n_12 in unit <IFIDReg>
+    PC_plus_4_n_14 in unit <IFIDReg>
+    PC_plus_4_n_15 in unit <IFIDReg>
+    PC_plus_4_n_13 in unit <IFIDReg>
+    PC_plus_4_n_16 in unit <IFIDReg>
+    PC_plus_4_n_17 in unit <IFIDReg>
+    PC_plus_4_n_18 in unit <IFIDReg>
+    PC_plus_4_n_19 in unit <IFIDReg>
+    PC_plus_4_n_20 in unit <IFIDReg>
+    PC_plus_4_n_21 in unit <IFIDReg>
+    PC_plus_4_n_23 in unit <IFIDReg>
+    PC_plus_4_n_24 in unit <IFIDReg>
+    PC_plus_4_n_22 in unit <IFIDReg>
+    PC_plus_4_n_25 in unit <IFIDReg>
+    PC_plus_4_n_26 in unit <IFIDReg>
+    PC_plus_4_n_27 in unit <IFIDReg>
+    PC_plus_4_n_28 in unit <IFIDReg>
+    PC_plus_4_n_29 in unit <IFIDReg>
+    PC_plus_4_n_30 in unit <IFIDReg>
+    PC_n_0 in unit <IFIDReg>
+    PC_n_1 in unit <IFIDReg>
+    PC_plus_4_n_31 in unit <IFIDReg>
+    PC_n_2 in unit <IFIDReg>
+    PC_n_3 in unit <IFIDReg>
+    PC_n_4 in unit <IFIDReg>
+    PC_n_5 in unit <IFIDReg>
+    PC_n_6 in unit <IFIDReg>
+    PC_n_7 in unit <IFIDReg>
+    PC_n_8 in unit <IFIDReg>
+    PC_n_9 in unit <IFIDReg>
+    PC_n_10 in unit <IFIDReg>
+    PC_n_11 in unit <IFIDReg>
+    PC_n_12 in unit <IFIDReg>
+    PC_n_13 in unit <IFIDReg>
+    PC_n_14 in unit <IFIDReg>
+    PC_n_15 in unit <IFIDReg>
+    PC_n_17 in unit <IFIDReg>
+    PC_n_18 in unit <IFIDReg>
+    PC_n_16 in unit <IFIDReg>
+    PC_n_19 in unit <IFIDReg>
+    PC_n_20 in unit <IFIDReg>
+    PC_n_21 in unit <IFIDReg>
+    PC_n_22 in unit <IFIDReg>
+    PC_n_23 in unit <IFIDReg>
+    PC_n_24 in unit <IFIDReg>
+    PC_n_26 in unit <IFIDReg>
+    PC_n_27 in unit <IFIDReg>
+    PC_n_25 in unit <IFIDReg>
+    PC_n_28 in unit <IFIDReg>
+    PC_n_29 in unit <IFIDReg>
+    PC_n_30 in unit <IFIDReg>
+    PC_n_31 in unit <IFIDReg>
+
+
+Optimizing unit <EXMEMReg> ...
+
+Optimizing unit <MEMWBReg> ...
+
+Optimizing unit <CPU_Pipeline> ...
+
+Optimizing unit <Peripheral> ...
+
+Optimizing unit <UARTReciever> ...
+
+Optimizing unit <UARTSender> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <RegFile> ...
+
+Optimizing unit <IFIDReg> ...
+
+Optimizing unit <IDEXReg> ...
+
+Optimizing unit <Control> ...
+
+Optimizing unit <ALUADD> ...
+
+Optimizing unit <ALUShift> ...
+
+Optimizing unit <ForwardControl> ...
+WARNING:Xst:1710 - FF/Latch <IFIDReg1/Instruction_n_20> (without init value) has a constant value of 0 in block <CPU_Pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <IDEXReg1/Instruction_n_20> (without init value) has a constant value of 0 in block <CPU_Pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <EXMEMReg1/Rt_n_4> (without init value) has a constant value of 0 in block <CPU_Pipeline>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_31> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_30> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_29> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_28> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_27> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_26> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_5> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_4> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_3> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_2> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_1> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <IDEXReg1/Instruction_n_0> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <EXMEMReg1/Rs_n_4> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <EXMEMReg1/Rs_n_3> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <EXMEMReg1/Rs_n_2> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <EXMEMReg1/Rs_n_1> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <EXMEMReg1/Rs_n_0> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_31> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_30> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_29> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_28> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_27> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_26> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_25> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_24> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_23> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_22> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_21> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_20> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_19> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_18> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_17> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_16> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_15> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_14> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_13> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_12> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_11> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_10> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_9> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_8> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_7> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_6> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_5> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_4> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_3> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_2> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_1> of sequential type is unconnected in block <CPU_Pipeline>.
+WARNING:Xst:2677 - Node <MEMWBReg1/PC_plus_4_n_0> of sequential type is unconnected in block <CPU_Pipeline>.
+INFO:Xst:2261 - The FF/Latch <IDEXReg1/PC_plus_4_n_31> in Unit <CPU_Pipeline> is equivalent to the following FF/Latch, which will be removed : <IDEXReg1/PC_n_31> 
+INFO:Xst:2261 - The FF/Latch <EXMEMReg1/PC_n_31> in Unit <CPU_Pipeline> is equivalent to the following FF/Latch, which will be removed : <EXMEMReg1/PC_plus_4_n_31> 
+INFO:Xst:2261 - The FF/Latch <IFIDReg1/PC_plus_4_n_31> in Unit <CPU_Pipeline> is equivalent to the following FF/Latch, which will be removed : <IFIDReg1/PC_n_31> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU_Pipeline, actual ratio is 47.
+FlipFlop EXMEMReg1/Write_register_n_0 has been replicated 1 time(s)
+FlipFlop EXMEMReg1/Write_register_n_1 has been replicated 1 time(s)
+FlipFlop EXMEMReg1/Write_register_n_2 has been replicated 2 time(s)
+FlipFlop EXMEMReg1/Write_register_n_3 has been replicated 1 time(s)
+FlipFlop EXMEMReg1/Write_register_n_4 has been replicated 2 time(s)
+FlipFlop IDEXReg1/ALUSrc1_n has been replicated 1 time(s)
+FlipFlop IDEXReg1/ALUSrc2_n has been replicated 2 time(s)
+FlipFlop MEMWBReg1/MemtoReg_n_0 has been replicated 2 time(s)
+FlipFlop MEMWBReg1/MemtoReg_n_1 has been replicated 2 time(s)
+FlipFlop MEMWBReg1/RegWrite_n has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <CPU_Pipeline> :
+	Found 2-bit shift register for signal <d1/key_i_t2>.
+Unit <CPU_Pipeline> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1824
+ Flip-Flops                                            : 1824
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CPU_Pipeline.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 4342
+#      GND                         : 1
+#      INV                         : 18
+#      LUT1                        : 115
+#      LUT2                        : 228
+#      LUT3                        : 1211
+#      LUT4                        : 147
+#      LUT5                        : 467
+#      LUT6                        : 1539
+#      MUXCY                       : 210
+#      MUXF7                       : 162
+#      MUXF8                       : 29
+#      VCC                         : 1
+#      XORCY                       : 214
+# FlipFlops/Latches                : 1886
+#      FDC                         : 558
+#      FDCE                        : 1139
+#      FDCE_1                      : 2
+#      FDE                         : 25
+#      FDE_1                       : 8
+#      FDP                         : 65
+#      FDP_1                       : 2
+#      FDPE                        : 2
+#      FDRE                        : 24
+#      LDC                         : 61
+# RAMS                             : 38
+#      RAM16X1D                    : 4
+#      RAM256X1S                   : 32
+#      RAM32M                      : 2
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 31
+#      IBUF                        : 10
+#      OBUF                        : 21
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1886  out of  18224    10%  
+ Number of Slice LUTs:                 3870  out of   9112    42%  
+    Number used as Logic:              3725  out of   9112    40%  
+    Number used as Memory:              145  out of   2176     6%  
+       Number used as RAM:              144
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4186
+   Number with an unused Flip Flop:    2300  out of   4186    54%  
+   Number with an unused LUT:           316  out of   4186     7%  
+   Number of fully used LUT-FF pairs:  1570  out of   4186    37%  
+   Number of unique control sets:       218
+
+IO Utilization: 
+ Number of IOs:                          33
+ Number of bonded IOBs:                  32  out of    232    13%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------------+-------------------------------------+-------+
+Clock Signal                                                                     | Clock buffer(FF name)               | Load  |
+---------------------------------------------------------------------------------+-------------------------------------+-------+
+clk                                                                              | BUFGP                               | 1864  |
+IFIDReg1/reset_PC_plus_4[0]_AND_331_o(IFIDReg1/reset_PC_plus_4[0]_AND_331_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_0_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[1]_AND_329_o(IFIDReg1/reset_PC_plus_4[1]_AND_329_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_1_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[2]_AND_327_o(IFIDReg1/reset_PC_plus_4[2]_AND_327_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_2_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[3]_AND_325_o(IFIDReg1/reset_PC_plus_4[3]_AND_325_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_3_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[4]_AND_323_o(IFIDReg1/reset_PC_plus_4[4]_AND_323_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_4_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[5]_AND_321_o(IFIDReg1/reset_PC_plus_4[5]_AND_321_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_5_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[6]_AND_319_o(IFIDReg1/reset_PC_plus_4[6]_AND_319_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_6_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[7]_AND_317_o(IFIDReg1/reset_PC_plus_4[7]_AND_317_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_7_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[8]_AND_315_o(IFIDReg1/reset_PC_plus_4[8]_AND_315_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_8_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[9]_AND_313_o(IFIDReg1/reset_PC_plus_4[9]_AND_313_o1:O)  | NONE(*)(IFIDReg1/PC_plus_4_n_9_LDC) | 1     |
+IFIDReg1/reset_PC_plus_4[10]_AND_311_o(IFIDReg1/reset_PC_plus_4[10]_AND_311_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_10_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[11]_AND_309_o(IFIDReg1/reset_PC_plus_4[11]_AND_309_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_11_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[12]_AND_307_o(IFIDReg1/reset_PC_plus_4[12]_AND_307_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_12_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[14]_AND_303_o(IFIDReg1/reset_PC_plus_4[14]_AND_303_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_14_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[15]_AND_301_o(IFIDReg1/reset_PC_plus_4[15]_AND_301_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_15_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[13]_AND_305_o(IFIDReg1/reset_PC_plus_4[13]_AND_305_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_13_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[16]_AND_299_o(IFIDReg1/reset_PC_plus_4[16]_AND_299_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_16_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[17]_AND_297_o(IFIDReg1/reset_PC_plus_4[17]_AND_297_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_17_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[18]_AND_295_o(IFIDReg1/reset_PC_plus_4[18]_AND_295_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_18_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[19]_AND_293_o(IFIDReg1/reset_PC_plus_4[19]_AND_293_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_19_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[20]_AND_291_o(IFIDReg1/reset_PC_plus_4[20]_AND_291_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_20_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[21]_AND_289_o(IFIDReg1/reset_PC_plus_4[21]_AND_289_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_21_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[23]_AND_285_o(IFIDReg1/reset_PC_plus_4[23]_AND_285_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_23_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[24]_AND_283_o(IFIDReg1/reset_PC_plus_4[24]_AND_283_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_24_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[22]_AND_287_o(IFIDReg1/reset_PC_plus_4[22]_AND_287_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_22_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[25]_AND_281_o(IFIDReg1/reset_PC_plus_4[25]_AND_281_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_25_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[26]_AND_279_o(IFIDReg1/reset_PC_plus_4[26]_AND_279_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_26_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[27]_AND_277_o(IFIDReg1/reset_PC_plus_4[27]_AND_277_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_27_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[28]_AND_275_o(IFIDReg1/reset_PC_plus_4[28]_AND_275_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_28_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[29]_AND_273_o(IFIDReg1/reset_PC_plus_4[29]_AND_273_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_29_LDC)| 1     |
+IFIDReg1/reset_PC_plus_4[30]_AND_271_o(IFIDReg1/reset_PC_plus_4[30]_AND_271_o1:O)| NONE(*)(IFIDReg1/PC_plus_4_n_30_LDC)| 1     |
+IFIDReg1/reset_PC[31]_AND_205_o(IFIDReg1/reset_PC[31]_AND_205_o1:O)              | NONE(*)(IFIDReg1/PC_plus_4_n_31_LDC)| 1     |
+IFIDReg1/reset_PC[2]_AND_263_o(IFIDReg1/reset_PC[2]_AND_263_o1:O)                | NONE(*)(IFIDReg1/PC_n_2_LDC)        | 1     |
+IFIDReg1/reset_PC[3]_AND_261_o(IFIDReg1/reset_PC[3]_AND_261_o1:O)                | NONE(*)(IFIDReg1/PC_n_3_LDC)        | 1     |
+IFIDReg1/reset_PC[4]_AND_259_o(IFIDReg1/reset_PC[4]_AND_259_o1:O)                | NONE(*)(IFIDReg1/PC_n_4_LDC)        | 1     |
+IFIDReg1/reset_PC[5]_AND_257_o(IFIDReg1/reset_PC[5]_AND_257_o1:O)                | NONE(*)(IFIDReg1/PC_n_5_LDC)        | 1     |
+IFIDReg1/reset_PC[6]_AND_255_o(IFIDReg1/reset_PC[6]_AND_255_o1:O)                | NONE(*)(IFIDReg1/PC_n_6_LDC)        | 1     |
+IFIDReg1/reset_PC[7]_AND_253_o(IFIDReg1/reset_PC[7]_AND_253_o1:O)                | NONE(*)(IFIDReg1/PC_n_7_LDC)        | 1     |
+IFIDReg1/reset_PC[8]_AND_251_o(IFIDReg1/reset_PC[8]_AND_251_o1:O)                | NONE(*)(IFIDReg1/PC_n_8_LDC)        | 1     |
+IFIDReg1/reset_PC[9]_AND_249_o(IFIDReg1/reset_PC[9]_AND_249_o1:O)                | NONE(*)(IFIDReg1/PC_n_9_LDC)        | 1     |
+IFIDReg1/reset_PC[10]_AND_247_o(IFIDReg1/reset_PC[10]_AND_247_o1:O)              | NONE(*)(IFIDReg1/PC_n_10_LDC)       | 1     |
+IFIDReg1/reset_PC[11]_AND_245_o(IFIDReg1/reset_PC[11]_AND_245_o1:O)              | NONE(*)(IFIDReg1/PC_n_11_LDC)       | 1     |
+IFIDReg1/reset_PC[12]_AND_243_o(IFIDReg1/reset_PC[12]_AND_243_o1:O)              | NONE(*)(IFIDReg1/PC_n_12_LDC)       | 1     |
+IFIDReg1/reset_PC[13]_AND_241_o(IFIDReg1/reset_PC[13]_AND_241_o1:O)              | NONE(*)(IFIDReg1/PC_n_13_LDC)       | 1     |
+IFIDReg1/reset_PC[14]_AND_239_o(IFIDReg1/reset_PC[14]_AND_239_o1:O)              | NONE(*)(IFIDReg1/PC_n_14_LDC)       | 1     |
+IFIDReg1/reset_PC[15]_AND_237_o(IFIDReg1/reset_PC[15]_AND_237_o1:O)              | NONE(*)(IFIDReg1/PC_n_15_LDC)       | 1     |
+IFIDReg1/reset_PC[17]_AND_233_o(IFIDReg1/reset_PC[17]_AND_233_o1:O)              | NONE(*)(IFIDReg1/PC_n_17_LDC)       | 1     |
+IFIDReg1/reset_PC[18]_AND_231_o(IFIDReg1/reset_PC[18]_AND_231_o1:O)              | NONE(*)(IFIDReg1/PC_n_18_LDC)       | 1     |
+IFIDReg1/reset_PC[16]_AND_235_o(IFIDReg1/reset_PC[16]_AND_235_o1:O)              | NONE(*)(IFIDReg1/PC_n_16_LDC)       | 1     |
+IFIDReg1/reset_PC[19]_AND_229_o(IFIDReg1/reset_PC[19]_AND_229_o1:O)              | NONE(*)(IFIDReg1/PC_n_19_LDC)       | 1     |
+IFIDReg1/reset_PC[20]_AND_227_o(IFIDReg1/reset_PC[20]_AND_227_o1:O)              | NONE(*)(IFIDReg1/PC_n_20_LDC)       | 1     |
+IFIDReg1/reset_PC[21]_AND_225_o(IFIDReg1/reset_PC[21]_AND_225_o1:O)              | NONE(*)(IFIDReg1/PC_n_21_LDC)       | 1     |
+IFIDReg1/reset_PC[22]_AND_223_o(IFIDReg1/reset_PC[22]_AND_223_o1:O)              | NONE(*)(IFIDReg1/PC_n_22_LDC)       | 1     |
+IFIDReg1/reset_PC[23]_AND_221_o(IFIDReg1/reset_PC[23]_AND_221_o1:O)              | NONE(*)(IFIDReg1/PC_n_23_LDC)       | 1     |
+IFIDReg1/reset_PC[24]_AND_219_o(IFIDReg1/reset_PC[24]_AND_219_o1:O)              | NONE(*)(IFIDReg1/PC_n_24_LDC)       | 1     |
+IFIDReg1/reset_PC[26]_AND_215_o(IFIDReg1/reset_PC[26]_AND_215_o1:O)              | NONE(*)(IFIDReg1/PC_n_26_LDC)       | 1     |
+IFIDReg1/reset_PC[27]_AND_213_o(IFIDReg1/reset_PC[27]_AND_213_o1:O)              | NONE(*)(IFIDReg1/PC_n_27_LDC)       | 1     |
+IFIDReg1/reset_PC[25]_AND_217_o(IFIDReg1/reset_PC[25]_AND_217_o1:O)              | NONE(*)(IFIDReg1/PC_n_25_LDC)       | 1     |
+IFIDReg1/reset_PC[28]_AND_211_o(IFIDReg1/reset_PC[28]_AND_211_o1:O)              | NONE(*)(IFIDReg1/PC_n_28_LDC)       | 1     |
+IFIDReg1/reset_PC[29]_AND_209_o(IFIDReg1/reset_PC[29]_AND_209_o1:O)              | NONE(*)(IFIDReg1/PC_n_29_LDC)       | 1     |
+IFIDReg1/reset_PC[30]_AND_207_o(IFIDReg1/reset_PC[30]_AND_207_o1:O)              | NONE(*)(IFIDReg1/PC_n_30_LDC)       | 1     |
+---------------------------------------------------------------------------------+-------------------------------------+-------+
+(*) These 61 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 11.285ns (Maximum Frequency: 88.616MHz)
+   Minimum input arrival time before clock: 6.661ns
+   Maximum output required time after clock: 4.419ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 11.285ns (frequency: 88.616MHz)
+  Total number of paths / destination ports: 84629802 / 5190
+-------------------------------------------------------------------------
+Delay:               11.285ns (Levels of Logic = 10)
+  Source:            IDEXReg1/Instruction_n_21 (FF)
+  Destination:       PC_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: IDEXReg1/Instruction_n_21 to PC_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.447   1.079  IDEXReg1/Instruction_n_21 (IDEXReg1/Instruction_n_21)
+     LUT6:I0->O            1   0.203   0.580  forwardControl1/Mmux_ForwardA15 (forwardControl1/Mmux_ForwardA14)
+     LUT5:I4->O           42   0.205   1.434  forwardControl1/Mmux_ForwardA16 (forwardControl1/Mmux_ForwardA15)
+     LUT6:I5->O           32   0.205   1.396  Mmux_ALU_inf126_2 (Mmux_ALU_inf1261)
+     LUT5:I3->O            2   0.203   0.864  alu1/shifter/A<3>121 (alu1/shifter/A<3>_mmx_out2)
+     LUT6:I2->O            2   0.203   0.721  alu1/shifter/A<1>62 (alu1/shifter/A<1>_mmx_out14)
+     LUT5:I3->O            1   0.203   0.580  alu1/muxer/Mmux_out302 (alu1/muxer/Mmux_out301)
+     LUT5:I4->O            1   0.205   0.580  alu1/muxer/Mmux_out307_SW0 (N1137)
+     LUT6:I5->O            3   0.205   0.651  alu1/muxer/Mmux_out307 (ALU_out<7>)
+     LUT6:I5->O            1   0.205   0.808  PC_next<7>3_SW1 (N336)
+     LUT5:I2->O            1   0.205   0.000  PC_next<7>3 (PC_next<7>)
+     FDCE:D                    0.102          PC_7
+    ----------------------------------------
+    Total                     11.285ns (2.591ns logic, 8.694ns route)
+                                       (23.0% logic, 77.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 267 / 267
+-------------------------------------------------------------------------
+Offset:              6.661ns (Levels of Logic = 6)
+  Source:            switch<7> (PAD)
+  Destination:       register_file1/RF_DATA_1_967 (FF)
+  Destination Clock: clk rising
+
+  Data Path: switch<7> to register_file1/RF_DATA_1_967
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.808  switch_7_IBUF (switch_7_IBUF)
+     LUT5:I2->O            1   0.205   0.684  Mmux_Read_data302 (Mmux_Read_data301)
+     LUT6:I4->O            1   0.203   0.684  Mmux_Read_data303 (Mmux_Read_data302)
+     LUT6:I4->O            2   0.203   0.864  Mmux_Read_data304 (Read_data<7>)
+     LUT6:I2->O           31   0.203   1.278  Mmux_Databus3_ADVANCE301 (Databus3_ADVANCE<7>)
+     LUT3:I2->O            1   0.205   0.000  register_file1/Mmux_RF_DATA[1][31]_data3[31]_mux_38_OUT301 (register_file1/RF_DATA[1][31]_data3[31]_mux_38_OUT<7>)
+     FDCE:D                    0.102          register_file1/RF_DATA_1_7
+    ----------------------------------------
+    Total                      6.661ns (2.343ns logic, 4.318ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 21 / 21
+-------------------------------------------------------------------------
+Offset:              4.419ns (Levels of Logic = 2)
+  Source:            peri1/digi_7 (FF)
+  Destination:       bcd<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: peri1/digi_7 to bcd<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.447   0.616  peri1/digi_7 (peri1/digi_7)
+     INV:I->O              1   0.206   0.579  bcd<7>1_INV_0 (bcd_7_OBUF)
+     OBUF:I->O                 2.571          bcd_7_OBUF (bcd<7>)
+    ----------------------------------------
+    Total                      4.419ns (3.224ns logic, 1.195ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[10]_AND_247_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[11]_AND_245_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[12]_AND_243_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[13]_AND_241_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[14]_AND_239_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[15]_AND_237_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[16]_AND_235_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[17]_AND_233_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[18]_AND_231_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[19]_AND_229_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[20]_AND_227_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[21]_AND_225_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[22]_AND_223_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[23]_AND_221_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[24]_AND_219_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[25]_AND_217_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[26]_AND_215_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[27]_AND_213_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[28]_AND_211_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[29]_AND_209_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[2]_AND_263_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[30]_AND_207_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[31]_AND_205_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[3]_AND_261_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[4]_AND_259_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[5]_AND_257_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[6]_AND_255_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[7]_AND_253_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[8]_AND_251_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC[9]_AND_249_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.193|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[0]_AND_331_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.227|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[10]_AND_311_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.016|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[11]_AND_309_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.035|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[12]_AND_307_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.054|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[13]_AND_305_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.073|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[14]_AND_303_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.063|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[15]_AND_301_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.082|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[16]_AND_299_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.101|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[17]_AND_297_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.120|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[18]_AND_295_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.249|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[19]_AND_293_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.187|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[1]_AND_329_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.227|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[20]_AND_291_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.206|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[21]_AND_289_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.306|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[22]_AND_287_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.125|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[23]_AND_285_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.263|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[24]_AND_283_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.282|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[25]_AND_281_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.301|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[26]_AND_279_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.320|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[27]_AND_277_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.339|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[28]_AND_275_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.358|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[29]_AND_273_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.377|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[2]_AND_327_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.638|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[30]_AND_271_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.396|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[3]_AND_325_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.795|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[4]_AND_323_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.783|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[5]_AND_321_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.892|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[6]_AND_319_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.911|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[7]_AND_317_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    5.040|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[8]_AND_315_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.949|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock IFIDReg1/reset_PC_plus_4[9]_AND_313_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.968|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+IFIDReg1/reset_PC[10]_AND_247_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[11]_AND_245_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[12]_AND_243_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[13]_AND_241_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[14]_AND_239_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[15]_AND_237_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[16]_AND_235_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[17]_AND_233_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[18]_AND_231_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[19]_AND_229_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[20]_AND_227_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[21]_AND_225_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[22]_AND_223_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[23]_AND_221_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[24]_AND_219_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[25]_AND_217_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[26]_AND_215_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[27]_AND_213_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[28]_AND_211_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[29]_AND_209_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[2]_AND_263_o        |         |    2.680|         |         |
+IFIDReg1/reset_PC[30]_AND_207_o       |         |    2.680|         |         |
+IFIDReg1/reset_PC[31]_AND_205_o       |         |    4.921|         |         |
+IFIDReg1/reset_PC[3]_AND_261_o        |         |    2.680|         |         |
+IFIDReg1/reset_PC[4]_AND_259_o        |         |    2.680|         |         |
+IFIDReg1/reset_PC[5]_AND_257_o        |         |    2.680|         |         |
+IFIDReg1/reset_PC[6]_AND_255_o        |         |    2.680|         |         |
+IFIDReg1/reset_PC[7]_AND_253_o        |         |    2.680|         |         |
+IFIDReg1/reset_PC[8]_AND_251_o        |         |    2.680|         |         |
+IFIDReg1/reset_PC[9]_AND_249_o        |         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[0]_AND_331_o |         |    2.717|         |         |
+IFIDReg1/reset_PC_plus_4[10]_AND_311_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[11]_AND_309_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[12]_AND_307_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[13]_AND_305_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[14]_AND_303_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[15]_AND_301_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[16]_AND_299_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[17]_AND_297_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[18]_AND_295_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[19]_AND_293_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[1]_AND_329_o |         |    2.717|         |         |
+IFIDReg1/reset_PC_plus_4[20]_AND_291_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[21]_AND_289_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[22]_AND_287_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[23]_AND_285_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[24]_AND_283_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[25]_AND_281_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[26]_AND_279_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[27]_AND_277_o|         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[28]_AND_275_o|         |    5.766|         |         |
+IFIDReg1/reset_PC_plus_4[29]_AND_273_o|         |    5.766|         |         |
+IFIDReg1/reset_PC_plus_4[2]_AND_327_o |         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[30]_AND_271_o|         |    5.749|         |         |
+IFIDReg1/reset_PC_plus_4[3]_AND_325_o |         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[4]_AND_323_o |         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[5]_AND_321_o |         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[6]_AND_319_o |         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[7]_AND_317_o |         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[8]_AND_315_o |         |    2.680|         |         |
+IFIDReg1/reset_PC_plus_4[9]_AND_313_o |         |    2.680|         |         |
+clk                                   |   11.285|    4.195|    4.510|         |
+--------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 80.00 secs
+Total CPU time to Xst completion: 80.51 secs
+ 
+--> 
+
+Total memory usage is 320476 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   87 (   0 filtered)
+Number of infos    :   27 (   0 filtered)
+

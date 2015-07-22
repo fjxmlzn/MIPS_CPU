@@ -1,0 +1,8 @@
+verilog work "src/rom.v"
+verilog work "src/regfile.v"
+verilog work "src/Peripheral.v"
+verilog work "src/debounce.v"
+verilog work "src/DataMemory.v"
+verilog work "src/Control.v"
+verilog work "src/ALU.v"
+verilog work "src/top.v"

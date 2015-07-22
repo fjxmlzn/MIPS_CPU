@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\work\ise\MIPS_single\CPU.ncd
+OUTFILE=E:\work\ise\MIPS_single\CPU.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=E:\work\ise\MIPS_single
+LICENSE=WebPack
+USER_INFO=__0_0_0

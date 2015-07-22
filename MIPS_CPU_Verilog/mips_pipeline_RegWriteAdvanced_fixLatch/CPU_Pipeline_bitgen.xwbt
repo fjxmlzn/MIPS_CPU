@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\work\ise\mips_pipeline2\CPU_Pipeline.ncd
+OUTFILE=E:\work\ise\mips_pipeline2\CPU_Pipeline.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=E:\work\ise\mips_pipeline2
+LICENSE=WebPack
+USER_INFO=__0_0_0

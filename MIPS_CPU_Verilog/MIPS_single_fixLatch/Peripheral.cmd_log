@@ -1,0 +1,2 @@
+vhdtdtfi -lib work E:/work/ise/MIPS_single/src/Peripheral.v -lang verilog -prj MIPS_Single -o Peripheral.spl -module Peripheral -template d:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 Peripheral.spl E:/work/ise/MIPS_single/Peripheral.sym 

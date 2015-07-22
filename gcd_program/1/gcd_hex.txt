@@ -1,0 +1,151 @@
+0x00000000: 0x08000087 | j	 entry_main <﻿entry_vector>
+0x00000004: 0x08000005 | j	 timer_interrupt_main <timer_interrupt_vector>
+0x00000008: 0x0800005e | j	 exception_main <exception_vector>
+0x0000000c: 0x08000063 | j	 uart_send_interrupt_main <uart_send_interrupt_vector>
+0x00000010: 0x08000067 | j	 uart_recv_interrupt_main <uart_recv_interrupt_vector>
+0x00000014: 0x3c084000 | lui	 $t0, 0x4000 <timer_interrupt_main>
+0x00000018: 0x21080008 | addi	 $t0, $t0, 0x0008
+0x0000001c: 0x8d090000 | lw	 $t1, 0, $t0
+0x00000020: 0x3129fff9 | andi	 $t1, $t1, 0xfff9
+0x00000024: 0xad090000 | sw	 $t1, 0, $t0
+0x00000028: 0x200f00fc | addi	 $t7, $zero, 0x00fc <ti_getenable>
+0x0000002c: 0x8dea0000 | lw	 $t2, 0, $t7
+0x00000030: 0x8d0b000c | lw	 $t3, 12, $t0
+0x00000034: 0x000b5a02 | srl	 $t3, $t3, 8
+0x00000038: 0x316c0001 | andi	 $t4, $t3, 0x0001
+0x0000003c: 0x000c60c0 | sll	 $t4, $t4, 3
+0x00000040: 0x000b5842 | srl	 $t3, $t3, 1
+0x00000044: 0x016c5825 | or	 $t3, $t3, $t4
+0x00000048: 0x01606020 | add	 $t4, $t3, $zero
+0x0000004c: 0x318d0008 | andi	 $t5, $t4, 0x0008
+0x00000050: 0x11a00004 | beq	 $t5, $zero, ti_getnum <ti_right_shift_loop>
+0x00000054: 0x000d6842 | srl	 $t5, $t5, 1
+0x00000058: 0x000a5102 | srl	 $t2, $t2, 4
+0x0000005c: 0x01ac6824 | and	 $t5, $t5, $t4
+0x00000060: 0x08000014 | j	 ti_right_shift_loop
+0x00000064: 0x314a000f | andi	 $t2, $t2, 0x000f <ti_getnum>
+0x00000068: 0x000b5a00 | sll	 $t3, $t3, 8
+0x0000006c: 0x200e0000 | addi	 $t6, $zero, 0x0
+0x00000070: 0x114e001d | beq	 $t2, $t6, ti_n0
+0x00000074: 0x200e0001 | addi	 $t6, $zero, 0x1
+0x00000078: 0x114e001d | beq	 $t2, $t6, ti_n1
+0x0000007c: 0x200e0002 | addi	 $t6, $zero, 0x2
+0x00000080: 0x114e001d | beq	 $t2, $t6, ti_n2
+0x00000084: 0x200e0003 | addi	 $t6, $zero, 0x3
+0x00000088: 0x114e001d | beq	 $t2, $t6, ti_n3
+0x0000008c: 0x200e0004 | addi	 $t6, $zero, 0x4
+0x00000090: 0x114e001d | beq	 $t2, $t6, ti_n4
+0x00000094: 0x200e0005 | addi	 $t6, $zero, 0x5
+0x00000098: 0x114e001d | beq	 $t2, $t6, ti_n5
+0x0000009c: 0x200e0006 | addi	 $t6, $zero, 0x6
+0x000000a0: 0x114e001d | beq	 $t2, $t6, ti_n6
+0x000000a4: 0x200e0007 | addi	 $t6, $zero, 0x7
+0x000000a8: 0x114e001d | beq	 $t2, $t6, ti_n7
+0x000000ac: 0x200e0008 | addi	 $t6, $zero, 0x8
+0x000000b0: 0x114e001d | beq	 $t2, $t6, ti_n8
+0x000000b4: 0x200e0009 | addi	 $t6, $zero, 0x9
+0x000000b8: 0x114e001d | beq	 $t2, $t6, ti_n9
+0x000000bc: 0x200e000a | addi	 $t6, $zero, 0xa
+0x000000c0: 0x114e001d | beq	 $t2, $t6, ti_na
+0x000000c4: 0x200e000b | addi	 $t6, $zero, 0xb
+0x000000c8: 0x114e001d | beq	 $t2, $t6, ti_nb
+0x000000cc: 0x200e000c | addi	 $t6, $zero, 0xc
+0x000000d0: 0x114e001d | beq	 $t2, $t6, ti_nc
+0x000000d4: 0x200e000d | addi	 $t6, $zero, 0xd
+0x000000d8: 0x114e001d | beq	 $t2, $t6, ti_nd
+0x000000dc: 0x200e000e | addi	 $t6, $zero, 0xe
+0x000000e0: 0x114e001d | beq	 $t2, $t6, ti_ne
+0x000000e4: 0x08000058 | j	 ti_nf
+0x000000e8: 0x216b00fc | addi	 $t3, $t3, 0x00fc <ti_n0>
+0x000000ec: 0x0800005a | j	 ti_display
+0x000000f0: 0x216b0060 | addi	 $t3, $t3, 0x0060 <ti_n1>
+0x000000f4: 0x0800005a | j	 ti_display
+0x000000f8: 0x216b00da | addi	 $t3, $t3, 0x00da <ti_n2>
+0x000000fc: 0x0800005a | j	 ti_display
+0x00000100: 0x216b00f2 | addi	 $t3, $t3, 0x00f2 <ti_n3>
+0x00000104: 0x0800005a | j	 ti_display
+0x00000108: 0x216b0066 | addi	 $t3, $t3, 0x0066 <ti_n4>
+0x0000010c: 0x0800005a | j	 ti_display
+0x00000110: 0x216b00b6 | addi	 $t3, $t3, 0x00b6 <ti_n5>
+0x00000114: 0x0800005a | j	 ti_display
+0x00000118: 0x216b00be | addi	 $t3, $t3, 0x00be <ti_n6>
+0x0000011c: 0x0800005a | j	 ti_display
+0x00000120: 0x216b00e0 | addi	 $t3, $t3, 0x00e0 <ti_n7>
+0x00000124: 0x0800005a | j	 ti_display
+0x00000128: 0x216b00fe | addi	 $t3, $t3, 0x00fe <ti_n8>
+0x0000012c: 0x0800005a | j	 ti_display
+0x00000130: 0x216b00f6 | addi	 $t3, $t3, 0x00f6 <ti_n9>
+0x00000134: 0x0800005a | j	 ti_display
+0x00000138: 0x216b00ee | addi	 $t3, $t3, 0x00ee <ti_na>
+0x0000013c: 0x0800005a | j	 ti_display
+0x00000140: 0x216b00ff | addi	 $t3, $t3, 0x00ff <ti_nb>
+0x00000144: 0x0800005a | j	 ti_display
+0x00000148: 0x216b009c | addi	 $t3, $t3, 0x009c <ti_nc>
+0x0000014c: 0x0800005a | j	 ti_display
+0x00000150: 0x216b00fd | addi	 $t3, $t3, 0x00fd <ti_nd>
+0x00000154: 0x0800005a | j	 ti_display
+0x00000158: 0x216b009e | addi	 $t3, $t3, 0x009e <ti_ne>
+0x0000015c: 0x0800005a | j	 ti_display
+0x00000160: 0x216b008e | addi	 $t3, $t3, 0x008e <ti_nf>
+0x00000164: 0x0800005a | j	 ti_display
+0x00000168: 0xad0b000c | sw	 $t3, 12, $t0 <ti_display>
+0x0000016c: 0x21290002 | addi	 $t1, $t1, 2
+0x00000170: 0xad090000 | sw	 $t1, 0, $t0
+0x00000174: 0x03400008 | jr	 $26
+0x00000178: 0x3c084000 | lui	 $t0, 0x4000 <exception_main>
+0x0000017c: 0x21080018 | addi	 $t0, $t0, 0x0018
+0x00000180: 0x2009005a | addi	 $t1, $zero, 0x005a
+0x00000184: 0xad090000 | sw	 $t1, 0, $t0
+0x00000188: 0x03400008 | jr	 $26
+0x0000018c: 0x3c084000 | lui	 $t0, 0x4000 <uart_send_interrupt_main>
+0x00000190: 0x21080018 | addi	 $t0, $t0, 0x0018
+0x00000194: 0x8d090000 | lw	 $t1, 0, $t0
+0x00000198: 0x03400008 | jr	 $26
+0x0000019c: 0x3c084000 | lui	 $t0, 0x4000 <uart_recv_interrupt_main>
+0x000001a0: 0x2108001c | addi	 $t0, $t0, 0x001c
+0x000001a4: 0x8d090000 | lw	 $t1, 0, $t0
+0x000001a8: 0x200a00fc | addi	 $t2, $zero, 0x00fc
+0x000001ac: 0x8d4b0000 | lw	 $t3, 0, $t2
+0x000001b0: 0x000b6402 | srl	 $t4, $t3, 16
+0x000001b4: 0x15800004 | bne	 $t4, $zero, ur_gcd_start
+0x000001b8: 0x3c0b0001 | lui	 $t3, 0x0001
+0x000001bc: 0x01695820 | add	 $t3, $t3, $t1
+0x000001c0: 0xad4b0000 | sw	 $t3, 0, $t2
+0x000001c4: 0x03400008 | jr	 $26
+0x000001c8: 0x00094a00 | sll	 $t1, $t1, 8 <ur_gcd_start>
+0x000001cc: 0x01695820 | add	 $t3, $t3, $t1
+0x000001d0: 0x000b5c00 | sll	 $t3, $t3, 16
+0x000001d4: 0x000b5c02 | srl	 $t3, $t3, 16
+0x000001d8: 0xad4b0000 | sw	 $t3, 0, $t2
+0x000001dc: 0x316e00ff | andi	 $t6, $t3, 0x00ff
+0x000001e0: 0x316fff00 | andi	 $t7, $t3, 0xff00
+0x000001e4: 0x000f7a02 | srl	 $t7, $t7, 8
+0x000001e8: 0x11e00007 | beq	 $t7, $zero, ur_gcd_end <ur_gcd_main>
+0x000001ec: 0x01ee6822 | sub	 $t5, $t7, $t6
+0x000001f0: 0x1da00001 | bgtz	 $t5, ur_gcd_main_swap
+0x000001f4: 0x01cf7022 | sub	 $t6, $t6, $t7
+0x000001f8: 0x000e6820 | add	 $t5, $zero, $t6 <ur_gcd_main_swap>
+0x000001fc: 0x000f7020 | add	 $t6, $zero, $t7
+0x00000200: 0x000d7820 | add	 $t7, $zero, $t5
+0x00000204: 0x0800007a | j	 ur_gcd_main
+0x00000208: 0x3c084000 | lui	 $t0, 0x4000 <ur_gcd_end>
+0x0000020c: 0x2108000c | addi	 $t0, $t0, 0x000c
+0x00000210: 0xad0e0000 | sw	 $t6, 0, $t0
+0x00000214: 0xad0e000c | sw	 $t6, 12, $t0
+0x00000218: 0x03400008 | jr	 $26
+0x0000021c: 0x3c084000 | lui	 $t0, 0x4000 <entry_main> <main_init>
+0x00000220: 0x200907ff | addi	 $t1, $zero, 0x07ff
+0x00000224: 0xad090014 | sw	 $t1, 0x14, $t0
+0x00000228: 0xad00000c | sw	 $zero, 0x0c, $t0
+0x0000022c: 0x3c09ffff | lui	 $t1, 0xffff
+0x00000230: 0x21293caf | addi	 $t1, $t1, 0x3caf
+0x00000234: 0xad090000 | sw	 $t1, 0, $t0
+0x00000238: 0x00004827 | nor	 $t1, $0, $0
+0x0000023c: 0xad090004 | sw	 $t1, 0x04, $t0
+0x00000240: 0x20090003 | addi	 $t1, $zero, 0x0003
+0x00000244: 0xad090008 | sw	 $t1, 0x08, $t0
+0x00000248: 0x20090002 | addi	 $t1, $zero, 0x0002
+0x0000024c: 0xad090020 | sw	 $t1, 0x20, $t0
+0x00000250: 0x200a0258 | addi	 $t2, $zero, 0x0258
+0x00000254: 0x01400008 | jr	 $t2
+0x00000258: 0x08000096 | j	 main_loop <main_loop>
