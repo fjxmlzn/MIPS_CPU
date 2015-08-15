@@ -48,7 +48,6 @@
 		<Unit filename="include/Frame.h" />
 		<Unit filename="include/MipsCode.h" />
 		<Unit filename="include/MipsInstructionList.h" />
-		<Unit filename="include/help.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/AsmCode.cpp" />
 		<Unit filename="src/Assembler.cpp" />

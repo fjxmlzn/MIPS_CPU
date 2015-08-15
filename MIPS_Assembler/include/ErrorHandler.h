@@ -12,9 +12,9 @@ public:
     ErrorHandler();
     virtual ~ErrorHandler();
 
-    void ReportError(string errMsg);
-    void ReportWarning(string errMsg);
-    void ReportMessage(string msg);
+    virtual void ReportError(string errMsg);
+    virtual void ReportWarning(string errMsg);
+    virtual void ReportMessage(string msg);
 };
 
 #endif // ERRORHANDLER_H
